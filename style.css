@@ -2,14 +2,14 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --bg-deep:   #0a0e14;
-  --bg-card:   #1a1f2e;
-  --bg-card2:  #252d3d;
-  --border:    #2d3748;
+  --bg-deep:   #1c1c2e;
+  --bg-card:   #252540;
+  --bg-card2:  #2d2d44;
+  --border:    #3d3d5c;
   --gold:      #FFD700;
   --orange:    #FF9900;
-  --blue:      #146EB4;
-  --blue-lt:   #63b3ed;
+  --blue:      #7c6fcd;
+  --blue-lt:   #a89ee0;
   --green:     #00B300;
   --red:       #bc002d;
   --text:      #cbd5e0;
@@ -29,7 +29,7 @@ body { font-family: var(--font); background: var(--bg-deep); color: var(--text);
   position: fixed; top: 0; left: 0; right: 0; z-index: 100;
   display: flex; align-items: center; justify-content: space-between;
   padding: 0 32px; height: 64px;
-  background: rgba(10,14,20,0.97);
+  background: rgba(28,28,46,0.97);
   backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--border);
 }
@@ -73,7 +73,7 @@ body { font-family: var(--font); background: var(--bg-deep); color: var(--text);
   min-height: 100vh;
   display: flex; align-items: center; justify-content: center;
   padding: 100px 24px 60px;
-  background: linear-gradient(135deg, var(--bg-deep) 0%, #1a1f2e 50%, var(--bg-deep) 100%);
+  background: linear-gradient(135deg, #1c1c2e 0%, #252540 50%, #1c1c2e 100%);
   position: relative; overflow: hidden;
 }
 /* Corner accents */
