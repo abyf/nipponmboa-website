@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>NipponMboa Consulting</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
 </head>
 <body>
 
@@ -16,11 +16,11 @@
       <span class="logo-text">Consulting</span>
     </div>
     <div class="nav-links">
-      <a href="#about" data-i18n="nav_about"></a>
-      <a href="#poles" data-i18n="nav_poles"></a>
+      <a href="#about"    data-i18n="nav_about"></a>
+      <a href="#poles"    data-i18n="nav_poles"></a>
       <a href="#services" data-i18n="nav_services"></a>
-      <a href="#targets" data-i18n="nav_targets"></a>
-      <a href="#contact" data-i18n="nav_contact"></a>
+      <a href="#targets"  data-i18n="nav_targets"></a>
+      <a href="#contact"  data-i18n="nav_contact"></a>
     </div>
     <div class="lang-switcher">
       <button class="lang-btn active" data-lang="fr">FR</button>
@@ -32,30 +32,33 @@
 
   <!-- HERO -->
   <section class="hero">
-    <div class="hero-content">
-      <div class="hero-badge" data-i18n="hero_badge"></div>
+    <div class="hero-corner-bl"></div>
+    <div class="hero-corner-br"></div>
+    <div class="hero-inner">
+      <div class="hero-flag">🇨🇲 × 🇯🇵</div>
       <h1 data-i18n="hero_title"></h1>
       <p class="hero-sub" data-i18n="hero_sub"></p>
+      <div class="hero-badge-wrap">
+        <div class="hero-badge">
+          <div class="hero-badge-inner" data-i18n="hero_badge_inner"></div>
+        </div>
+      </div>
       <div class="hero-cta">
         <a href="#services" class="btn btn-primary" data-i18n="hero_cta1"></a>
-        <a href="#contact" class="btn btn-outline" data-i18n="hero_cta2"></a>
-      </div>
-    </div>
-    <div class="hero-visual">
-      <div class="flag-blend">
-        <div class="flag-cm"></div>
-        <div class="flag-bridge">⛩</div>
-        <div class="flag-jp"></div>
+        <a href="#contact"  class="btn btn-outline"  data-i18n="hero_cta2"></a>
       </div>
     </div>
   </section>
 
   <!-- ABOUT -->
-  <section class="section" id="about">
+  <section class="section section-alt" id="about">
     <div class="container">
-      <h2 class="section-title" data-i18n="about_title"></h2>
+      <span class="section-title-underline">
+        <h2 class="section-title" data-i18n="about_title"></h2>
+      </span>
+      <p class="section-subtitle" data-i18n="about_subtitle"></p>
       <div class="about-grid">
-        <div class="about-card">
+        <div class="about-card featured">
           <div class="about-icon">🎯</div>
           <h3 data-i18n="about_mission_title"></h3>
           <p data-i18n="about_mission_text"></p>
@@ -79,9 +82,12 @@
   </section>
 
   <!-- POLES -->
-  <section class="section section-dark" id="poles">
+  <section class="section" id="poles">
     <div class="container">
-      <h2 class="section-title" data-i18n="poles_title"></h2>
+      <span class="section-title-underline">
+        <h2 class="section-title" data-i18n="poles_title"></h2>
+      </span>
+      <p class="section-subtitle" data-i18n="poles_subtitle"></p>
       <p class="section-sub" data-i18n="poles_sub"></p>
       <div class="poles-grid">
         <div class="pole-card">
@@ -91,7 +97,7 @@
           <p data-i18n="pole1_desc"></p>
           <a href="#services" class="pole-link" data-i18n="pole_link"></a>
         </div>
-        <div class="pole-card pole-featured">
+        <div class="pole-card">
           <div class="pole-num">02</div>
           <div class="pole-icon">🎓</div>
           <h3 data-i18n="pole2_title"></h3>
@@ -110,155 +116,89 @@
   </section>
 
   <!-- SERVICES -->
-  <section class="section" id="services">
+  <section class="section section-alt" id="services">
     <div class="container">
-      <h2 class="section-title" data-i18n="services_title"></h2>
+      <span class="section-title-underline">
+        <h2 class="section-title" data-i18n="services_title"></h2>
+      </span>
+      <p class="section-subtitle" data-i18n="services_subtitle"></p>
       <div class="services-tabs">
         <button class="tab-btn active" data-tab="s1" data-i18n="pole1_title"></button>
-        <button class="tab-btn" data-tab="s2" data-i18n="pole2_title"></button>
-        <button class="tab-btn" data-tab="s3" data-i18n="pole3_title"></button>
+        <button class="tab-btn"        data-tab="s2" data-i18n="pole2_title"></button>
+        <button class="tab-btn"        data-tab="s3" data-i18n="pole3_title"></button>
       </div>
 
       <div class="tab-content active" id="s1">
         <div class="services-grid">
-          <div class="service-card">
-            <h4 data-i18n="s1_1_title"></h4>
-            <p data-i18n="s1_1_desc"></p>
-            <span class="price" data-i18n="s1_1_price"></span>
-          </div>
-          <div class="service-card">
-            <h4 data-i18n="s1_2_title"></h4>
-            <p data-i18n="s1_2_desc"></p>
-            <span class="price" data-i18n="s1_2_price"></span>
-          </div>
-          <div class="service-card">
-            <h4 data-i18n="s1_3_title"></h4>
-            <p data-i18n="s1_3_desc"></p>
-            <span class="price" data-i18n="s1_3_price"></span>
-          </div>
-          <div class="service-card">
-            <h4 data-i18n="s1_4_title"></h4>
-            <p data-i18n="s1_4_desc"></p>
-            <span class="price" data-i18n="s1_4_price"></span>
-          </div>
+          <div class="service-card"><h4 data-i18n="s1_1_title"></h4><p data-i18n="s1_1_desc"></p></div>
+          <div class="service-card"><h4 data-i18n="s1_2_title"></h4><p data-i18n="s1_2_desc"></p></div>
+          <div class="service-card"><h4 data-i18n="s1_3_title"></h4><p data-i18n="s1_3_desc"></p></div>
+          <div class="service-card"><h4 data-i18n="s1_4_title"></h4><p data-i18n="s1_4_desc"></p></div>
+          <div class="service-card"><h4 data-i18n="s1_5_title"></h4><p data-i18n="s1_5_desc"></p></div>
         </div>
       </div>
-
       <div class="tab-content" id="s2">
         <div class="services-grid">
-          <div class="service-card">
-            <h4 data-i18n="s2_1_title"></h4>
-            <p data-i18n="s2_1_desc"></p>
-            <span class="price" data-i18n="s2_1_price"></span>
-          </div>
-          <div class="service-card">
-            <h4 data-i18n="s2_2_title"></h4>
-            <p data-i18n="s2_2_desc"></p>
-            <span class="price" data-i18n="s2_2_price"></span>
-          </div>
-          <div class="service-card">
-            <h4 data-i18n="s2_3_title"></h4>
-            <p data-i18n="s2_3_desc"></p>
-            <span class="price" data-i18n="s2_3_price"></span>
-          </div>
-          <div class="service-card">
-            <h4 data-i18n="s2_4_title"></h4>
-            <p data-i18n="s2_4_desc"></p>
-            <span class="price" data-i18n="s2_4_price"></span>
-          </div>
+          <div class="service-card"><h4 data-i18n="s2_1_title"></h4><p data-i18n="s2_1_desc"></p></div>
+          <div class="service-card"><h4 data-i18n="s2_2_title"></h4><p data-i18n="s2_2_desc"></p></div>
+          <div class="service-card"><h4 data-i18n="s2_3_title"></h4><p data-i18n="s2_3_desc"></p></div>
+          <div class="service-card"><h4 data-i18n="s2_4_title"></h4><p data-i18n="s2_4_desc"></p></div>
         </div>
       </div>
-
       <div class="tab-content" id="s3">
         <div class="services-grid">
-          <div class="service-card">
-            <h4 data-i18n="s3_1_title"></h4>
-            <p data-i18n="s3_1_desc"></p>
-            <span class="price" data-i18n="s3_1_price"></span>
-          </div>
-          <div class="service-card">
-            <h4 data-i18n="s3_2_title"></h4>
-            <p data-i18n="s3_2_desc"></p>
-            <span class="price" data-i18n="s3_2_price"></span>
-          </div>
-          <div class="service-card">
-            <h4 data-i18n="s3_3_title"></h4>
-            <p data-i18n="s3_3_desc"></p>
-            <span class="price" data-i18n="s3_3_price"></span>
-          </div>
+          <div class="service-card"><h4 data-i18n="s3_1_title"></h4><p data-i18n="s3_1_desc"></p></div>
+          <div class="service-card"><h4 data-i18n="s3_2_title"></h4><p data-i18n="s3_2_desc"></p></div>
+          <div class="service-card"><h4 data-i18n="s3_3_title"></h4><p data-i18n="s3_3_desc"></p></div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- TARGETS -->
-  <section class="section section-dark" id="targets">
+  <section class="section" id="targets">
     <div class="container">
-      <h2 class="section-title" data-i18n="targets_title"></h2>
+      <span class="section-title-underline">
+        <h2 class="section-title" data-i18n="targets_title"></h2>
+      </span>
+      <p class="section-subtitle" data-i18n="targets_subtitle"></p>
       <div class="targets-grid">
-        <div class="target-card">
-          <div class="target-icon">🏭</div>
-          <h4 data-i18n="t1_title"></h4>
-          <p data-i18n="t1_desc"></p>
-        </div>
-        <div class="target-card">
-          <div class="target-icon">🗾</div>
-          <h4 data-i18n="t2_title"></h4>
-          <p data-i18n="t2_desc"></p>
-        </div>
-        <div class="target-card">
-          <div class="target-icon">👨‍🎓</div>
-          <h4 data-i18n="t3_title"></h4>
-          <p data-i18n="t3_desc"></p>
-        </div>
-        <div class="target-card">
-          <div class="target-icon">🌍</div>
-          <h4 data-i18n="t4_title"></h4>
-          <p data-i18n="t4_desc"></p>
-        </div>
-        <div class="target-card">
-          <div class="target-icon">🏛️</div>
-          <h4 data-i18n="t5_title"></h4>
-          <p data-i18n="t5_desc"></p>
-        </div>
+        <div class="target-card"><div class="target-icon">🏭</div><h4 data-i18n="t1_title"></h4><p data-i18n="t1_desc"></p></div>
+        <div class="target-card"><div class="target-icon">🗾</div><h4 data-i18n="t2_title"></h4><p data-i18n="t2_desc"></p></div>
+        <div class="target-card"><div class="target-icon">👨‍🎓</div><h4 data-i18n="t3_title"></h4><p data-i18n="t3_desc"></p></div>
+        <div class="target-card"><div class="target-icon">🌍</div><h4 data-i18n="t4_title"></h4><p data-i18n="t4_desc"></p></div>
+        <div class="target-card"><div class="target-icon">🏛️</div><h4 data-i18n="t5_title"></h4><p data-i18n="t5_desc"></p></div>
       </div>
     </div>
   </section>
 
   <!-- CONTACT -->
-  <section class="section" id="contact">
+  <section class="section section-alt" id="contact">
     <div class="container">
-      <h2 class="section-title" data-i18n="contact_title"></h2>
-      <p class="section-sub" data-i18n="contact_sub"></p>
+      <span class="section-title-underline">
+        <h2 class="section-title" data-i18n="contact_title"></h2>
+      </span>
+      <p class="section-subtitle" data-i18n="contact_subtitle"></p>
       <div class="contact-grid">
         <div class="contact-info">
           <div class="contact-item">
             <span class="contact-icon">📧</span>
-            <div>
-              <strong data-i18n="contact_email_label"></strong>
-              <p>contact@nipponmboa.com</p>
-            </div>
+            <div><strong data-i18n="contact_email_label"></strong><p>contact@nipponmboa.com</p></div>
           </div>
           <div class="contact-item">
             <span class="contact-icon">📱</span>
-            <div>
-              <strong data-i18n="contact_phone_label"></strong>
-              <p data-i18n="contact_phone_placeholder"></p>
-            </div>
+            <div><strong data-i18n="contact_phone_label"></strong><p data-i18n="contact_phone_placeholder"></p></div>
           </div>
           <div class="contact-item">
             <span class="contact-icon">📍</span>
-            <div>
-              <strong data-i18n="contact_location_label"></strong>
-              <p>Yaoundé, Cameroun</p>
-            </div>
+            <div><strong data-i18n="contact_location_label"></strong><p>Yaoundé, Cameroun</p></div>
           </div>
         </div>
         <form class="contact-form" onsubmit="handleSubmit(event)">
-          <input type="text" data-i18n-placeholder="form_name" required />
+          <input type="text"  data-i18n-placeholder="form_name"  required />
           <input type="email" data-i18n-placeholder="form_email" required />
           <select>
-            <option value="" data-i18n="form_service_default"></option>
+            <option value=""  data-i18n="form_service_default"></option>
             <option value="p1" data-i18n="pole1_title"></option>
             <option value="p2" data-i18n="pole2_title"></option>
             <option value="p3" data-i18n="pole3_title"></option>
@@ -274,15 +214,17 @@
   <footer class="footer">
     <div class="container footer-inner">
       <div class="footer-brand">
-        <span class="logo-jp">日本</span><span class="logo-sep">×</span><span class="logo-cm">Mboa</span>
-        <span class="logo-text">Consulting</span>
+        <div class="nav-brand">
+          <span class="logo-jp">日本</span><span class="logo-sep">×</span><span class="logo-cm">Mboa</span>
+          <span class="logo-text">Consulting</span>
+        </div>
         <p data-i18n="footer_tagline"></p>
       </div>
       <div class="footer-links">
-        <a href="#about" data-i18n="nav_about"></a>
-        <a href="#poles" data-i18n="nav_poles"></a>
+        <a href="#about"    data-i18n="nav_about"></a>
+        <a href="#poles"    data-i18n="nav_poles"></a>
         <a href="#services" data-i18n="nav_services"></a>
-        <a href="#contact" data-i18n="nav_contact"></a>
+        <a href="#contact"  data-i18n="nav_contact"></a>
       </div>
       <p class="footer-copy" data-i18n="footer_copy"></p>
     </div>
