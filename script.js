@@ -3,8 +3,8 @@ const i18n = {
     nav_about: "À propos", nav_poles: "Nos Pôles", nav_services: "Services",
     nav_targets: "Cibles", nav_contact: "Contact",
 
-    hero_title: "Le pont entre le <span>Cameroun</span> et le <span>Japon</span>",
-    hero_sub: "Facilitation bilatérale des échanges économiques, linguistiques, culturels et technologiques.",
+    hero_title: "Une expérience unique au service de votre réussite",
+    hero_sub: "Plateforme bilatérale de facilitation économique, linguistique, culturelle et technologique entre le Cameroun et le Japon.",
     hero_badge_inner: "Plateforme de facilitation bilatérale — Cameroun × Japon",
     hero_cta1: "Découvrir nos services", hero_cta2: "Nous contacter",
 
@@ -84,8 +84,8 @@ const i18n = {
     nav_about: "About", nav_poles: "Our Poles", nav_services: "Services",
     nav_targets: "Clients", nav_contact: "Contact",
 
-    hero_title: "The bridge between <span>Cameroon</span> and <span>Japan</span>",
-    hero_sub: "Facilitating bilateral economic, linguistic, cultural and technological exchanges.",
+    hero_title: "A unique experience at the service of your success",
+    hero_sub: "Bilateral platform for economic, linguistic, cultural and technological facilitation between Cameroon and Japan.",
     hero_badge_inner: "Bilateral facilitation platform — Cameroon × Japan",
     hero_cta1: "Explore our services", hero_cta2: "Get in touch",
 
@@ -94,7 +94,7 @@ const i18n = {
     about_mission_title: "Mission",
     about_mission_text: "Facilitate bilateral exchanges between Cameroon and Japan — economic, linguistic, cultural and technological.",
     about_vision_title: "Vision",
-    about_vision_text: "Become the go-to partner for any SME, institution or individual seeking to build a lasting bridge between both countries.",
+    about_vision_text: "Become the go-to partner for any SME, institution or individual seeking to build a lasting connection between Cameroon and Japan.",
     about_values_title: "Values",
     about_val1: "Reciprocity — Balanced services between both countries",
     about_val2: "Japanese quality — Rigor, punctuality, excellence",
@@ -128,11 +128,11 @@ const i18n = {
     s2_1_title: "Japan Mobility Full Pack",
     s2_1_desc: "Guidance, Japanese courses, JLPT N4/N3/N2 prep, study or employment assistance and referrals to Amazon, Google, Oracle.",
     s2_2_title: "Japanese Language Courses",
-    s2_2_desc: "General or professional Japanese language learning, group or individual, tailored to your goal.",
+    s2_2_desc: "General or professional Japanese language learning, group or individual, tailored to your goal — from beginner to JLPT-ready.",
     s2_3_title: "Orientation & Mentoring",
-    s2_3_desc: "2-3h personalized diagnostic to join a school, find a job or apply for a scholarship in Japan.",
+    s2_3_desc: "2-3h personalized diagnostic session to join a school, find a job or apply for a scholarship in Japan.",
     s2_4_title: "French Language Courses",
-    s2_4_desc: "For Japanese volunteers, cooperants and expats in Cameroon. General, professional French and educational outings.",
+    s2_4_desc: "For Japanese volunteers, cooperants and expats in Cameroon. General, professional French and educational outings included.",
 
     s3_1_title: "Tourist Circuits",
     s3_1_desc: "Discover Cameroon's national parks, chiefdoms and historic sites. Explore Japan's temples, Mount Fuji and iconic cities.",
@@ -157,7 +157,7 @@ const i18n = {
     form_service_default: "Select a pole",
     form_message: "Your message", form_submit: "Send message",
 
-    footer_tagline: "The bridge between Cameroon and Japan",
+    footer_tagline: "A unique experience at the service of your success",
     footer_copy: "© 2025 NipponMboa Consulting. All rights reserved.",
   },
 
