@@ -52,6 +52,8 @@ const i18n = {
     s2_3_desc: "2-3h de diagnostic personnalisé pour intégrer une école, trouver un emploi ou postuler à une bourse au Japon.",
     s2_4_title: "Cours de Français",
     s2_4_desc: "Pour volontaires japonais, coopérants et expatriés au Cameroun. Français général, professionnel et sorties pédagogiques.",
+    s2_5_title: "Club Anglais — Perfectionnement Oral",
+    s2_5_desc: "Sessions de conversation anglaise pour Camerounais (16 ans et +). Axé sur l'aisance orale, la confiance et la fluidité en contexte professionnel ou quotidien.",
 
     s3_1_title: "Circuits Touristiques",
     s3_1_desc: "Découverte des parcs nationaux, chefferies et sites historiques du Cameroun. Exploration des temples, Mont Fuji et villes emblématiques du Japon.",
@@ -133,6 +135,8 @@ const i18n = {
     s2_3_desc: "2-3h personalized diagnostic session to join a school, find a job or apply for a scholarship in Japan.",
     s2_4_title: "French Language Courses",
     s2_4_desc: "For Japanese volunteers, cooperants and expats in Cameroon. General, professional French and educational outings included.",
+    s2_5_title: "English Conversation Club",
+    s2_5_desc: "Oral English improvement sessions for Cameroonians (16+). Focused on fluency, confidence and communication in professional and everyday contexts.",
 
     s3_1_title: "Tourist Circuits",
     s3_1_desc: "Discover Cameroon's national parks, chiefdoms and historic sites. Explore Japan's temples, Mount Fuji and iconic cities.",
@@ -214,6 +218,8 @@ const i18n = {
     s2_3_desc: "日本の学校入学・就職・奨学金申請のための2〜3時間の個別診断。",
     s2_4_title: "フランス語コース",
     s2_4_desc: "カメルーン在住の日本人ボランティア・協力隊員・駐在員向け。一般・ビジネスフランス語と教育的外出。",
+    s2_5_title: "英会話クラブ",
+    s2_5_desc: "カメルーン人（16歳以上）向けの英語口頭表現向上セッション。日常・ビジネス場面での流暢さと自信を養います。",
 
     s3_1_title: "観光ツアー",
     s3_1_desc: "カメルーンの国立公園・首長国・歴史的遺跡の探訪。日本の神社・富士山・象徴的な都市の探索。",
