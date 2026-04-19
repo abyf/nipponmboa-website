@@ -2,18 +2,18 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --bg-deep:   #f0f2f5;
-  --bg-card:   #ffffff;
-  --bg-card2:  #f8f9fb;
-  --border:    #e2e8f0;
-  --gold:      #c8a84b;
-  --orange:    #e07b00;
-  --blue:      #2d5fa6;
-  --blue-lt:   #4a7fd4;
-  --green:     #007a3d;
+  --bg-deep:   #1c1c2e;
+  --bg-card:   #252540;
+  --bg-card2:  #2d2d44;
+  --border:    #3d3d5c;
+  --gold:      #FFD700;
+  --orange:    #FF9900;
+  --blue:      #7c6fcd;
+  --blue-lt:   #a89ee0;
+  --green:     #00B300;
   --red:       #bc002d;
-  --text:      #2d3748;
-  --text-dim:  #718096;
+  --text:      #cbd5e0;
+  --text-dim:  #a0aec0;
   --white:     #ffffff;
   --font: 'Inter', 'Noto Sans JP', sans-serif;
   --radius: 12px;
@@ -29,7 +29,7 @@ body { font-family: var(--font); background: var(--bg-deep); color: var(--text);
   position: fixed; top: 0; left: 0; right: 0; z-index: 100;
   display: flex; align-items: center; justify-content: space-between;
   padding: 0 32px; height: 64px;
-  background: rgba(26,37,53,0.98);
+  background: rgba(28,28,46,0.97);
   backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--border);
 }
@@ -73,7 +73,7 @@ body { font-family: var(--font); background: var(--bg-deep); color: var(--text);
   min-height: 100vh;
   display: flex; align-items: center; justify-content: center;
   padding: 100px 24px 60px;
-  background: linear-gradient(135deg, #1a2535 0%, #2d3f5a 50%, #1a2535 100%);
+  background: linear-gradient(135deg, #1c1c2e 0%, #252540 50%, #1c1c2e 100%);
   position: relative; overflow: hidden;
 }
 /* Corner accents */
@@ -222,7 +222,7 @@ body { font-family: var(--font); background: var(--bg-deep); color: var(--text);
 .contact-form textarea {
   padding: 11px 14px; border: 1px solid var(--border);
   border-radius: 8px; font-size: 0.9rem; font-family: var(--font);
-  color: var(--text); background: var(--white);
+  color: var(--white); background: rgba(0,0,0,0.3);
   transition: border-color 0.2s; width: 100%;
 }
 .contact-form input:focus,
