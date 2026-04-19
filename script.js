@@ -76,7 +76,7 @@ const i18n = {
     form_service_default: "Sélectionner un pôle",
     form_message: "Votre message", form_submit: "Envoyer le message",
 
-    footer_tagline: "Le pont entre le Cameroun et le Japon",
+    footer_tagline: "Une expérience unique au service de votre réussite",
     footer_copy: "© 2025 NipponMboa Consulting. Tous droits réservés.",
   },
 
