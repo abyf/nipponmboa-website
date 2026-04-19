@@ -55,11 +55,6 @@ body { font-family: var(--font); background: var(--bg-deep); color: var(--text);
 }
 .nav-toggle { display: none; background: none; border: none; color: var(--white); font-size: 1.4rem; cursor: pointer; }
 
-/* ===== HERO SYMBOLS ===== */
-.hero-symbols { display: flex; align-items: center; gap: 20px; justify-content: center; margin-bottom: 20px; }
-.hero-symbol { display: flex; flex-direction: column; align-items: center; gap: 8px; }
-.hero-symbol-label { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-dim); }
-.hero-symbol-sep { font-size: 1.8rem; color: var(--gold); font-weight: 800; margin-bottom: 20px; }
 .hero {
   min-height: 100vh;
   display: flex; align-items: center; justify-content: center;
