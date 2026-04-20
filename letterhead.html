@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>NipponMboa Consulting — Letterhead</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet"/>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Inter', sans-serif; background: #f0f0f0; }
+
+  .page {
+    width: 210mm; min-height: 297mm;
+    margin: 20px auto; background: #ffffff;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.15);
+    display: flex; flex-direction: column;
+    position: relative; overflow: hidden;
+  }
+
+  /* ===== HEADER ===== */
+  .header {
+    background: linear-gradient(135deg, #0277bd 0%, #0288d1 50%, #01579b 100%);
+    padding: 24px 40px 20px;
+    display: flex; align-items: center; justify-content: space-between;
+    position: relative;
+  }
+  .header::after {
+    content: '';
+    position: absolute; bottom: 0; left: 0; right: 0;
+    height: 4px;
+    background: linear-gradient(to right, #007a5e, #c8a84b, #bc002d);
+  }
+
+  .logo-container {
+    background: #e8e8e8;
+    border-radius: 50%;
+    padding: 8px 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  }
+  .logo-container img { height: 70px; width: auto; object-fit: contain; display: block; }
+
+  .header-info { text-align: right; color: rgba(255,255,255,0.92); }
+  .header-info .company-name { font-size: 1.3rem; font-weight: 700; color: #fff; letter-spacing: 0.02em; }
+  .header-info .tagline { font-size: 0.72rem; color: #c8a84b; letter-spacing: 0.08em; margin-top: 3px; }
+  .header-info .contact-line { font-size: 0.7rem; margin-top: 8px; line-height: 1.7; }
+
+  /* ===== BODY ===== */
+  .body { flex: 1; padding: 40px 40px 20px; }
+
+  .date-ref { display: flex; justify-content: space-between; margin-bottom: 32px; font-size: 0.82rem; color: #4a6a82; }
+
+  .recipient { margin-bottom: 32px; }
+  .recipient .label { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.1em; color: #0288d1; font-weight: 600; margin-bottom: 6px; }
+  .recipient .name { font-size: 0.95rem; font-weight: 700; color: #0d2137; }
+  .recipient .address { font-size: 0.82rem; color: #4a6a82; line-height: 1.6; }
+
+  .subject { margin-bottom: 28px; }
+  .subject .label { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.1em; color: #0288d1; font-weight: 600; }
+  .subject .text { font-size: 0.95rem; font-weight: 700; color: #0d2137; margin-top: 4px; border-left: 3px solid #c8a84b; padding-left: 12px; }
+
+  .salutation { font-size: 0.88rem; color: #0d2137; margin-bottom: 20px; }
+
+  .letter-body { font-size: 0.85rem; color: #2d4a5e; line-height: 1.9; margin-bottom: 20px; }
+  .letter-body p { margin-bottom: 14px; }
+
+  .placeholder {
+    background: #f0f8ff; border: 1px dashed #b3d9f5;
+    border-radius: 4px; padding: 12px 16px;
+    font-size: 0.82rem; color: #4a6a82; font-style: italic;
+    margin-bottom: 20px; line-height: 1.7;
+  }
+
+  .closing { font-size: 0.85rem; color: #0d2137; margin-bottom: 40px; }
+
+  .signature { display: flex; flex-direction: column; gap: 4px; }
+  .signature .sig-name { font-size: 0.95rem; font-weight: 700; color: #0d2137; }
+  .signature .sig-title { font-size: 0.78rem; color: #0288d1; font-weight: 600; }
+  .signature .sig-company { font-size: 0.75rem; color: #4a6a82; }
+  .sig-line { width: 160px; height: 1px; background: #b3d9f5; margin: 28px 0 8px; }
+
+  /* ===== FOOTER ===== */
+  .footer {
+    padding: 14px 40px;
+    border-top: 1px solid #e2e8f0;
+    display: flex; justify-content: space-between; align-items: center;
+    background: #f8fbff;
+  }
+  .footer-left { font-size: 0.68rem; color: #4a6a82; line-height: 1.6; }
+  .footer-right { font-size: 0.68rem; color: #4a6a82; text-align: right; line-height: 1.6; }
+  .footer-bar {
+    height: 3px;
+    background: linear-gradient(to right, #007a5e, #c8a84b, #bc002d);
+  }
+
+  /* ===== DECORATIVE SIDE ACCENT ===== */
+  .side-accent {
+    position: absolute; left: 0; top: 0; bottom: 0;
+    width: 5px;
+    background: linear-gradient(to bottom, #0277bd, #c8a84b, #bc002d);
+  }
+
+  /* ===== PRINT ===== */
+  @media print {
+    body { background: none; }
+    .page { margin: 0; box-shadow: none; width: 100%; min-height: 100vh; }
+    .print-btn { display: none; }
+  }
+
+  .print-btn {
+    display: block; margin: 16px auto; padding: 10px 28px;
+    background: #0288d1; color: white; border: none;
+    border-radius: 8px; font-size: 0.9rem; font-weight: 600;
+    cursor: pointer; font-family: 'Inter', sans-serif;
+  }
+  .print-btn:hover { background: #0277bd; }
+</style>
+</head>
+<body>
+
+<button class="print-btn" onclick="window.print()">🖨️ Imprimer / Save as PDF</button>
+
+<div class="page">
+  <div class="side-accent"></div>
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="logo-container">
+      <img src="NipponMboa-Consulting-Logo.jpeg" alt="NipponMboa Consulting" />
+    </div>
+    <div class="header-info">
+      <div class="company-name">NipponMboa Consulting</div>
+      <div class="tagline">Faciliter. つなぐ. Succeed.</div>
+      <div class="contact-line">
+        📍 Yaoundé, Maetur Nkomo — Antenne Orange, Cameroun<br/>
+        📧 contact@nipponmboa.com &nbsp;|&nbsp; 🌐 nipponmboa.com<br/>
+        📱 [Téléphone / WhatsApp — à compléter]
+      </div>
+    </div>
+  </div>
+
+  <!-- BODY -->
+  <div class="body">
+
+    <div class="date-ref">
+      <span>Yaoundé, le <strong>[Date]</strong></span>
+      <span>Réf. : <strong>[NMC-2025-XXX]</strong></span>
+    </div>
+
+    <div class="recipient">
+      <div class="label">À l'attention de</div>
+      <div class="name">[Nom du destinataire]</div>
+      <div class="address">
+        [Titre / Fonction]<br/>
+        [Organisation / Entreprise]<br/>
+        [Adresse complète]
+      </div>
+    </div>
+
+    <div class="subject">
+      <div class="label">Objet</div>
+      <div class="text">[Objet de la lettre]</div>
+    </div>
+
+    <div class="salutation">Madame, Monsieur,</div>
+
+    <div class="letter-body">
+      <div class="placeholder">
+        [ Corps de la lettre — à rédiger selon le contexte. ]<br/><br/>
+        Exemple : Nous avons l'honneur de vous adresser la présente afin de vous informer de / vous proposer / vous confirmer...
+        <br/><br/>
+        Paragraphe 1 — Introduction et contexte.<br/>
+        Paragraphe 2 — Détails, proposition ou demande.<br/>
+        Paragraphe 3 — Prochaines étapes ou appel à l'action.
+      </div>
+    </div>
+
+    <div class="closing">
+      Dans l'attente de votre retour, nous vous prions d'agréer, Madame, Monsieur, l'expression de nos salutations distinguées.
+    </div>
+
+    <div class="signature">
+      <div class="sig-line"></div>
+      <div class="sig-name">[Prénom NOM]</div>
+      <div class="sig-title">[Titre / Fonction]</div>
+      <div class="sig-company">NipponMboa Consulting</div>
+    </div>
+
+  </div>
+
+  <!-- FOOTER BAR -->
+  <div class="footer-bar"></div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <div class="footer-left">
+      <strong>NipponMboa Consulting</strong><br/>
+      Yaoundé, Maetur Nkomo — Antenne Orange, Cameroun<br/>
+      contact@nipponmboa.com &nbsp;|&nbsp; nipponmboa.com
+    </div>
+    <div class="footer-right">
+      Faciliter. つなぐ. Succeed.<br/>
+      Plateforme bilatérale Cameroun × Japon<br/>
+      [RCCM / N° Contribuable — à compléter]
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
