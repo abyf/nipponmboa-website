@@ -30,8 +30,8 @@ body { font-family: var(--font); background: var(--bg-deep); color: var(--text);
   display: flex; align-items: center; justify-content: space-between;
   padding: 0 32px; height: 64px;
   overflow: visible;
-  background: rgba(2,119,189,1.0);
-  backdrop-filter: blur(8px);
+  background: transparent;
+  backdrop-filter: blur(0);
   box-shadow: none;
 }
 .nav-brand { display: flex; align-items: center; gap: 4px; font-size: 1.15rem; font-weight: 700; position: relative; }
@@ -41,7 +41,7 @@ body { font-family: var(--font); background: var(--bg-deep); color: var(--text);
   background: #e8e8e8;
   padding: 8px 16px;
   box-shadow: 0 6px 20px rgba(0,0,0,0.15);
-  position: relative; top: 20px;
+  position: relative; top: 30px;
 }
 .footer-logo { height: 120px; width: auto; object-fit: contain; border-radius: 50%; background: #e8e8e8; padding: 10px 20px; box-shadow: 0 6px 20px rgba(0,0,0,0.15); margin-bottom: 8px; }
 .logo-jp  { color: var(--red); }
