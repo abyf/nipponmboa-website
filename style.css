@@ -43,7 +43,7 @@ body { font-family: var(--font); background: var(--bg-deep); color: var(--text);
   box-shadow: 0 6px 20px rgba(0,0,0,0.15);
   position: relative; top: 20px;
 }
-.footer-logo { height: 60px; width: auto; object-fit: contain; border-radius: 8px; background: #e8e8e8; padding: 6px 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.15); margin-bottom: 4px; }
+.footer-logo { height: 120px; width: auto; object-fit: contain; border-radius: 50%; background: #e8e8e8; padding: 10px 20px; box-shadow: 0 6px 20px rgba(0,0,0,0.15); margin-bottom: 8px; }
 .logo-jp  { color: var(--red); }
 .logo-sep { color: var(--gold); margin: 0 2px; }
 .logo-cm  { color: #4caf50; }
