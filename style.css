@@ -32,14 +32,14 @@ body { font-family: var(--font); background: var(--bg-deep); color: var(--text);
   overflow: visible;
   background: rgba(2,119,189,0.97);
   backdrop-filter: blur(8px);
-  box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+  box-shadow: none;
 }
 .nav-brand { display: flex; align-items: center; gap: 4px; font-size: 1.15rem; font-weight: 700; position: relative; }
 .nav-logo {
   height: 96px; width: auto; object-fit: contain;
-  border-radius: 10px; background: #e8e8e8;
+  border-radius: 12px; background: #e8e8e8;
   padding: 6px 14px;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.35), 0 0 0 2px rgba(255,255,255,0.15);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.18);
   position: relative; top: 16px;
 }
 .footer-logo { height: 60px; width: auto; object-fit: contain; border-radius: 8px; background: #e8e8e8; padding: 6px 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.15); margin-bottom: 4px; }
