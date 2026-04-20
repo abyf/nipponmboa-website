@@ -34,6 +34,8 @@ body { font-family: var(--font); background: var(--bg-deep); color: var(--text);
   border-bottom: 1px solid var(--border);
 }
 .nav-brand { display: flex; align-items: center; gap: 4px; font-size: 1.15rem; font-weight: 700; }
+.nav-logo { height: 42px; width: auto; object-fit: contain; border-radius: 4px; }
+.footer-logo { height: 60px; width: auto; object-fit: contain; border-radius: 4px; margin-bottom: 4px; }
 .logo-jp  { color: var(--red); }
 .logo-sep { color: var(--gold); margin: 0 2px; }
 .logo-cm  { color: #4caf50; }

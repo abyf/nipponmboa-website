@@ -5,7 +5,7 @@ const i18n = {
 
     hero_title: "Une expérience unique au service de votre réussite",
     hero_sub: "Plateforme bilatérale de facilitation économique, linguistique, culturelle et technologique entre le Cameroun et le Japon.",
-    hero_badge_inner: "Plateforme de facilitation bilatérale — Cameroun × Japon",
+    hero_badge_inner: "Faciliter. つなぐ. Succeed.",
     hero_cta1: "Découvrir nos services", hero_cta2: "Nous contacter",
 
     about_title: "Qui sommes-nous ?",
@@ -88,7 +88,7 @@ const i18n = {
 
     hero_title: "A unique experience at the service of your success",
     hero_sub: "Bilateral platform for economic, linguistic, cultural and technological facilitation between Cameroon and Japan.",
-    hero_badge_inner: "Bilateral facilitation platform — Cameroon × Japan",
+    hero_badge_inner: "Faciliter. つなぐ. Succeed.",
     hero_cta1: "Explore our services", hero_cta2: "Get in touch",
 
     about_title: "Who We Are",
@@ -171,7 +171,7 @@ const i18n = {
 
     hero_title: "<span>カメルーン</span>と<span>日本</span>をつなぐ架け橋",
     hero_sub: "経済・言語・文化・技術の二国間交流を促進します。",
-    hero_badge_inner: "二国間促進プラットフォーム — カメルーン × 日本",
+    hero_badge_inner: "Faciliter. つなぐ. Succeed.",
     hero_cta1: "サービスを見る", hero_cta2: "お問い合わせ",
 
     about_title: "私たちについて",
