@@ -28,13 +28,13 @@ body { font-family: var(--font); background: var(--bg-deep); color: var(--text);
 .navbar {
   position: fixed; top: 0; left: 0; right: 0; z-index: 100;
   display: flex; align-items: center; justify-content: space-between;
-  padding: 0 32px; height: 64px;
+  padding: 0 32px; height: 72px;
   background: rgba(2,119,189,0.97);
   backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--border);
 }
 .nav-brand { display: flex; align-items: center; gap: 4px; font-size: 1.15rem; font-weight: 700; }
-.nav-logo { height: 42px; width: auto; object-fit: contain; border-radius: 6px; background: #e8e8e8; padding: 4px 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.25); }
+.nav-logo { height: 52px; width: auto; object-fit: contain; border-radius: 8px; background: #e8e8e8; padding: 6px 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.4), 0 0 0 2px rgba(255,255,255,0.2); }
 .footer-logo { height: 60px; width: auto; object-fit: contain; border-radius: 8px; background: #e8e8e8; padding: 6px 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.15); margin-bottom: 4px; }
 .logo-jp  { color: var(--red); }
 .logo-sep { color: var(--gold); margin: 0 2px; }
