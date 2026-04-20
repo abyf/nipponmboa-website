@@ -36,12 +36,12 @@ body { font-family: var(--font); background: var(--bg-deep); color: var(--text);
 }
 .nav-brand { display: flex; align-items: center; gap: 4px; font-size: 1.15rem; font-weight: 700; position: relative; }
 .nav-logo {
-  height: 110px; width: auto; object-fit: contain;
+  height: 130px; width: auto; object-fit: contain;
   border-radius: 50%;
   background: #e8e8e8;
   padding: 8px 16px;
   box-shadow: 0 6px 20px rgba(0,0,0,0.15);
-  position: relative; top: 30px;
+  position: relative; top: 44px;
 }
 .footer-logo { height: 120px; width: auto; object-fit: contain; border-radius: 50%; background: #e8e8e8; padding: 10px 20px; box-shadow: 0 6px 20px rgba(0,0,0,0.15); margin-bottom: 8px; }
 .logo-jp  { color: var(--red); }
