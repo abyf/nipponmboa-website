@@ -39,14 +39,14 @@ body { font-family: var(--font); background: var(--bg-deep); color: var(--text);
 .logo-cm  { color: #4caf50; }
 .logo-text { color: var(--white); margin-left: 6px; font-size: 0.95rem; font-weight: 400; }
 
-.nav-links { display: flex; gap: 28px; }
-.nav-links a { color: var(--text-dim); text-decoration: none; font-size: 0.88rem; font-weight: 500; transition: color 0.2s; }
+/* navbar links on blue navbar bg → white */
+.nav-links a { color: rgba(255,255,255,0.9); text-decoration: none; font-size: 0.88rem; font-weight: 500; transition: color 0.2s; }
 .nav-links a:hover { color: var(--gold); }
 
 .lang-switcher { display: flex; gap: 6px; }
 .lang-btn {
-  background: transparent; border: 1px solid rgba(255,255,255,0.2);
-  color: var(--text-dim); padding: 4px 10px; border-radius: 20px;
+  background: transparent; border: 1px solid rgba(255,255,255,0.4);
+  color: rgba(255,255,255,0.9); padding: 4px 10px; border-radius: 20px;
   cursor: pointer; font-size: 0.78rem; transition: all 0.2s;
 }
 .lang-btn:hover, .lang-btn.active {
@@ -115,7 +115,7 @@ body { font-family: var(--font); background: var(--bg-deep); color: var(--text);
 .section-alt { background: linear-gradient(135deg, var(--bg-card) 0%, var(--bg-card2) 100%); }
 
 .section-title {
-  font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 700; color: var(--white);
+  font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 700; color: #0d2137;
   margin-bottom: 8px;
 }
 .section-title-underline {
@@ -138,10 +138,10 @@ body { font-family: var(--font); background: var(--bg-deep); color: var(--text);
 .about-card:hover { transform: translateY(-3px); }
 .about-card.featured { border-color: var(--gold); box-shadow: 0 6px 24px rgba(255,215,0,0.15); }
 .about-icon { font-size: 1.8rem; margin-bottom: 14px; }
-.about-card h3 { font-size: 1rem; font-weight: 700; color: var(--white); margin-bottom: 10px; }
+.about-card h3 { font-size: 1rem; font-weight: 700; color: #0d2137; margin-bottom: 10px; }
 .about-card p { color: var(--text); font-size: 0.9rem; }
 .values-list { list-style: none; font-size: 0.9rem; }
-.values-list li { padding: 6px 0; border-bottom: 1px solid rgba(255,255,255,0.05); }
+.values-list li { padding: 6px 0; border-bottom: 1px solid rgba(0,0,0,0.08); color: #2d4a5e; }
 .values-list li::before { content: '✦ '; color: var(--gold); }
 
 /* ===== POLES ===== */
@@ -158,7 +158,7 @@ body { font-family: var(--font); background: var(--bg-deep); color: var(--text);
 .pole-card:hover { transform: translateY(-4px); }
 .pole-num { font-size: 3.5rem; font-weight: 800; color: rgba(255,255,255,0.04); position: absolute; top: 12px; right: 18px; line-height: 1; }
 .pole-icon { font-size: 2rem; margin-bottom: 14px; }
-.pole-card h3 { font-size: 1rem; font-weight: 700; color: var(--white); margin-bottom: 10px; }
+.pole-card h3 { font-size: 1rem; font-weight: 700; color: #0d2137; margin-bottom: 10px; }
 .pole-card p { color: var(--text); font-size: 0.88rem; margin-bottom: 18px; }
 .pole-link { color: var(--orange); font-weight: 600; font-size: 0.88rem; text-decoration: none; }
 .pole-link:hover { color: var(--gold); }
@@ -183,7 +183,7 @@ body { font-family: var(--font); background: var(--bg-deep); color: var(--text);
   box-shadow: var(--shadow); transition: transform 0.2s;
 }
 .service-card:hover { transform: translateY(-3px); }
-.service-card h4 { font-size: 0.95rem; font-weight: 700; color: var(--white); margin-bottom: 8px; }
+.service-card h4 { font-size: 0.95rem; font-weight: 700; color: #0d2137; margin-bottom: 8px; }
 .service-card p { color: var(--text); font-size: 0.85rem; }
 
 /* ===== TARGETS ===== */
@@ -196,8 +196,8 @@ body { font-family: var(--font); background: var(--bg-deep); color: var(--text);
 }
 .target-card:hover { transform: translateY(-3px); }
 .target-icon { font-size: 1.8rem; margin-bottom: 10px; }
-.target-card h4 { font-size: 0.9rem; font-weight: 700; color: var(--white); margin-bottom: 6px; }
-.target-card p { color: var(--text-dim); font-size: 0.82rem; }
+.target-card h4 { font-size: 0.9rem; font-weight: 700; color: #0d2137; margin-bottom: 6px; }
+.target-card p { color: #4a6a82; font-size: 0.82rem; }
 
 /* ===== STATS ===== */
 .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 16px; margin-top: 40px; }
@@ -213,8 +213,8 @@ body { font-family: var(--font); background: var(--bg-deep); color: var(--text);
 .contact-info { display: flex; flex-direction: column; gap: 24px; }
 .contact-item { display: flex; gap: 14px; align-items: flex-start; }
 .contact-icon { font-size: 1.4rem; }
-.contact-item strong { display: block; font-weight: 700; color: var(--white); margin-bottom: 3px; font-size: 0.9rem; }
-.contact-item p { color: var(--text-dim); font-size: 0.88rem; }
+.contact-item strong { display: block; font-weight: 700; color: #0d2137; margin-bottom: 3px; font-size: 0.9rem; }
+.contact-item p { color: #4a6a82; font-size: 0.88rem; }
 
 .contact-form { display: flex; flex-direction: column; gap: 14px; }
 .contact-form input,
@@ -235,11 +235,10 @@ body { font-family: var(--font); background: var(--bg-deep); color: var(--text);
 .footer { background: var(--bg-deep); border-top: 1px solid var(--border); padding: 40px 0 20px; }
 .footer-inner { display: flex; flex-direction: column; align-items: center; gap: 20px; text-align: center; }
 .footer-brand { display: flex; flex-direction: column; align-items: center; gap: 6px; }
-.footer-brand p { font-size: 0.85rem; color: var(--text-dim); }
-.footer-links { display: flex; gap: 24px; flex-wrap: wrap; justify-content: center; }
-.footer-links a { color: var(--text-dim); text-decoration: none; font-size: 0.85rem; }
-.footer-links a:hover { color: var(--gold); }
-.footer-copy { font-size: 0.75rem; color: rgba(255,255,255,0.25); }
+.footer-brand p { font-size: 0.85rem; color: #4a6a82; }
+.footer-links a { color: #4a6a82; text-decoration: none; font-size: 0.85rem; }
+.footer-links a:hover { color: var(--blue); }
+.footer-copy { font-size: 0.75rem; color: #8aa0b0; }
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
@@ -247,7 +246,7 @@ body { font-family: var(--font); background: var(--bg-deep); color: var(--text);
   .nav-links.open {
     display: flex; flex-direction: column;
     position: absolute; top: 64px; left: 0; right: 0;
-    background: var(--bg-deep); padding: 20px 32px;
+    background: rgba(2,119,189,0.98); padding: 20px 32px;
     gap: 16px; z-index: 99; border-bottom: 1px solid var(--border);
   }
   .nav-toggle { display: block; }
