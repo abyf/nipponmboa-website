@@ -66,7 +66,7 @@ const i18n = {
     targets_subtitle: "Nous accompagnons une diversité d'acteurs",
     t1_title: "PME Camerounaises", t1_desc: "Accès aux technologies, partenaires et marchés japonais",
     t2_title: "PME Japonaises",    t2_desc: "Accès au marché camerounais (test, distribution, partenariat)",
-    t3_title: "Particuliers Camerounais", t3_desc: "Apprentissage du japonais, études et emploi au Japon",
+    t3_title: "Particuliers Camerounais", t3_desc: "Apprentissage du japonais et de l'anglais, perfectionnement oral, études et emploi au Japon, orientation vers une carrière dans les data centers (Amazon, Google, Microsoft, Oracle)",
     t4_title: "Japonais au Cameroun",    t4_desc: "Apprentissage du français, tourisme et intégration locale",
     t5_title: "Institutions",            t5_desc: "JICA, Ambassade du Japon, JETRO, GICAM, MINAC et autres",
 
@@ -149,7 +149,7 @@ const i18n = {
     targets_subtitle: "We support a diverse range of stakeholders",
     t1_title: "Cameroonian SMEs",    t1_desc: "Access to Japanese technologies, partners and markets",
     t2_title: "Japanese SMEs",       t2_desc: "Access to the Cameroonian market (testing, distribution, partnership)",
-    t3_title: "Cameroonian Individuals", t3_desc: "Japanese language learning, studies and employment in Japan",
+    t3_title: "Cameroonian Individuals", t3_desc: "Japanese & English language learning, oral proficiency improvement, studies and employment in Japan, career guidance for data center roles (Amazon, Google, Microsoft, Oracle)",
     t4_title: "Japanese in Cameroon",    t4_desc: "French language learning, tourism and local integration",
     t5_title: "Institutions",            t5_desc: "JICA, Japanese Embassy, JETRO, GICAM, MINAC and others",
 
@@ -232,7 +232,7 @@ const i18n = {
     targets_subtitle: "多様なステークホルダーをサポート",
     t1_title: "カメルーンの中小企業",    t1_desc: "日本の技術・パートナー・市場へのアクセス",
     t2_title: "日本の中小企業",          t2_desc: "カメルーン市場へのアクセス（テスト・流通・提携）",
-    t3_title: "カメルーン人個人",        t3_desc: "日本語学習、日本での留学・就職",
+    t3_title: "カメルーン人個人", t3_desc: "日本語・英語学習、英会話向上、日本での留学・就職、データセンターキャリア支援（Amazon・Google・Microsoft・Oracle）",
     t4_title: "カメルーン在住の日本人",  t4_desc: "フランス語学習、観光、現地統合",
     t5_title: "機関・団体",              t5_desc: "JICA、日本大使館、JETRO、GICAM、MINACなど",
 
