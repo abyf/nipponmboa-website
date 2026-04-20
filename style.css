@@ -39,9 +39,10 @@ body { font-family: var(--font); background: var(--bg-deep); color: var(--text);
 .logo-cm  { color: #4caf50; }
 .logo-text { color: var(--white); margin-left: 6px; font-size: 0.95rem; font-weight: 400; }
 
-/* navbar links on blue navbar bg → white */
-.nav-links a { color: rgba(255,255,255,0.9); text-decoration: none; font-size: 0.88rem; font-weight: 500; transition: color 0.2s; }
+.nav-links { display: flex; gap: 28px; }
+.nav-links a { color: rgba(255,255,255,0.9); text-decoration: none; font-size: 0.9rem; font-weight: 700; transition: color 0.2s; letter-spacing: 0.02em; }
 .nav-links a:hover { color: var(--gold); }
+.nav-links a + a { border-left: 1px solid rgba(255,255,255,0.2); padding-left: 28px; }
 
 .lang-switcher { display: flex; gap: 6px; }
 .lang-btn {
