@@ -172,6 +172,7 @@ body { font-family: var(--font); background: var(--bg-deep); color: var(--text);
 }
 .pole-card:nth-child(2) { border-top-color: var(--orange); }
 .pole-card:nth-child(3) { border-top-color: var(--green); }
+.pole-card:nth-child(4) { border-top-color: var(--red); }
 .pole-card:hover { transform: translateY(-4px); }
 .pole-num { font-size: 3.5rem; font-weight: 800; color: rgba(255,255,255,0.04); position: absolute; top: 12px; right: 18px; line-height: 1; }
 .pole-icon { font-size: 2rem; margin-bottom: 14px; }
