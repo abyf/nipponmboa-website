@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Demande Bridge IT Solutions - NipponMboa Consulting</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    .form-hero {
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+      color: #fff;
+      padding: 80px 20px 60px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .form-hero::before {
+      content: '💻';
+      position: absolute;
+      font-size: 200px;
+      opacity: 0.05;
+      right: -50px;
+      top: -50px;
+    }
+    .form-hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      position: relative;
+      z-index: 1;
+    }
+    .form-hero p {
+      font-size: 1.1rem;
+      opacity: 0.9;
+      max-width: 600px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+    .form-container {
+      max-width: 800px;
+      margin: -40px auto 80px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+      padding: 40px;
+      position: relative;
+      z-index: 2;
+    }
+    .form-section {
+      margin-bottom: 30px;
+      padding-bottom: 30px;
+      border-bottom: 1px solid #eee;
+    }
+    .form-section:last-child {
+      border-bottom: none;
+    }
+    .form-section.hidden {
+      display: none;
+    }
+    .form-section-title {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #1a1a2e;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .form-section-icon {
+      font-size: 1.5rem;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    .form-group.hidden {
+      display: none;
+    }
+    .form-group label {
+      display: block;
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 8px;
+      font-size: 0.95rem;
+    }
+    .form-group .required {
+      color: #e74c3c;
+      margin-left: 3px;
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 12px 15px;
+      border: 2px solid #e0e0e0;
+      border-radius: 6px;
+      font-size: 1rem;
+      font-family: inherit;
+      transition: all 0.3s ease;
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: #c8102e;
+      box-shadow: 0 0 0 3px rgba(200, 16, 46, 0.1);
+    }
+    .form-group textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+    .form-group-inline {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    .checkbox-group, .radio-group {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .checkbox-item, .radio-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 10px;
+      border: 2px solid #f0f0f0;
+      border-radius: 6px;
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
+    .checkbox-item:hover, .radio-item:hover {
+      border-color: #c8102e;
+      background: #fff5f7;
+    }
+    .checkbox-item input[type="checkbox"],
+    .radio-item input[type="radio"] {
+      width: auto;
+      margin-top: 3px;
+      cursor: pointer;
+      flex-shrink: 0;
+    }
+    .checkbox-item label,
+    .radio-item label {
+      margin: 0;
+      font-weight: 400;
+      cursor: pointer;
+      flex: 1;
+    }
+    .form-hint {
+      font-size: 0.85rem;
+      color: #666;
+      margin-top: 5px;
+    }
+    .submit-btn {
+      background: linear-gradient(135deg, #c8102e 0%, #a00d24 100%);
+      color: #fff;
+      padding: 15px 40px;
+      border: none;
+      border-radius: 6px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      width: 100%;
+      margin-top: 10px;
+    }
+    .submit-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(200, 16, 46, 0.3);
+    }
+    .submit-btn:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+      transform: none;
+    }
+    .success-message,
+    .error-message {
+      padding: 15px;
+      border-radius: 6px;
+      margin-bottom: 20px;
+      display: none;
+    }
+    .success-message {
+      background: #d4edda;
+      color: #155724;
+      border: 1px solid #c3e6cb;
+    }
+    .error-message {
+      background: #f8d7da;
+      color: #721c24;
+      border: 1px solid #f5c6cb;
+    }
+    .success-message.show,
+    .error-message.show {
+      display: block;
+    }
+    @media (max-width: 768px) {
+      .form-hero h1 {
+        font-size: 1.8rem;
+      }
+      .form-container {
+        margin: -40px 20px 60px;
+        padding: 30px 20px;
+      }
+      .form-group-inline {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-brand">
+      <a href="index.html">
+        <img src="NipponMboa-Consulting-Logo.jpeg" alt="NipponMboa Consulting" class="nav-logo" />
+      </a>
+    </div>
+    <div class="nav-links">
+      <a href="index.html#about">À propos</a>
+      <a href="index.html#poles">Nos Pôles</a>
+      <a href="index.html#services">Services</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+    <div class="lang-switcher">
+      <button class="lang-btn active" data-lang="fr">FR</button>
+      <button class="lang-btn" data-lang="en">EN</button>
+      <button class="lang-btn" data-lang="ja">日本語</button>
+    </div>
+    <button class="nav-toggle" aria-label="Menu">&#9776;</button>
+  </nav>
+
+  <!-- FORM HERO -->
+  <section class="form-hero">
+    <h1>Demande de Service IT</h1>
+    <p>Décrivez-nous votre projet, nous vous répondrons sous 48h</p>
+  </section>
+
+  <!-- FORM CONTAINER -->
+  <div class="form-container">
+    <div class="success-message" id="successMessage">
+      <strong>✓ Demande envoyée avec succès !</strong>
+      <p>Nous vous contacterons dans les 48 heures.</p>
+    </div>
+    <div class="error-message" id="errorMessage">
+      <strong>✗ Erreur</strong>
+      <p>Une erreur s'est produite. Veuillez réessayer.</p>
+    </div>
+
+    <form id="bridgeItForm">
+      <!-- SECTION 1: CONTACT INFORMATION -->
+      <div class="form-section">
+        <h2 class="form-section-title">
+          <span class="form-section-icon">👤</span>
+          <span>Informations de Contact</span>
+        </h2>
+        <div class="form-group-inline">
+          <div class="form-group">
+            <label>Nom complet<span class="required">*</span></label>
+            <input type="text" name="fullName" required placeholder="Ex: Jean Dupont" />
+          </div>
+          <div class="form-group">
+            <label>Email<span class="required">*</span></label>
+            <input type="email" name="email" required placeholder="exemple@email.com" />
+          </div>
+        </div>
+        <div class="form-group-inline">
+          <div class="form-group">
+            <label>Téléphone / WhatsApp<span class="required">*</span></label>
+            <input type="tel" name="phone" required placeholder="+237 6XX XXX XXX" />
+          </div>
+          <div class="form-group">
+            <label>Profession / Fonction</label>
+            <input type="text" name="occupation" placeholder="Ex: Directeur, Enseignant, Entrepreneur" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Adresse</label>
+          <input type="text" name="address" placeholder="Ville, Quartier" />
+        </div>
+      </div>
+
+      <!-- SECTION 2: SERVICE TYPE -->
+      <div class="form-section">
+        <h2 class="form-section-title">
+          <span class="form-section-icon">💼</span>
+          <span>Type de Prestation</span>
+        </h2>
+        <div class="form-group">
+          <label>Quel service souhaitez-vous ?<span class="required">*</span></label>
+          <select name="serviceType" id="serviceType" required>
+            <option value="">-- Sélectionner un service --</option>
+            <option value="website">Création de Site Web</option>
+            <option value="management">Plateforme de Gestion</option>
+            <option value="ecommerce">Site E-commerce</option>
+            <option value="cloud">Formation Cloud Computing</option>
+            <option value="ai">Formation Intelligence Artificielle</option>
+            <option value="training">Formation Inter/Intra Entreprise</option>
+            <option value="other">Autre (préciser)</option>
+          </select>
+        </div>
+        
+        <!-- Show if "Other" is selected -->
+        <div class="form-group hidden" id="serviceTypeOtherGroup">
+          <label>Précisez votre besoin<span class="required">*</span></label>
+          <input type="text" name="serviceTypeOther" placeholder="Décrivez le service que vous souhaitez" />
+        </div>
+      </div>
+
+      <!-- SECTION 3: WEBSITE CREATION OPTIONS (shown if serviceType = "website") -->
+      <div class="form-section hidden" id="websiteSection">
+        <h2 class="form-section-title">
+          <span class="form-section-icon">🌐</span>
+          <span>Détails du Site Web</span>
+        </h2>
+        
+        <!-- Structure Type -->
+        <div class="form-group">
+          <label>Pour quel type de structure ?<span class="required">*</span></label>
+          <select name="structureType" id="structureType">
+            <option value="">-- Sélectionner --</option>
+            <option value="school">Établissement scolaire / Formation</option>
+            <option value="association">Association / ONG</option>
+            <option value="business">Entreprise / PME</option>
+            <option value="commerce">Commerce / Service</option>
+            <option value="religious">Église / Organisation religieuse</option>
+            <option value="professional">Professionnel indépendant</option>
+            <option value="hotel">Hôtel / Tourisme</option>
+            <option value="health">Santé / Clinique</option>
+            <option value="events">Événementiel</option>
+            <option value="public">Institution publique</option>
+            <option value="other">Autre</option>
+          </select>
+        </div>
+
+        <!-- ASSOCIATION-SPECIFIC FIELDS -->
+        <div id="associationFields" class="hidden">
+          <!-- Type d'association -->
+          <div class="form-group">
+            <label>Type d'association<span class="required">*</span></label>
+            <select name="associationType">
+              <option value="">-- Sélectionner --</option>
+              <option value="cultural">Association culturelle</option>
+              <option value="sports">Association sportive</option>
+              <option value="ngo">ONG / Humanitaire</option>
+              <option value="youth">Association de jeunesse</option>
+              <option value="parents">Association de parents d'élèves</option>
+              <option value="professional">Association professionnelle / Réseau</option>
+              <option value="cooperative">Coopérative</option>
+              <option value="other">Autre (préciser)</option>
+            </select>
+          </div>
+
+          <!-- Objectif principal -->
+          <div class="form-group">
+            <label>Objectif principal du site<span class="required">*</span></label>
+            <div class="radio-group">
+              <div class="radio-item">
+                <input type="radio" name="siteObjective" value="showcase" id="obj_showcase" />
+                <label for="obj_showcase">Présenter l'association et ses activités (vitrine)</label>
+              </div>
+              <div class="radio-item">
+                <input type="radio" name="siteObjective" value="recruit" id="obj_recruit" />
+                <label for="obj_recruit">Recruter de nouveaux membres</label>
+              </div>
+              <div class="radio-item">
+                <input type="radio" name="siteObjective" value="donations" id="obj_donations" />
+                <label for="obj_donations">Collecter des dons / cotisations en ligne</label>
+              </div>
+              <div class="radio-item">
+                <input type="radio" name="siteObjective" value="news" id="obj_news" />
+                <label for="obj_news">Publier des actualités et événements</label>
+              </div>
+              <div class="radio-item">
+                <input type="radio" name="siteObjective" value="multiple" id="obj_multiple" />
+                <label for="obj_multiple">Plusieurs de ces objectifs (site complet)</label>
+              </div>
+              <div class="radio-item">
+                <input type="radio" name="siteObjective" value="other" id="obj_other" />
+                <label for="obj_other">Autre</label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Fonctionnalités souhaitées -->
+          <div class="form-group">
+            <label>Fonctionnalités souhaitées</label>
+            <p class="form-hint">Sélectionnez toutes les fonctionnalités que vous souhaitez</p>
+            <div class="checkbox-group">
+              <div class="checkbox-item">
+                <input type="checkbox" name="features" value="presentation" id="feat_presentation" />
+                <label for="feat_presentation">Page de présentation (mission, équipe, historique)</label>
+              </div>
+              <div class="checkbox-item">
+                <input type="checkbox" name="features" value="calendar" id="feat_calendar" />
+                <label for="feat_calendar">Calendrier d'événements / activités</label>
+              </div>
+              <div class="checkbox-item">
+                <input type="checkbox" name="features" value="membership" id="feat_membership" />
+                <label for="feat_membership">Formulaire d'adhésion en ligne</label>
+              </div>
+              <div class="checkbox-item">
+                <input type="checkbox" name="features" value="payment" id="feat_payment" />
+                <label for="feat_payment">Paiement de cotisations / dons (Mobile Money, carte)</label>
+              </div>
+              <div class="checkbox-item">
+                <input type="checkbox" name="features" value="gallery" id="feat_gallery" />
+                <label for="feat_gallery">Galerie photos / vidéos</label>
+              </div>
+              <div class="checkbox-item">
+                <input type="checkbox" name="features" value="blog" id="feat_blog" />
+                <label for="feat_blog">Blog / actualités</label>
+              </div>
+              <div class="checkbox-item">
+                <input type="checkbox" name="features" value="members_area" id="feat_members" />
+                <label for="feat_members">Espace membres (accès réservé)</label>
+              </div>
+              <div class="checkbox-item">
+                <input type="checkbox" name="features" value="newsletter" id="feat_newsletter" />
+                <label for="feat_newsletter">Newsletter / inscription à une liste de diffusion</label>
+              </div>
+              <div class="checkbox-item">
+                <input type="checkbox" name="features" value="map" id="feat_map" />
+                <label for="feat_map">Carte / localisation des antennes</label>
+              </div>
+              <div class="checkbox-item">
+                <input type="checkbox" name="features" value="documents" id="feat_documents" />
+                <label for="feat_documents">Téléchargement de documents (statuts, rapports, PV)</label>
+              </div>
+              <div class="checkbox-item">
+                <input type="checkbox" name="features" value="social" id="feat_social" />
+                <label for="feat_social">Liens vers les réseaux sociaux</label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Langues du site -->
+          <div class="form-group">
+            <label>Langues du site<span class="required">*</span></label>
+            <div class="checkbox-group">
+              <div class="checkbox-item">
+                <input type="checkbox" name="languages" value="french" id="lang_french" />
+                <label for="lang_french">Français</label>
+              </div>
+              <div class="checkbox-item">
+                <input type="checkbox" name="languages" value="english" id="lang_english" />
+                <label for="lang_english">Anglais</label>
+              </div>
+              <div class="checkbox-item">
+                <input type="checkbox" name="languages" value="japanese" id="lang_japanese" />
+                <label for="lang_japanese">Japonais</label>
+              </div>
+              <div class="checkbox-item">
+                <input type="checkbox" name="languages" value="other" id="lang_other" />
+                <label for="lang_other">Autre (préciser dans le commentaire)</label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Délai souhaité -->
+          <div class="form-group">
+            <label>Délai souhaité<span class="required">*</span></label>
+            <select name="deadline">
+              <option value="">-- Sélectionner --</option>
+              <option value="urgent">Urgent (moins de 2 semaines)</option>
+              <option value="normal">Normal (1 à 2 mois)</option>
+              <option value="flexible">Flexible / pas de contrainte</option>
+            </select>
+          </div>
+
+          <!-- Commentaire libre -->
+          <div class="form-group">
+            <label>Décrivez brièvement votre association et vos attentes pour ce site</label>
+            <textarea name="associationDescription" rows="5" placeholder="Exemple : Notre association existe depuis 2010 et vise à promouvoir la culture locale. Nous avons besoin d'un site pour présenter nos activités et recruter de nouveaux membres..."></textarea>
+          </div>
+
+          <!-- Gestion du contenu -->
+          <div class="form-group">
+            <label>Une fois le site en ligne, qui mettra à jour le contenu ?<span class="required">*</span></label>
+            <div class="radio-group">
+              <div class="radio-item">
+                <input type="radio" name="contentManagement" value="self" id="cm_self" />
+                <label for="cm_self">Moi-même ou un membre de mon équipe (Je veux un espace d'administration simple pour faire mes modifications sans toucher au code)</label>
+              </div>
+              <div class="radio-item">
+                <input type="radio" name="contentManagement" value="nipponmboa" id="cm_nipponmboa" />
+                <label for="cm_nipponmboa">Je confie la maintenance à NipponMboa (Je vous envoie les modifications par email/WhatsApp et vous les appliquez pour moi)</label>
+              </div>
+              <div class="radio-item">
+                <input type="radio" name="contentManagement" value="static" id="cm_static" />
+                <label for="cm_static">Le site n'aura pas besoin de mises à jour fréquentes (Le contenu restera essentiellement le même après la mise en ligne)</label>
+              </div>
+              <div class="radio-item">
+                <input type="radio" name="contentManagement" value="advice" id="cm_advice" />
+                <label for="cm_advice">Je ne sais pas encore, conseillez-moi</label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <button type="submit" class="submit-btn" id="submitBtn">Envoyer la demande</button>
+    </form>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="NipponMboa-Consulting-Logo.jpeg" alt="NipponMboa Consulting" class="footer-logo" />
+        <p>Une expérience unique au service de votre réussite</p>
+      </div>
+      <div class="footer-links">
+        <a href="index.html#about">À propos</a>
+        <a href="index.html#poles">Nos Pôles</a>
+        <a href="index.html#services">Services</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
+      <p class="footer-copy">© 2025 NipponMboa Consulting. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <script src="bridge-it-form-v2.js"></script>
+</body>
+</html>
