@@ -5,7 +5,7 @@ const successMessage = document.getElementById('successMessage');
 const errorMessage = document.getElementById('errorMessage');
 
 // Replace with your Google Apps Script URL
-const GOOGLE_SCRIPT_URL = 'PASTE_YOUR_WEB_APP_URL_HERE';
+const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwgLRzXmaNcfJRZnp1AOn1rEzVlWEJV38G5H_e7uK5WwVXPhyXFLXL15Kq3ybFiPpt6/exec';
 
 // ===================================
 // CONDITIONAL LOGIC
