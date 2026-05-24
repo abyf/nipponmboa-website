@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Demande Bridge IT Solutions - NipponMboa Consulting</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    .form-hero {
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+      color: #fff;
+      padding: 80px 20px 60px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .form-hero::before {
+      content: '💻';
+      position: absolute;
+      font-size: 200px;
+      opacity: 0.05;
+      right: -50px;
+      top: -50px;
+    }
+    .form-hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      position: relative;
+      z-index: 1;
+    }
+    .form-hero p {
+      font-size: 1.1rem;
+      opacity: 0.9;
+      max-width: 600px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+    .form-container {
+      max-width: 800px;
+      margin: -40px auto 80px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+      padding: 40px;
+      position: relative;
+      z-index: 2;
+    }
+    .form-section {
+      margin-bottom: 30px;
+      padding-bottom: 30px;
+      border-bottom: 1px solid #eee;
+    }
+    .form-section:last-child {
+      border-bottom: none;
+    }
+    .form-section-title {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #1a1a2e;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .form-section-icon {
+      font-size: 1.5rem;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    .form-group label {
+      display: block;
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 8px;
+      font-size: 0.95rem;
+    }
+    .form-group .required {
+      color: #e74c3c;
+      margin-left: 3px;
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 12px 15px;
+      border: 2px solid #e0e0e0;
+      border-radius: 6px;
+      font-size: 1rem;
+      font-family: inherit;
+      transition: all 0.3s ease;
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: #c8102e;
+      box-shadow: 0 0 0 3px rgba(200, 16, 46, 0.1);
+    }
+    .form-group textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+    .form-group-inline {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    .checkbox-group {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 12px;
+    }
+    .checkbox-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .checkbox-item input[type="checkbox"] {
+      width: auto;
+      margin: 0;
+      cursor: pointer;
+    }
+    .checkbox-item label {
+      margin: 0;
+      font-weight: 400;
+      cursor: pointer;
+    }
+    .radio-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .radio-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .radio-item input[type="radio"] {
+      width: auto;
+      margin: 0;
+      cursor: pointer;
+    }
+    .radio-item label {
+      margin: 0;
+      font-weight: 400;
+      cursor: pointer;
+    }
+    .form-hint {
+      font-size: 0.85rem;
+      color: #666;
+      margin-top: 5px;
+    }
+    .submit-btn {
+      background: linear-gradient(135deg, #c8102e 0%, #a00d24 100%);
+      color: #fff;
+      padding: 15px 40px;
+      border: none;
+      border-radius: 6px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      width: 100%;
+      margin-top: 10px;
+    }
+    .submit-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(200, 16, 46, 0.3);
+    }
+    .submit-btn:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+      transform: none;
+    }
+    .success-message,
+    .error-message {
+      padding: 15px;
+      border-radius: 6px;
+      margin-bottom: 20px;
+      display: none;
+    }
+    .success-message {
+      background: #d4edda;
+      color: #155724;
+      border: 1px solid #c3e6cb;
+    }
+    .error-message {
+      background: #f8d7da;
+      color: #721c24;
+      border: 1px solid #f5c6cb;
+    }
+    .success-message.show,
+    .error-message.show {
+      display: block;
+    }
+    @media (max-width: 768px) {
+      .form-hero h1 {
+        font-size: 1.8rem;
+      }
+      .form-container {
+        margin: -40px 20px 60px;
+        padding: 30px 20px;
+      }
+      .form-group-inline {
+        grid-template-columns: 1fr;
+      }
+      .checkbox-group {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-brand">
+      <a href="index.html">
+        <img src="NipponMboa-Consulting-Logo.jpeg" alt="NipponMboa Consulting" class="nav-logo" />
+      </a>
+    </div>
+    <div class="nav-links">
+      <a href="index.html#about" data-i18n="nav_about">À propos</a>
+      <a href="index.html#poles" data-i18n="nav_poles">Nos Pôles</a>
+      <a href="index.html#services" data-i18n="nav_services">Services</a>
+      <a href="index.html#contact" data-i18n="nav_contact">Contact</a>
+    </div>
+    <div class="lang-switcher">
+      <button class="lang-btn active" data-lang="fr">FR</button>
+      <button class="lang-btn" data-lang="en">EN</button>
+      <button class="lang-btn" data-lang="ja">日本語</button>
+    </div>
+    <button class="nav-toggle" aria-label="Menu">&#9776;</button>
+  </nav>
+
+  <!-- FORM HERO -->
+  <section class="form-hero">
+    <h1 data-i18n="form_hero_title">Demande de Service IT</h1>
+    <p data-i18n="form_hero_subtitle">Décrivez-nous votre projet, nous vous répondrons sous 48h</p>
+  </section>
+
+  <!-- FORM CONTAINER -->
+  <div class="form-container">
+    <div class="success-message" id="successMessage">
+      <strong data-i18n="form_success_title">✓ Demande envoyée avec succès !</strong>
+      <p data-i18n="form_success_text">Nous vous contacterons dans les 48 heures.</p>
+    </div>
+    <div class="error-message" id="errorMessage">
+      <strong data-i18n="form_error_title">✗ Erreur</strong>
+      <p data-i18n="form_error_text">Une erreur s'est produite. Veuillez réessayer.</p>
+    </div>
+
+    <form id="bridgeItForm">
+      <!-- SECTION 1: CONTACT INFORMATION -->
+      <div class="form-section">
+        <h2 class="form-section-title">
+          <span class="form-section-icon">👤</span>
+          <span data-i18n="form_section1_title">Informations de Contact</span>
+        </h2>
+        <div class="form-group-inline">
+          <div class="form-group">
+            <label data-i18n="form_name_label">Nom complet<span class="required">*</span></label>
+            <input type="text" name="fullName" required data-i18n-placeholder="form_name_placeholder" placeholder="Ex: Jean Dupont" />
+          </div>
+          <div class="form-group">
+            <label data-i18n="form_company_label">Société / Organisation</label>
+            <input type="text" name="company" data-i18n-placeholder="form_company_placeholder" placeholder="Ex: ABC Sarl" />
+          </div>
+        </div>
+        <div class="form-group-inline">
+          <div class="form-group">
+            <label data-i18n="form_email_label">Email<span class="required">*</span></label>
+            <input type="email" name="email" required data-i18n-placeholder="form_email_placeholder" placeholder="exemple@email.com" />
+          </div>
+          <div class="form-group">
+            <label data-i18n="form_phone_label">Téléphone / WhatsApp<span class="required">*</span></label>
+            <input type="tel" name="phone" required data-i18n-placeholder="form_phone_placeholder" placeholder="+237 6XX XXX XXX" />
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION 2: PROJECT TYPE -->
+      <div class="form-section">
+        <h2 class="form-section-title">
+          <span class="form-section-icon">💼</span>
+          <span data-i18n="form_section2_title">Type de Service</span>
+        </h2>
+        <div class="form-group">
+          <label data-i18n="form_services_label">Service(s) souhaité(s)<span class="required">*</span></label>
+          <div class="checkbox-group">
+            <div class="checkbox-item">
+              <input type="checkbox" name="services" value="website" id="service_website" />
+              <label for="service_website" data-i18n="form_service_website">Création de Site Web</label>
+            </div>
+            <div class="checkbox-item">
+              <input type="checkbox" name="services" value="management" id="service_management" />
+              <label for="service_management" data-i18n="form_service_management">Plateforme de Gestion</label>
+            </div>
+            <div class="checkbox-item">
+              <input type="checkbox" name="services" value="ecommerce" id="service_ecommerce" />
+              <label for="service_ecommerce" data-i18n="form_service_ecommerce">Site E-commerce</label>
+            </div>
+            <div class="checkbox-item">
+              <input type="checkbox" name="services" value="cloud" id="service_cloud" />
+              <label for="service_cloud" data-i18n="form_service_cloud">Formation Cloud Computing</label>
+            </div>
+            <div class="checkbox-item">
+              <input type="checkbox" name="services" value="ai" id="service_ai" />
+              <label for="service_ai" data-i18n="form_service_ai">Formation Intelligence Artificielle</label>
+            </div>
+            <div class="checkbox-item">
+              <input type="checkbox" name="services" value="training" id="service_training" />
+              <label for="service_training" data-i18n="form_service_training">Formation Inter/Intra Entreprise</label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION 3: PROJECT DETAILS -->
+      <div class="form-section">
+        <h2 class="form-section-title">
+          <span class="form-section-icon">📋</span>
+          <span data-i18n="form_section3_title">Détails du Projet</span>
+        </h2>
+        <div class="form-group">
+          <label data-i18n="form_project_desc_label">Description du projet<span class="required">*</span></label>
+          <textarea name="projectDescription" required data-i18n-placeholder="form_project_desc_placeholder" placeholder="Décrivez votre projet, vos besoins, vos objectifs..."></textarea>
+          <p class="form-hint" data-i18n="form_project_desc_hint">Soyez aussi détaillé que possible pour nous aider à mieux comprendre vos besoins.</p>
+        </div>
+        
+        <div class="form-group">
+          <label data-i18n="form_features_label">Fonctionnalités souhaitées</label>
+          <textarea name="desiredFeatures" data-i18n-placeholder="form_features_placeholder" placeholder="Ex: Formulaire de contact, paiement en ligne, gestion des stocks, tableau de bord..."></textarea>
+        </div>
+
+        <div class="form-group">
+          <label data-i18n="form_existing_label">Site ou système existant ?</label>
+          <div class="radio-group">
+            <div class="radio-item">
+              <input type="radio" name="existingSystem" value="new" id="existing_new" checked />
+              <label for="existing_new" data-i18n="form_existing_new">Nouveau projet</label>
+            </div>
+            <div class="radio-item">
+              <input type="radio" name="existingSystem" value="redesign" id="existing_redesign" />
+              <label for="existing_redesign" data-i18n="form_existing_redesign">Refonte / Amélioration</label>
+            </div>
+            <div class="radio-item">
+              <input type="radio" name="existingSystem" value="maintenance" id="existing_maintenance" />
+              <label for="existing_maintenance" data-i18n="form_existing_maintenance">Maintenance</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label data-i18n="form_existing_url_label">URL du site existant (si applicable)</label>
+          <input type="url" name="existingUrl" data-i18n-placeholder="form_existing_url_placeholder" placeholder="https://exemple.com" />
+        </div>
+      </div>
+
+      <!-- SECTION 4: BUDGET & TIMELINE -->
+      <div class="form-section">
+        <h2 class="form-section-title">
+          <span class="form-section-icon">💰</span>
+          <span data-i18n="form_section4_title">Budget et Délai</span>
+        </h2>
+        <div class="form-group-inline">
+          <div class="form-group">
+            <label data-i18n="form_budget_label">Budget estimé<span class="required">*</span></label>
+            <select name="budget" required>
+              <option value="" data-i18n="form_budget_select">Sélectionner une fourchette</option>
+              <option value="<500k" data-i18n="form_budget_1">< 500,000 FCFA</option>
+              <option value="500k-1M">500,000 - 1,000,000 FCFA</option>
+              <option value="1M-2M">1,000,000 - 2,000,000 FCFA</option>
+              <option value="2M-5M">2,000,000 - 5,000,000 FCFA</option>
+              <option value="5M+">5,000,000+ FCFA</option>
+              <option value="flexible" data-i18n="form_budget_flexible">Flexible / À discuter</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label data-i18n="form_timeline_label">Délai souhaité<span class="required">*</span></label>
+            <select name="timeline" required>
+              <option value="" data-i18n="form_timeline_select">Sélectionner un délai</option>
+              <option value="urgent" data-i18n="form_timeline_urgent">Urgent (< 2 semaines)</option>
+              <option value="1month" data-i18n="form_timeline_1month">1 mois</option>
+              <option value="2-3months" data-i18n="form_timeline_2-3months">2-3 mois</option>
+              <option value="3-6months" data-i18n="form_timeline_3-6months">3-6 mois</option>
+              <option value="flexible" data-i18n="form_timeline_flexible">Flexible</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION 5: ADDITIONAL INFO -->
+      <div class="form-section">
+        <h2 class="form-section-title">
+          <span class="form-section-icon">📝</span>
+          <span data-i18n="form_section5_title">Informations Complémentaires</span>
+        </h2>
+        <div class="form-group">
+          <label data-i18n="form_references_label">Avez-vous des sites de référence ?</label>
+          <textarea name="references" data-i18n-placeholder="form_references_placeholder" placeholder="Exemples de sites que vous aimez, ou description du style souhaité..."></textarea>
+        </div>
+        <div class="form-group">
+          <label data-i18n="form_additional_label">Autres informations</label>
+          <textarea name="additionalInfo" data-i18n-placeholder="form_additional_placeholder" placeholder="Toute autre information utile pour votre projet..."></textarea>
+        </div>
+      </div>
+
+      <button type="submit" class="submit-btn" id="submitBtn" data-i18n="form_submit_btn">Envoyer la demande</button>
+    </form>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="NipponMboa-Consulting-Logo.jpeg" alt="NipponMboa Consulting" class="footer-logo" />
+        <p data-i18n="footer_tagline">Une expérience unique au service de votre réussite</p>
+      </div>
+      <div class="footer-links">
+        <a href="index.html#about" data-i18n="nav_about">À propos</a>
+        <a href="index.html#poles" data-i18n="nav_poles">Nos Pôles</a>
+        <a href="index.html#services" data-i18n="nav_services">Services</a>
+        <a href="index.html#contact" data-i18n="nav_contact">Contact</a>
+      </div>
+      <p class="footer-copy" data-i18n="footer_copy">© 2025 NipponMboa Consulting. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <script src="bridge-it-form.js"></script>
+</body>
+</html>
