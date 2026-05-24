@@ -5,7 +5,7 @@ const successMessage = document.getElementById('successMessage');
 const errorMessage = document.getElementById('errorMessage');
 
 // Your Google Apps Script URL
-const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwgLRzXmaNcfJRZnp1AOn1rEzVlWEJV38G5H_e7uK5WwVXPhyXFLXL15Kq3ybFiPpt6/exec';
+const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyd2VpWQCirH_xc7VmAMSnMZTUEBijQQHIaTeiCmTq2ibMGQ3rfhYDJiGmBpG4G0El6/exec';
 
 // ===================================
 // MULTILINGUAL SUPPORT
