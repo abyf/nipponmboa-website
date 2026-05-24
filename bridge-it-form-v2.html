@@ -254,31 +254,31 @@
       <div class="form-section">
         <h2 class="form-section-title">
           <span class="form-section-icon">👤</span>
-          <span>Informations de Contact</span>
+          <span data-i18n="contactSection">Informations de Contact</span>
         </h2>
         <div class="form-group-inline">
           <div class="form-group">
-            <label>Nom complet<span class="required">*</span></label>
-            <input type="text" name="fullName" required placeholder="Ex: Jean Dupont" />
+            <label data-i18n="fullName">Nom complet</label><span class="required">*</span>
+            <input type="text" name="fullName" required data-i18n-placeholder="fullNamePlaceholder" />
           </div>
           <div class="form-group">
-            <label>Email<span class="required">*</span></label>
-            <input type="email" name="email" required placeholder="exemple@email.com" />
+            <label data-i18n="email">Email</label><span class="required">*</span>
+            <input type="email" name="email" required data-i18n-placeholder="emailPlaceholder" />
           </div>
         </div>
         <div class="form-group-inline">
           <div class="form-group">
-            <label>Téléphone / WhatsApp<span class="required">*</span></label>
-            <input type="tel" name="phone" required placeholder="+237 6XX XXX XXX" />
+            <label data-i18n="phone">Téléphone / WhatsApp</label><span class="required">*</span>
+            <input type="tel" name="phone" required data-i18n-placeholder="phonePlaceholder" />
           </div>
           <div class="form-group">
-            <label>Profession / Fonction</label>
-            <input type="text" name="occupation" placeholder="Ex: Directeur, Enseignant, Entrepreneur" />
+            <label data-i18n="occupation">Profession / Fonction</label>
+            <input type="text" name="occupation" data-i18n-placeholder="occupationPlaceholder" />
           </div>
         </div>
         <div class="form-group">
-          <label>Adresse</label>
-          <input type="text" name="address" placeholder="Ville, Quartier" />
+          <label data-i18n="address">Adresse</label>
+          <input type="text" name="address" data-i18n-placeholder="addressPlaceholder" />
         </div>
       </div>
 
@@ -384,6 +384,12 @@
             </div>
           </div>
 
+          <!-- Show if "Other" is selected for site objective -->
+          <div class="form-group hidden" id="siteObjectiveOtherGroup">
+            <label>Précisez l'objectif<span class="required">*</span></label>
+            <input type="text" name="siteObjectiveOther" placeholder="Décrivez votre objectif principal" />
+          </div>
+
           <!-- Fonctionnalités souhaitées -->
           <div class="form-group">
             <label>Fonctionnalités souhaitées</label>
@@ -454,9 +460,15 @@
               </div>
               <div class="checkbox-item">
                 <input type="checkbox" name="languages" value="other" id="lang_other" />
-                <label for="lang_other">Autre (préciser dans le commentaire)</label>
+                <label for="lang_other">Autre (préciser)</label>
               </div>
             </div>
+          </div>
+
+          <!-- Show if "Other" is checked for languages -->
+          <div class="form-group hidden" id="languagesOtherGroup">
+            <label>Précisez la(les) langue(s)<span class="required">*</span></label>
+            <input type="text" name="languagesOther" placeholder="Ex: Arabe, Chinois, Espagnol..." />
           </div>
 
           <!-- Délai souhaité -->

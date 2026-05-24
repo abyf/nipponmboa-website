@@ -273,14 +273,31 @@ function applyTranslations(lang) {
   currentLang = lang;
   const t = translations[lang];
   
-  // Update all translatable elements
+  // Update hero
   document.querySelector('.form-hero h1').textContent = t.heroTitle;
   document.querySelector('.form-hero p').textContent = t.heroSubtitle;
   
+  // Update messages
   document.querySelector('#successMessage strong').textContent = t.successTitle;
   document.querySelector('#successMessage p').textContent = t.successText;
   document.querySelector('#errorMessage strong').textContent = t.errorTitle;
   document.querySelector('#errorMessage p').textContent = t.errorText;
+  
+  // Update all elements with data-i18n attribute
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (t[key]) {
+      el.textContent = t[key];
+    }
+  });
+  
+  // Update all placeholders
+  document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+    const key = el.getAttribute('data-i18n-placeholder');
+    if (t[key]) {
+      el.placeholder = t[key];
+    }
+  });
   
   // Update submit button
   submitBtn.textContent = t.submitBtn;
@@ -289,6 +306,9 @@ function applyTranslations(lang) {
   document.querySelectorAll('.lang-btn').forEach(btn => {
     btn.classList.toggle('active', btn.dataset.lang === lang);
   });
+  
+  // Update document language
+  document.documentElement.lang = lang;
 }
 
 // Language switcher
@@ -353,6 +373,36 @@ structureTypeSelect.addEventListener('change', function() {
     associationFields.classList.remove('hidden');
     document.querySelector('select[name="associationType"]').required = true;
     document.querySelector('select[name="deadline"]').required = true;
+  }
+});
+
+// Show/hide "Other" field for site objective
+const siteObjectiveRadios = document.querySelectorAll('input[name="siteObjective"]');
+const siteObjectiveOtherGroup = document.getElementById('siteObjectiveOtherGroup');
+
+siteObjectiveRadios.forEach(radio => {
+  radio.addEventListener('change', function() {
+    if (this.value === 'other' && this.checked) {
+      siteObjectiveOtherGroup.classList.remove('hidden');
+      siteObjectiveOtherGroup.querySelector('input').required = true;
+    } else {
+      siteObjectiveOtherGroup.classList.add('hidden');
+      siteObjectiveOtherGroup.querySelector('input').required = false;
+    }
+  });
+});
+
+// Show/hide "Other" field for languages
+const langOtherCheckbox = document.getElementById('lang_other');
+const languagesOtherGroup = document.getElementById('languagesOtherGroup');
+
+langOtherCheckbox.addEventListener('change', function() {
+  if (this.checked) {
+    languagesOtherGroup.classList.remove('hidden');
+    languagesOtherGroup.querySelector('input').required = true;
+  } else {
+    languagesOtherGroup.classList.add('hidden');
+    languagesOtherGroup.querySelector('input').required = false;
   }
 });
 
@@ -437,13 +487,6 @@ form.addEventListener('submit', async (e) => {
 // ===================================
 // VALIDATION
 // ===================================
-
-const siteObjectiveRadios = document.querySelectorAll('input[name="siteObjective"]');
-siteObjectiveRadios.forEach(radio => {
-  radio.addEventListener('change', () => {
-    siteObjectiveRadios.forEach(r => r.setCustomValidity(''));
-  });
-});
 
 const languageCheckboxes = document.querySelectorAll('input[name="languages"]');
 languageCheckboxes.forEach(checkbox => {
