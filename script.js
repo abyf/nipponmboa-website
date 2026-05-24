@@ -354,3 +354,10 @@ function handleSubmit(e) {
 }
 
 applyLang('fr');
+
+// Function to open form with current language
+function openFormWithLang(e) {
+  e.preventDefault();
+  const formUrl = `bridge-it-form-v2.html?lang=${currentLang}`;
+  window.location.href = formUrl;
+}
