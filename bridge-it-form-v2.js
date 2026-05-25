@@ -260,6 +260,131 @@ const translations = {
     validationObjective: 'Please select an objective',
     validationLanguages: 'Please select at least one language',
     validationContent: 'Please select an option'
+  },
+  
+  ja: {
+    // Hero
+    heroTitle: 'ITサービス依頼',
+    heroSubtitle: 'プロジェクトを説明してください。48時間以内にご返信いたします',
+    
+    // Success/Error messages
+    successTitle: '✓ リクエストが正常に送信されました！',
+    successText: '48時間以内にご連絡いたします。',
+    errorTitle: '✗ エラー',
+    errorText: 'エラーが発生しました。もう一度お試しください。',
+    
+    // Section titles
+    contactSection: '連絡先情報',
+    serviceSection: 'サービスタイプ',
+    websiteSection: 'ウェブサイトの詳細',
+    
+    // Contact fields
+    fullName: '氏名',
+    fullNamePlaceholder: '例：山田太郎',
+    email: 'メール',
+    emailPlaceholder: 'example@email.com',
+    phone: '電話 / WhatsApp',
+    phonePlaceholder: '+237 6XX XXX XXX',
+    occupation: '職業 / 役職',
+    occupationPlaceholder: '例：ディレクター、教師、起業家',
+    address: '住所',
+    addressPlaceholder: '市区町村、地区',
+    
+    // Service type
+    serviceTypeLabel: 'どのサービスが必要ですか？',
+    serviceTypeSelect: '-- サービスを選択 --',
+    serviceWebsite: 'ウェブサイト制作',
+    serviceManagement: '管理プラットフォーム',
+    serviceEcommerce: 'Eコマースサイト',
+    serviceCloud: 'クラウドコンピューティング研修',
+    serviceAI: '人工知能研修',
+    serviceTraining: '企業間・社内研修',
+    serviceOther: 'その他（詳細を記入）',
+    serviceOtherLabel: 'ニーズを詳しく記入',
+    serviceOtherPlaceholder: '必要なサービスを説明してください',
+    
+    // Structure type
+    structureTypeLabel: 'どのような組織向けですか？',
+    structureSelect: '-- 選択 --',
+    structureSchool: '教育機関 / 研修',
+    structureAssociation: '協会 / NGO',
+    structureBusiness: 'ビジネス / 中小企業',
+    structureCommerce: '商業 / サービス',
+    structureReligious: '教会 / 宗教団体',
+    structureProfessional: '独立専門家',
+    structureHotel: 'ホテル / 観光',
+    structureHealth: '医療 / クリニック',
+    structureEvents: 'イベント',
+    structurePublic: '公共機関',
+    structureOther: 'その他',
+    
+    // Association fields
+    associationTypeLabel: '協会の種類',
+    associationCultural: '文化協会',
+    associationSports: 'スポーツ協会',
+    associationNGO: 'NGO / 人道支援',
+    associationYouth: '青年協会',
+    associationParents: '保護者会',
+    associationProfessional: '専門家協会 / ネットワーク',
+    associationCooperative: '協同組合',
+    associationOther: 'その他（詳細を記入）',
+    
+    // Site objective
+    siteObjectiveLabel: 'サイトの主な目的',
+    objShowcase: '協会と活動を紹介する（ショーケース）',
+    objRecruit: '新しいメンバーを募集',
+    objDonations: 'オンラインで寄付 / 会費を集める',
+    objNews: 'ニュースとイベントを公開',
+    objMultiple: 'これらの目的の複数（完全サイト）',
+    objOther: 'その他',
+    
+    // Features
+    featuresLabel: '希望する機能',
+    featuresHint: '必要な機能をすべて選択してください',
+    featPresentation: 'プレゼンテーションページ（使命、チーム、歴史）',
+    featCalendar: 'イベント / 活動カレンダー',
+    featMembership: 'オンライン会員登録フォーム',
+    featPayment: '会費 / 寄付の支払い（Mobile Money、カード）',
+    featGallery: '写真 / 動画ギャラリー',
+    featBlog: 'ブログ / ニュース',
+    featMembersArea: '会員エリア（限定アクセス）',
+    featNewsletter: 'ニュースレター / メーリングリスト登録',
+    featMap: '地図 / 支部の場所',
+    featDocuments: '文書ダウンロード（規約、報告書、議事録）',
+    featSocial: 'ソーシャルメディアリンク',
+    
+    // Languages
+    languagesLabel: 'サイトの言語',
+    langFrench: 'フランス語',
+    langEnglish: '英語',
+    langJapanese: '日本語',
+    langOther: 'その他（コメントに記入）',
+    
+    // Deadline
+    deadlineLabel: '希望スケジュール',
+    deadlineUrgent: '緊急（2週間未満）',
+    deadlineNormal: '通常（1〜2ヶ月）',
+    deadlineFlexible: '柔軟 / 制約なし',
+    
+    // Description
+    descriptionLabel: '協会とこのサイトへの期待を簡単に説明してください',
+    descriptionPlaceholder: '例：当協会は2010年から存在し、地域文化の促進を目指しています。活動を紹介し、新しいメンバーを募集するためのサイトが必要です...',
+    
+    // Content management
+    contentMgmtLabel: 'サイト公開後、誰がコンテンツを更新しますか？',
+    cmSelf: '自分またはチームメンバー（コードに触れずに変更できる簡単な管理パネルが必要）',
+    cmNipponmboa: 'NipponMboaにメンテナンスを任せる（メール/WhatsAppで変更を送り、適用してもらう）',
+    cmStatic: 'サイトは頻繁な更新を必要としない（公開後もコンテンツは基本的に同じまま）',
+    cmAdvice: 'まだ分からない、アドバイスが欲しい',
+    
+    // Submit
+    submitBtn: 'リクエストを送信',
+    submittingBtn: '送信中...',
+    
+    // Validation
+    validationObjective: '目的を選択してください',
+    validationLanguages: '少なくとも1つの言語を選択してください',
+    validationContent: 'オプションを選択してください'
   }
 };
 
@@ -334,27 +459,46 @@ applyTranslations(currentLang);
 const serviceTypeSelect = document.getElementById('serviceType');
 const serviceTypeOtherGroup = document.getElementById('serviceTypeOtherGroup');
 const websiteSection = document.getElementById('websiteSection');
+const managementSection = document.getElementById('managementSection');
+const ecommerceSection = document.getElementById('ecommerceSection');
+const trainingSection = document.getElementById('trainingSection');
 
 serviceTypeSelect.addEventListener('change', function() {
   const selectedValue = this.value;
   
+  // Hide all service-specific sections first
+  websiteSection.classList.add('hidden');
+  managementSection.classList.add('hidden');
+  ecommerceSection.classList.add('hidden');
+  trainingSection.classList.add('hidden');
+  serviceTypeOtherGroup.classList.add('hidden');
+  
+  // Remove all required attributes
+  document.querySelectorAll('#websiteSection [required], #managementSection [required], #ecommerceSection [required], #trainingSection [required]').forEach(field => {
+    field.required = false;
+  });
+  
+  // Show relevant section based on selection
   if (selectedValue === 'other') {
     serviceTypeOtherGroup.classList.remove('hidden');
     serviceTypeOtherGroup.querySelector('input').required = true;
-  } else {
-    serviceTypeOtherGroup.classList.add('hidden');
-    serviceTypeOtherGroup.querySelector('input').required = false;
-  }
-  
-  if (selectedValue === 'website') {
+  } else if (selectedValue === 'website') {
     websiteSection.classList.remove('hidden');
     document.getElementById('structureType').required = true;
-  } else {
-    websiteSection.classList.add('hidden');
-    document.getElementById('structureType').required = false;
-    document.querySelectorAll('#websiteSection [required]').forEach(field => {
-      field.required = false;
-    });
+  } else if (selectedValue === 'management') {
+    managementSection.classList.remove('hidden');
+    document.querySelector('select[name="userCount"]').required = true;
+    document.querySelector('textarea[name="managementDescription"]').required = true;
+  } else if (selectedValue === 'ecommerce') {
+    ecommerceSection.classList.remove('hidden');
+    document.querySelector('select[name="productType"]').required = true;
+    document.querySelector('select[name="productCount"]').required = true;
+    document.querySelector('select[name="deliveryZone"]').required = true;
+  } else if (selectedValue === 'cloud' || selectedValue === 'ai' || selectedValue === 'training') {
+    trainingSection.classList.remove('hidden');
+    document.querySelector('select[name="participantCount"]').required = true;
+    document.querySelector('select[name="participantLevel"]').required = true;
+    document.querySelector('textarea[name="trainingObjectives"]').required = true;
   }
 });
 
@@ -447,14 +591,37 @@ form.addEventListener('submit', async (e) => {
       address: formData.get('address') || 'N/A',
       serviceType: formData.get('serviceType'),
       serviceTypeOther: formData.get('serviceTypeOther') || 'N/A',
+      
+      // Website fields
       structureType: formData.get('structureType') || 'N/A',
       associationType: formData.get('associationType') || 'N/A',
       siteObjective: formData.get('siteObjective') || 'N/A',
+      siteObjectiveOther: formData.get('siteObjectiveOther') || 'N/A',
       features: formData.getAll('features').join(', ') || 'N/A',
       languages: formData.getAll('languages').join(', ') || 'N/A',
+      languagesOther: formData.get('languagesOther') || 'N/A',
       deadline: formData.get('deadline') || 'N/A',
       associationDescription: formData.get('associationDescription') || 'N/A',
-      contentManagement: formData.get('contentManagement') || 'N/A'
+      contentManagement: formData.get('contentManagement') || 'N/A',
+      
+      // Management platform fields
+      managementType: formData.getAll('managementType').join(', ') || 'N/A',
+      userCount: formData.get('userCount') || 'N/A',
+      managementDescription: formData.get('managementDescription') || 'N/A',
+      
+      // E-commerce fields
+      productType: formData.get('productType') || 'N/A',
+      productCount: formData.get('productCount') || 'N/A',
+      paymentMethods: formData.getAll('paymentMethods').join(', ') || 'N/A',
+      deliveryZone: formData.get('deliveryZone') || 'N/A',
+      ecommerceDescription: formData.get('ecommerceDescription') || 'N/A',
+      
+      // Training fields
+      participantCount: formData.get('participantCount') || 'N/A',
+      trainingType: formData.get('trainingType') || 'N/A',
+      participantLevel: formData.get('participantLevel') || 'N/A',
+      trainingObjectives: formData.get('trainingObjectives') || 'N/A',
+      trainingDuration: formData.get('trainingDuration') || 'N/A'
     };
     
     await fetch(GOOGLE_SCRIPT_URL, {

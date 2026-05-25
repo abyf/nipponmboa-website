@@ -513,6 +513,198 @@
         </div>
       </div>
 
+      <!-- SECTION 4: MANAGEMENT PLATFORM (shown if serviceType = "management") -->
+      <div class="form-section hidden" id="managementSection">
+        <h2 class="form-section-title">
+          <span class="form-section-icon">⚙️</span>
+          <span>Détails Plateforme de Gestion</span>
+        </h2>
+        
+        <div class="form-group">
+          <label>Quel type de gestion souhaitez-vous ?<span class="required">*</span></label>
+          <div class="checkbox-group">
+            <div class="checkbox-item">
+              <input type="checkbox" name="managementType" value="clients" id="mgmt_clients" />
+              <label for="mgmt_clients">Gestion des clients (CRM)</label>
+            </div>
+            <div class="checkbox-item">
+              <input type="checkbox" name="managementType" value="inventory" id="mgmt_inventory" />
+              <label for="mgmt_inventory">Gestion des stocks</label>
+            </div>
+            <div class="checkbox-item">
+              <input type="checkbox" name="managementType" value="hr" id="mgmt_hr" />
+              <label for="mgmt_hr">Gestion des ressources humaines</label>
+            </div>
+            <div class="checkbox-item">
+              <input type="checkbox" name="managementType" value="finance" id="mgmt_finance" />
+              <label for="mgmt_finance">Gestion financière / Comptabilité</label>
+            </div>
+            <div class="checkbox-item">
+              <input type="checkbox" name="managementType" value="project" id="mgmt_project" />
+              <label for="mgmt_project">Gestion de projets</label>
+            </div>
+            <div class="checkbox-item">
+              <input type="checkbox" name="managementType" value="other" id="mgmt_other" />
+              <label for="mgmt_other">Autre (préciser ci-dessous)</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Nombre d'utilisateurs prévus<span class="required">*</span></label>
+          <select name="userCount">
+            <option value="">-- Sélectionner --</option>
+            <option value="1-5">1-5 utilisateurs</option>
+            <option value="6-20">6-20 utilisateurs</option>
+            <option value="21-50">21-50 utilisateurs</option>
+            <option value="50+">Plus de 50 utilisateurs</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Décrivez vos besoins spécifiques<span class="required">*</span></label>
+          <textarea name="managementDescription" rows="5" placeholder="Exemple : Nous avons besoin d'un système pour suivre nos clients, gérer les devis et factures..."></textarea>
+        </div>
+      </div>
+
+      <!-- SECTION 5: E-COMMERCE (shown if serviceType = "ecommerce") -->
+      <div class="form-section hidden" id="ecommerceSection">
+        <h2 class="form-section-title">
+          <span class="form-section-icon">🛒</span>
+          <span>Détails E-commerce</span>
+        </h2>
+        
+        <div class="form-group">
+          <label>Type de produits à vendre<span class="required">*</span></label>
+          <select name="productType">
+            <option value="">-- Sélectionner --</option>
+            <option value="physical">Produits physiques</option>
+            <option value="digital">Produits numériques</option>
+            <option value="services">Services</option>
+            <option value="mixed">Mixte (physique + numérique/services)</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Nombre approximatif de produits<span class="required">*</span></label>
+          <select name="productCount">
+            <option value="">-- Sélectionner --</option>
+            <option value="1-20">1-20 produits</option>
+            <option value="21-100">21-100 produits</option>
+            <option value="101-500">101-500 produits</option>
+            <option value="500+">Plus de 500 produits</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Modes de paiement souhaités<span class="required">*</span></label>
+          <div class="checkbox-group">
+            <div class="checkbox-item">
+              <input type="checkbox" name="paymentMethods" value="mobile_money" id="pay_mobile" />
+              <label for="pay_mobile">Mobile Money (MTN, Orange, etc.)</label>
+            </div>
+            <div class="checkbox-item">
+              <input type="checkbox" name="paymentMethods" value="card" id="pay_card" />
+              <label for="pay_card">Carte bancaire</label>
+            </div>
+            <div class="checkbox-item">
+              <input type="checkbox" name="paymentMethods" value="paypal" id="pay_paypal" />
+              <label for="pay_paypal">PayPal</label>
+            </div>
+            <div class="checkbox-item">
+              <input type="checkbox" name="paymentMethods" value="bank_transfer" id="pay_bank" />
+              <label for="pay_bank">Virement bancaire</label>
+            </div>
+            <div class="checkbox-item">
+              <input type="checkbox" name="paymentMethods" value="cash" id="pay_cash" />
+              <label for="pay_cash">Paiement à la livraison</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Zone de livraison<span class="required">*</span></label>
+          <select name="deliveryZone">
+            <option value="">-- Sélectionner --</option>
+            <option value="local">Local (ville/région)</option>
+            <option value="national">National</option>
+            <option value="regional">Régional (CEMAC)</option>
+            <option value="international">International</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Besoins additionnels</label>
+          <textarea name="ecommerceDescription" rows="4" placeholder="Exemple : Besoin d'un système de gestion des stocks intégré, programme de fidélité..."></textarea>
+        </div>
+      </div>
+
+      <!-- SECTION 6: TRAINING (shown if serviceType = "cloud", "ai", or "training") -->
+      <div class="form-section hidden" id="trainingSection">
+        <h2 class="form-section-title">
+          <span class="form-section-icon">📚</span>
+          <span>Détails Formation</span>
+        </h2>
+        
+        <div class="form-group">
+          <label>Nombre de participants<span class="required">*</span></label>
+          <select name="participantCount">
+            <option value="">-- Sélectionner --</option>
+            <option value="1-5">1-5 personnes</option>
+            <option value="6-10">6-10 personnes</option>
+            <option value="11-20">11-20 personnes</option>
+            <option value="20+">Plus de 20 personnes</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Type de formation<span class="required">*</span></label>
+          <div class="radio-group">
+            <div class="radio-item">
+              <input type="radio" name="trainingType" value="in_person" id="train_person" />
+              <label for="train_person">En présentiel</label>
+            </div>
+            <div class="radio-item">
+              <input type="radio" name="trainingType" value="online" id="train_online" />
+              <label for="train_online">En ligne</label>
+            </div>
+            <div class="radio-item">
+              <input type="radio" name="trainingType" value="hybrid" id="train_hybrid" />
+              <label for="train_hybrid">Hybride (présentiel + en ligne)</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Niveau des participants<span class="required">*</span></label>
+          <select name="participantLevel">
+            <option value="">-- Sélectionner --</option>
+            <option value="beginner">Débutant</option>
+            <option value="intermediate">Intermédiaire</option>
+            <option value="advanced">Avancé</option>
+            <option value="mixed">Niveaux mixtes</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Objectifs de la formation<span class="required">*</span></label>
+          <textarea name="trainingObjectives" rows="4" placeholder="Exemple : Nos employés doivent apprendre à utiliser AWS pour héberger nos applications..."></textarea>
+        </div>
+
+        <div class="form-group">
+          <label>Durée souhaitée</label>
+          <select name="trainingDuration">
+            <option value="">-- Sélectionner --</option>
+            <option value="1-day">1 jour</option>
+            <option value="2-3-days">2-3 jours</option>
+            <option value="1-week">1 semaine</option>
+            <option value="2-weeks">2 semaines</option>
+            <option value="1-month">1 mois</option>
+            <option value="custom">Durée personnalisée</option>
+          </select>
+        </div>
+      </div>
+
       <button type="submit" class="submit-btn" id="submitBtn">Envoyer la demande</button>
     </form>
   </div>
