@@ -687,7 +687,19 @@ function applyLang(lang) {
 
 // Initialize language switcher
 document.querySelectorAll('.lang-btn').forEach(btn => {
-  btn.addEventListener('click', () => applyLang(btn.dataset.lang));
+  btn.addEventListener('click', () => {
+    applyLang(btn.dataset.lang);
+    
+    // If a quiz result is currently displayed, regenerate it in the new language
+    const resultSection = document.getElementById('quiz-result');
+    if (resultSection && resultSection.style.display !== 'none') {
+      const activeCard = document.querySelector('.quiz-card.active');
+      if (activeCard) {
+        const goal = activeCard.dataset.goal;
+        showQuizResult(goal);
+      }
+    }
+  });
 });
 
 // Mobile navigation toggle
