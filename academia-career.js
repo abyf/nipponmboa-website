@@ -372,7 +372,7 @@ const packRecommendations = {
           duration: { fr: "1-2 heures", en: "1-2 hours", ja: "1〜2時間" },
           title: { fr: "Orientation", en: "Guidance", ja: "進路相談" },
           desc: { fr: "Diagnostic personnalisé et plan d'études", en: "Personalized assessment and study plan", ja: "個別診断と学習計画" },
-          price: { min: 10000, max: 20000, perHour: true },
+          price: { perHour: 10000 },
           icon: "🧭"
         },
         {
@@ -387,9 +387,17 @@ const packRecommendations = {
               startMonth: 11,
               duration: { fr: "3 mois", en: "3 months", ja: "3ヶ月" },
               title: { fr: "JLPT & Culture Japonaise", en: "JLPT & Japanese Culture", ja: "JLPT & 日本文化" },
-              desc: { fr: "Préparation examen + culture", en: "Exam prep + culture", ja: "試験対策 + 文化" },
+              desc: { fr: "Préparation examen + culture (peut démarrer à partir du mois 10 ou 11)", en: "Exam prep + culture (can start from month 10 or 11)", ja: "試験対策 + 文化（10ヶ月または11ヶ月目から開始可能）" },
               price: 200000,
               icon: "📝"
+            },
+            {
+              startMonth: 1,
+              duration: { fr: "1 an recommandé, sans limite", en: "1 year recommended, unlimited", ja: "1年推奨、無制限" },
+              title: { fr: "Club Anglais (Optionnel mais Recommandé)", en: "English Club (Optional but Recommended)", ja: "英会話クラブ（任意だが推奨）" },
+              desc: { fr: "Perfectionnement oral et confiance professionnelle", en: "Oral improvement and professional confidence", ja: "会話力向上とプロフェッショナルな自信" },
+              price: { subscription: 5000, monthly: 11000, sixMonths: 62000, yearly: 122000 },
+              icon: "🗣️"
             }
           ]
         },
@@ -424,15 +432,15 @@ const packRecommendations = {
             {
               step: "d-4",
               title: { fr: "Intégration (1 mois)", en: "Integration (1 month)", ja: "統合サポート（1ヶ月）" },
-              desc: { fr: "Suivi après arrivée au Japon", en: "Follow-up after arrival in Japan", ja: "日本到着後のフォローアップ" },
+              desc: { fr: "Suivi après arrivée au Japon (téléphone mobile, comptes bancaires, besoins quotidiens pour vivre au Japon)", en: "Follow-up after arrival in Japan (mobile phone, bank accounts, daily needs to live in Japan)", ja: "日本到着後のフォローアップ（携帯電話、銀行口座、日常生活のニーズ）" },
               price: 350000,
               condition: "d-3"
             }
           ]
         }
       ],
-      totalMin: 1310000,
-      totalMax: 1320000
+      totalMin: 1315000,
+      totalMax: 1442000
     },
     steps: [
       {
@@ -457,11 +465,11 @@ const packRecommendations = {
       }
     ],
     extras: {
-      fr: ["🗣️ Club Anglais inclus tout au long", "📚 Préparation complète JLPT", "🎌 Ateliers culture japonaise"],
-      en: ["🗣️ English Club included throughout", "📚 Complete JLPT preparation", "🎌 Japanese culture workshops"],
-      ja: ["🗣️ 英会話クラブ常時受講可能", "📚 JLPT完全対策", "🎌 日本文化ワークショップ"]
+      fr: ["📚 Préparation complète JLPT", "🎌 Ateliers culture japonaise", "🗣️ Club Anglais (optionnel) : +5 000 FCFA (inscription) + 11 000 FCFA/mois"],
+      en: ["📚 Complete JLPT preparation", "🎌 Japanese culture workshops", "🗣️ English Club (optional): +5,000 FCFA (subscription) + 11,000 FCFA/month"],
+      ja: ["📚 JLPT完全対策", "🎌 日本文化ワークショップ", "🗣️ 英会話クラブ（任意）：+5,000 FCFA（登録料）+ 11,000 FCFA/月"]
     },
-    price: "1 310 000 - 1 320 000 FCFA"
+    price: "1 315 000 - 1 442 000 FCFA (Club Anglais en option)"
   },
   'work-japan': {
     title: {
@@ -706,10 +714,9 @@ function showQuizResult(goal) {
       
       // Price section
       if (phase.price) {
-        if (phase.price.perHour) {
+        if (phase.price.perHour && !phase.price.inscription) {
           timelineHTML += '<div class="timeline-price">';
-          timelineHTML += `<strong>${phase.price.min.toLocaleString()} - ${phase.price.max.toLocaleString()} FCFA</strong>`;
-          timelineHTML += `<span>(${phase.price.min/10000} 000 - ${phase.price.max/10000} 000 FCFA/heure)</span>`;
+          timelineHTML += `<strong>10 000 FCFA/heure</strong>`;
           timelineHTML += '</div>';
         } else if (phase.price.inscription) {
           timelineHTML += '<div class="timeline-price">';
@@ -728,7 +735,20 @@ function showQuizResult(goal) {
           timelineHTML += `<strong>${par.title[currentLang]}</strong>`;
           timelineHTML += `<p>${par.desc[currentLang]}</p>`;
           timelineHTML += `<p class="parallel-timing">Démarre au mois ${par.startMonth} • ${par.duration[currentLang]}</p>`;
-          timelineHTML += `<div class="parallel-price">${par.price.toLocaleString()} FCFA</div>`;
+          
+          // Handle different price formats
+          if (typeof par.price === 'number') {
+            timelineHTML += `<div class="parallel-price">${par.price.toLocaleString()} FCFA</div>`;
+          } else if (par.price.subscription) {
+            timelineHTML += '<div class="parallel-price">';
+            timelineHTML += `<div><strong>Inscription:</strong> ${par.price.subscription.toLocaleString()} FCFA</div>`;
+            timelineHTML += '<div><strong>Options de paiement:</strong></div>';
+            timelineHTML += `<div>• Mensuel: ${par.price.monthly.toLocaleString()} FCFA/mois</div>`;
+            timelineHTML += `<div>• 6 mois: ${par.price.sixMonths.toLocaleString()} FCFA</div>`;
+            timelineHTML += `<div>• Annuel: ${par.price.yearly.toLocaleString()} FCFA</div>`;
+            timelineHTML += '</div>';
+          }
+          
           timelineHTML += '</div>';
           timelineHTML += '</div>';
         });
