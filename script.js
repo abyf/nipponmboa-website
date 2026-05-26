@@ -31,6 +31,7 @@ const i18n = {
     pole4_title: "Bridge IT Solutions",
     pole4_desc: "Prestations informatiques sur mesure : création de sites web, plateformes de gestion, e-commerce et formations spécialisées en IA, cloud computing et technologies émergentes.",
     pole_link: "Voir les services →",
+    pole2_link: "📚 Explorer les options en détails",
     pole_request_link: "📝 Faire une demande",
 
     // Bridge IT Solutions services
@@ -131,6 +132,7 @@ const i18n = {
     pole4_title: "Bridge IT Solutions",
     pole4_desc: "Custom IT services: website creation, management platforms, e-commerce solutions and specialized training in AI, cloud computing and emerging technologies.",
     pole_link: "View services →",
+    pole2_link: "📚 Explore options in detail",
     pole_request_link: "📝 Make a request",
 
     // Bridge IT Solutions services
@@ -231,6 +233,7 @@ const i18n = {
     pole4_title: "Bridge ITソリューション",
     pole4_desc: "オーダーメイドIT サービス：ウェブサイト制作、管理プラットフォーム、Eコマース、AI・クラウドコンピューティング・新興技術の専門研修。",
     pole_link: "サービスを見る →",
+    pole2_link: "📚 詳細オプションを見る",
     pole_request_link: "📝 リクエストする",
 
     // Bridge IT Solutions services

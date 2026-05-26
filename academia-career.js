@@ -122,6 +122,11 @@ const academiaI18n = {
     // Footer
     footer_tagline: "Une expérience unique au service de votre réussite",
     footer_copy: "© 2025 NipponMboa Consulting. Tous droits réservés.",
+    
+    // Return Home
+    return_home_title: "Découvrir tous nos services",
+    return_home_subtitle: "Explorez l'ensemble de nos pôles et services",
+    return_home_btn: "Retour à l'accueil",
   },
 
   en: {
@@ -230,6 +235,11 @@ const academiaI18n = {
 
     footer_tagline: "A unique experience at the service of your success",
     footer_copy: "© 2025 NipponMboa Consulting. All rights reserved.",
+    
+    // Return Home
+    return_home_title: "Discover all our services",
+    return_home_subtitle: "Explore all our poles and services",
+    return_home_btn: "Back to home",
   },
 
   ja: {
@@ -338,6 +348,11 @@ const academiaI18n = {
 
     footer_tagline: "あなたの成功のためのユニークな体験",
     footer_copy: "© 2025 NipponMboa Consulting. All rights reserved.",
+    
+    // Return Home
+    return_home_title: "すべてのサービスを見る",
+    return_home_subtitle: "全部門とサービスをご覧ください",
+    return_home_btn: "ホームに戻る",
   }
 };
 
@@ -348,6 +363,76 @@ const packRecommendations = {
       fr: "Pack Complet Japonais",
       en: "Complete Japanese Package",
       ja: "日本語完全パック"
+    },
+    hasDetailedTimeline: true,
+    timeline: {
+      phases: [
+        {
+          month: 0,
+          duration: { fr: "1-2 heures", en: "1-2 hours", ja: "1〜2時間" },
+          title: { fr: "Orientation", en: "Guidance", ja: "進路相談" },
+          desc: { fr: "Diagnostic personnalisé et plan d'études", en: "Personalized assessment and study plan", ja: "個別診断と学習計画" },
+          price: { min: 10000, max: 20000, perHour: true },
+          icon: "🧭"
+        },
+        {
+          month: 1,
+          duration: { fr: "12 mois", en: "12 months", ja: "12ヶ月" },
+          title: { fr: "Cours de Japonais", en: "Japanese Courses", ja: "日本語コース" },
+          desc: { fr: "Formation intensive N5 → N2/N3", en: "Intensive training N5 → N2/N3", ja: "集中研修 N5 → N2/N3" },
+          price: { inscription: 50000, annual: 550000 },
+          icon: "🇯🇵",
+          parallel: [
+            {
+              startMonth: 11,
+              duration: { fr: "3 mois", en: "3 months", ja: "3ヶ月" },
+              title: { fr: "JLPT & Culture Japonaise", en: "JLPT & Japanese Culture", ja: "JLPT & 日本文化" },
+              desc: { fr: "Préparation examen + culture", en: "Exam prep + culture", ja: "試験対策 + 文化" },
+              price: 200000,
+              icon: "📝"
+            }
+          ]
+        },
+        {
+          month: 8,
+          duration: { fr: "4-6 mois", en: "4-6 months", ja: "4〜6ヶ月" },
+          title: { fr: "Assistance Études au Japon", en: "Study Assistance in Japan", ja: "日本留学サポート" },
+          desc: { fr: "Processus complet d'inscription", en: "Complete enrollment process", ja: "入学手続き全般" },
+          icon: "✈️",
+          substeps: [
+            {
+              step: "d-1",
+              title: { fr: "Mise en relation & Visa", en: "University Connection & Visa", ja: "大学紹介 & ビザ" },
+              desc: { fr: "Université/école + dossier visa", en: "University/school + visa application", ja: "大学・学校 + ビザ申請" },
+              price: 150000,
+              condition: null
+            },
+            {
+              step: "d-2",
+              title: { fr: "Documentation & Traduction", en: "Documentation & Translation", ja: "書類作成 & 翻訳" },
+              desc: { fr: "Assistance docs + paiement frais", en: "Document assistance + fee payment", ja: "書類サポート + 学費支払い" },
+              price: 250000,
+              condition: "d-1"
+            },
+            {
+              step: "d-3",
+              title: { fr: "Recherche Hébergement", en: "Housing Search", ja: "住居探し" },
+              desc: { fr: "Assistance logement au Japon", en: "Housing assistance in Japan", ja: "日本での住居サポート" },
+              price: 200000,
+              condition: "d-2"
+            },
+            {
+              step: "d-4",
+              title: { fr: "Intégration (1 mois)", en: "Integration (1 month)", ja: "統合サポート（1ヶ月）" },
+              desc: { fr: "Suivi après arrivée au Japon", en: "Follow-up after arrival in Japan", ja: "日本到着後のフォローアップ" },
+              price: 350000,
+              condition: "d-3"
+            }
+          ]
+        }
+      ],
+      totalMin: 1310000,
+      totalMax: 1320000
     },
     steps: [
       {
@@ -376,7 +461,7 @@ const packRecommendations = {
       en: ["🗣️ English Club included throughout", "📚 Complete JLPT preparation", "🎌 Japanese culture workshops"],
       ja: ["🗣️ 英会話クラブ常時受講可能", "📚 JLPT完全対策", "🎌 日本文化ワークショップ"]
     },
-    price: "750 000 FCFA"
+    price: "1 310 000 - 1 320 000 FCFA"
   },
   'work-japan': {
     title: {
@@ -590,19 +675,85 @@ function showQuizResult(goal) {
   // Set title
   titleEl.textContent = result.title[currentLang];
 
-  // Build steps HTML
-  const stepsHTML = `
-    <div class="journey-steps">
-      ${result.steps.map(step => `
-        <div class="journey-step">
-          <div class="step-icon">${step.icon}</div>
-          <div class="step-title">${step.title[currentLang]}</div>
-          <div class="step-desc">${step.desc[currentLang]}</div>
+  // Check if this pack has a detailed timeline
+  if (result.hasDetailedTimeline && result.timeline) {
+    // Build detailed timeline HTML
+    const timeline = result.timeline;
+    let timelineHTML = '<div class="detailed-timeline">';
+    
+    timeline.phases.forEach((phase, index) => {
+      timelineHTML += `
+        <div class="timeline-phase">
+          <div class="timeline-marker">
+            <span class="timeline-icon">${phase.icon}</span>
+            <span class="timeline-month">Mois ${phase.month}</span>
+          </div>
+          <div class="timeline-content">
+            <h4>${phase.title[currentLang]}</h4>
+            <p class="timeline-duration">${phase.duration[currentLang]}</p>
+            <p class="timeline-desc">${phase.desc[currentLang]}</p>
+            
+            ${phase.price.perHour ? `
+              <div class="timeline-price">
+                <strong>${phase.price.min.toLocaleString()} - ${phase.price.max.toLocaleString()} FCFA</strong>
+                <span>(${phase.price.min/10000} 000 - ${phase.price.max/10000} 000 FCFA/heure)</span>
+              </div>
+            ` : phase.price.inscription ? `
+              <div class="timeline-price">
+                <div><strong>Inscription:</strong> ${phase.price.inscription.toLocaleString()} FCFA</div>
+                <div><strong>Pension annuelle:</strong> ${phase.price.annual.toLocaleString()} FCFA</div>
+              </div>
+            ` : ''}
+            
+            ${phase.parallel ? phase.parallel.map(par => `
+              <div class="timeline-parallel">
+                <div class="parallel-marker">${par.icon}</div>
+                <div class="parallel-content">
+                  <strong>${par.title[currentLang]}</strong>
+                  <p>${par.desc[currentLang]}</p>
+                  <p class="parallel-timing">Démarre au mois ${par.startMonth} • ${par.duration[currentLang]}</p>
+                  <div class="parallel-price">${par.price.toLocaleString()} FCFA</div>
+                </div>
+              </div>
+            `).join('') : ''}
+            
+            ${phase.substeps ? `
+              <div class="timeline-substeps">
+                ${phase.substeps.map(substep => `
+                  <div class="substep ${substep.condition ? 'conditional' : ''}">
+                    <div class="substep-header">
+                      <span class="substep-label">${substep.step}</span>
+                      <strong>${substep.title[currentLang]}</strong>
+                      ${substep.condition ? `<span class="condition-badge">Si ${substep.condition} confirmé</span>` : ''}
+                    </div>
+                    <p>${substep.desc[currentLang]}</p>
+                    <div class="substep-price">${substep.price.toLocaleString()} FCFA</div>
+                  </div>
+                `).join('')}
+              </div>
+            ` : ''}
+          </div>
         </div>
-      `).join('')}
-    </div>
-  `;
-  stepsEl.innerHTML = stepsHTML;
+      `;
+    });
+    
+    timelineHTML += '</div>';
+    stepsEl.innerHTML = timelineHTML;
+  } else {
+    // Build simple steps HTML (original version)
+    const stepsHTML = `
+      <div class="journey-steps">
+        ${result.steps.map(step => `
+          <div class="journey-step">
+            <div class="step-icon">${step.icon}</div>
+            <div class="step-title">${step.title[currentLang]}</div>
+            <div class="step-desc">${step.desc[currentLang]}</div>
+          </div>
+        `).join('')}
+      </div>
+    `;
+    stepsEl.innerHTML = stepsHTML;
+  }
 
   // Build extras HTML
   if (result.extras[currentLang].length > 0) {
