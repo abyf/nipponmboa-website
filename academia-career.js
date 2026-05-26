@@ -573,7 +573,7 @@ const packRecommendations = {
           month: 8,
           duration: { fr: "1-6 mois", en: "1-6 months", ja: "1〜6ヶ月" },
           title: { fr: "Mentorat Carrière & Recommandations", en: "Career Mentoring & Referrals", ja: "キャリアメンタリング & 推薦" },
-          desc: { fr: "Amazon, Google, Oracle si match profil", en: "Amazon, Google, Oracle if profile match", ja: "プロフィールマッチ時：Amazon・Google・Oracle" },
+          desc: { fr: "Recommandations vers Amazon, Google, Oracle selon compatibilité du profil", en: "Referrals to Amazon, Google, Oracle based on profile compatibility", ja: "プロフィール適合性に基づくAmazon・Google・Oracle推薦" },
           price: 250000,
           icon: "💼"
         }
@@ -604,9 +604,9 @@ const packRecommendations = {
       }
     ],
     extras: {
-      fr: ["🗣️ Club Anglais (optionnel) : +5 000 FCFA (inscription) + 11 000 FCFA/mois", "💻 Pack Data Center disponible", "🤝 Recommandations Amazon, Google, Oracle"],
-      en: ["🗣️ English Club (optional): +5,000 FCFA (subscription) + 11,000 FCFA/month", "💻 Data Center Package available", "🤝 Amazon, Google, Oracle referrals"],
-      ja: ["🗣️ 英会話クラブ（任意）：+5,000 FCFA（登録料）+ 11,000 FCFA/月", "💻 データセンターパック利用可能", "🤝 Amazon・Google・Oracle推薦"]
+      fr: ["🗣️ Club Anglais (optionnel) : +5 000 FCFA (inscription) + 11 000 FCFA/mois"],
+      en: ["🗣️ English Club (optional): +5,000 FCFA (subscription) + 11,000 FCFA/month"],
+      ja: ["🗣️ 英会話クラブ（任意）：+5,000 FCFA（登録料）+ 11,000 FCFA/月"]
     },
     price: {
       fr: "1 065 000 - 1 192 000 FCFA (Club Anglais en option)",
@@ -846,11 +846,18 @@ function showQuizResult(goal) {
       
       // Price section
       if (phase.price) {
-        if (phase.price.perHour && !phase.price.inscription) {
+        if (typeof phase.price === 'number') {
+          // Simple price (e.g., 250000)
+          timelineHTML += '<div class="timeline-price">';
+          timelineHTML += `<strong>${phase.price.toLocaleString()} FCFA</strong>`;
+          timelineHTML += '</div>';
+        } else if (phase.price.perHour && !phase.price.inscription) {
+          // Hourly rate
           timelineHTML += '<div class="timeline-price">';
           timelineHTML += `<strong>10 000 FCFA/heure</strong>`;
           timelineHTML += '</div>';
         } else if (phase.price.inscription) {
+          // Inscription + annual fee
           timelineHTML += '<div class="timeline-price">';
           timelineHTML += `<div><strong>${academiaI18n[currentLang].timeline_inscription}:</strong> ${phase.price.inscription.toLocaleString()} FCFA</div>`;
           timelineHTML += `<div><strong>${academiaI18n[currentLang].timeline_annual_fee}:</strong> ${phase.price.annual.toLocaleString()} FCFA</div>`;
