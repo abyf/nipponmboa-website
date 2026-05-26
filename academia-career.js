@@ -965,6 +965,13 @@ function showQuizResult(goal) {
           timelineHTML += `<div>• ${academiaI18n[currentLang].timeline_six_months}: ${phase.price.sixMonths.toLocaleString()} FCFA</div>`;
           timelineHTML += `<div>• ${academiaI18n[currentLang].timeline_yearly}: ${phase.price.yearly.toLocaleString()} FCFA</div>`;
           timelineHTML += '</div>';
+        } else if (phase.price.sixMonths && phase.price.yearly) {
+          // Six months and yearly options (for Data Center training)
+          timelineHTML += '<div class="timeline-price">';
+          timelineHTML += `<div><strong>${academiaI18n[currentLang].timeline_payment_options}:</strong></div>`;
+          timelineHTML += `<div>• ${academiaI18n[currentLang].timeline_six_months}: <strong>${phase.price.sixMonths.toLocaleString()} FCFA</strong></div>`;
+          timelineHTML += `<div>• ${academiaI18n[currentLang].timeline_yearly}: <strong>${phase.price.yearly.toLocaleString()} FCFA</strong></div>`;
+          timelineHTML += '</div>';
         }
       }
       
