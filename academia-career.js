@@ -663,9 +663,14 @@ document.querySelectorAll('.quiz-card').forEach(card => {
 });
 
 function showQuizResult(goal) {
+  console.log('showQuizResult called with goal:', goal);
   const result = packRecommendations[goal];
-  if (!result) return;
+  if (!result) {
+    console.error('No result found for goal:', goal);
+    return;
+  }
 
+  console.log('Result found:', result);
   const resultSection = document.getElementById('quiz-result');
   const titleEl = document.getElementById('result-pack-title');
   const stepsEl = document.getElementById('result-steps');
@@ -674,71 +679,100 @@ function showQuizResult(goal) {
 
   // Set title
   titleEl.textContent = result.title[currentLang];
+  console.log('Title set:', result.title[currentLang]);
 
   // Check if this pack has a detailed timeline
   if (result.hasDetailedTimeline && result.timeline) {
+    console.log('Building detailed timeline...');
     // Build detailed timeline HTML
     const timeline = result.timeline;
     let timelineHTML = '<div class="detailed-timeline">';
     
     timeline.phases.forEach((phase, index) => {
-      timelineHTML += `
-        <div class="timeline-phase">
-          <div class="timeline-marker">
-            <span class="timeline-icon">${phase.icon}</span>
-            <span class="timeline-month">Mois ${phase.month}</span>
-          </div>
-          <div class="timeline-content">
-            <h4>${phase.title[currentLang]}</h4>
-            <p class="timeline-duration">${phase.duration[currentLang]}</p>
-            <p class="timeline-desc">${phase.desc[currentLang]}</p>
-            
-            ${phase.price.perHour ? `
-              <div class="timeline-price">
-                <strong>${phase.price.min.toLocaleString()} - ${phase.price.max.toLocaleString()} FCFA</strong>
-                <span>(${phase.price.min/10000} 000 - ${phase.price.max/10000} 000 FCFA/heure)</span>
-              </div>
-            ` : phase.price.inscription ? `
-              <div class="timeline-price">
-                <div><strong>Inscription:</strong> ${phase.price.inscription.toLocaleString()} FCFA</div>
-                <div><strong>Pension annuelle:</strong> ${phase.price.annual.toLocaleString()} FCFA</div>
-              </div>
-            ` : ''}
-            
-            ${phase.parallel ? phase.parallel.map(par => `
-              <div class="timeline-parallel">
-                <div class="parallel-marker">${par.icon}</div>
-                <div class="parallel-content">
-                  <strong>${par.title[currentLang]}</strong>
-                  <p>${par.desc[currentLang]}</p>
-                  <p class="parallel-timing">Démarre au mois ${par.startMonth} • ${par.duration[currentLang]}</p>
-                  <div class="parallel-price">${par.price.toLocaleString()} FCFA</div>
-                </div>
-              </div>
-            `).join('') : ''}
-            
-            ${phase.substeps ? `
-              <div class="timeline-substeps">
-                ${phase.substeps.map(substep => `
-                  <div class="substep ${substep.condition ? 'conditional' : ''}">
-                    <div class="substep-header">
-                      <span class="substep-label">${substep.step}</span>
-                      <strong>${substep.title[currentLang]}</strong>
-                      ${substep.condition ? `<span class="condition-badge">Si ${substep.condition} confirmé</span>` : ''}
-                    </div>
-                    <p>${substep.desc[currentLang]}</p>
-                    <div class="substep-price">${substep.price.toLocaleString()} FCFA</div>
-                  </div>
-                `).join('')}
-              </div>
-            ` : ''}
-          </div>
-        </div>
-      `;
+      // Start phase container
+      timelineHTML += '<div class="timeline-phase">';
+      
+      // Timeline marker
+      timelineHTML += '<div class="timeline-marker">';
+      timelineHTML += `<span class="timeline-icon">${phase.icon}</span>`;
+      timelineHTML += `<span class="timeline-month">Mois ${phase.month}</span>`;
+      timelineHTML += '</div>';
+      
+      // Timeline content
+      timelineHTML += '<div class="timeline-content">';
+      timelineHTML += `<h4>${phase.title[currentLang]}</h4>`;
+      timelineHTML += `<p class="timeline-duration">${phase.duration[currentLang]}</p>`;
+      timelineHTML += `<p class="timeline-desc">${phase.desc[currentLang]}</p>`;
+      
+      // Price section
+      if (phase.price) {
+        if (phase.price.perHour) {
+          timelineHTML += '<div class="timeline-price">';
+          timelineHTML += `<strong>${phase.price.min.toLocaleString()} - ${phase.price.max.toLocaleString()} FCFA</strong>`;
+          timelineHTML += `<span>(${phase.price.min/10000} 000 - ${phase.price.max/10000} 000 FCFA/heure)</span>`;
+          timelineHTML += '</div>';
+        } else if (phase.price.inscription) {
+          timelineHTML += '<div class="timeline-price">';
+          timelineHTML += `<div><strong>Inscription:</strong> ${phase.price.inscription.toLocaleString()} FCFA</div>`;
+          timelineHTML += `<div><strong>Pension annuelle:</strong> ${phase.price.annual.toLocaleString()} FCFA</div>`;
+          timelineHTML += '</div>';
+        }
+      }
+      
+      // Parallel activities
+      if (phase.parallel && phase.parallel.length > 0) {
+        phase.parallel.forEach(par => {
+          timelineHTML += '<div class="timeline-parallel">';
+          timelineHTML += `<div class="parallel-marker">${par.icon}</div>`;
+          timelineHTML += '<div class="parallel-content">';
+          timelineHTML += `<strong>${par.title[currentLang]}</strong>`;
+          timelineHTML += `<p>${par.desc[currentLang]}</p>`;
+          timelineHTML += `<p class="parallel-timing">Démarre au mois ${par.startMonth} • ${par.duration[currentLang]}</p>`;
+          timelineHTML += `<div class="parallel-price">${par.price.toLocaleString()} FCFA</div>`;
+          timelineHTML += '</div>';
+          timelineHTML += '</div>';
+        });
+      }
+      
+      // Substeps
+      if (phase.substeps && phase.substeps.length > 0) {
+        timelineHTML += '<div class="timeline-substeps">';
+        phase.substeps.forEach(substep => {
+          const conditionalClass = substep.condition ? 'conditional' : '';
+          timelineHTML += `<div class="substep ${conditionalClass}">`;
+          timelineHTML += '<div class="substep-header">';
+          timelineHTML += `<span class="substep-label">${substep.step}</span>`;
+          timelineHTML += `<strong>${substep.title[currentLang]}</strong>`;
+          if (substep.condition) {
+            timelineHTML += `<span class="condition-badge">Si ${substep.condition} confirmé</span>`;
+          }
+          timelineHTML += '</div>';
+          timelineHTML += `<p>${substep.desc[currentLang]}</p>`;
+          timelineHTML += `<div class="substep-price">${substep.price.toLocaleString()} FCFA</div>`;
+          timelineHTML += '</div>';
+        });
+        timelineHTML += '</div>';
+      }
+      
+      // Close timeline content and phase
+      timelineHTML += '</div>';
+      timelineHTML += '</div>';
     });
+    
+    // Add total price summary
+    timelineHTML += '<div class="timeline-phase">';
+    timelineHTML += '<div class="timeline-marker"><span class="timeline-icon">💰</span><span class="timeline-month">Total</span></div>';
+    timelineHTML += '<div class="timeline-content">';
+    timelineHTML += '<h4>Coût Total</h4>';
+    timelineHTML += '<div class="timeline-price">';
+    timelineHTML += `<strong>${timeline.totalMin.toLocaleString()} - ${timeline.totalMax.toLocaleString()} FCFA</strong>`;
+    timelineHTML += '</div>';
+    timelineHTML += '</div>';
+    timelineHTML += '</div>';
     
     timelineHTML += '</div>';
     stepsEl.innerHTML = timelineHTML;
+    console.log('Timeline HTML built successfully');
   } else {
     // Build simple steps HTML (original version)
     const stepsHTML = `
