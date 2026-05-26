@@ -387,7 +387,7 @@ const packRecommendations = {
               startMonth: 11,
               duration: { fr: "3 mois", en: "3 months", ja: "3ヶ月" },
               title: { fr: "JLPT & Culture Japonaise", en: "JLPT & Japanese Culture", ja: "JLPT & 日本文化" },
-              desc: { fr: "Préparation examen + culture (peut démarrer à partir du mois 10 ou 11)", en: "Exam prep + culture (can start from month 10 or 11)", ja: "試験対策 + 文化（10ヶ月または11ヶ月目から開始可能）" },
+              desc: { fr: "Préparation examen + culture (peut démarrer à partir du mois 10)", en: "Exam prep + culture (can start from month 10)", ja: "試験対策 + 文化（10ヶ月目から開始可能）" },
               price: 200000,
               icon: "📝"
             },
@@ -465,9 +465,9 @@ const packRecommendations = {
       }
     ],
     extras: {
-      fr: ["📚 Préparation complète JLPT", "🎌 Ateliers culture japonaise", "🗣️ Club Anglais (optionnel) : +5 000 FCFA (inscription) + 11 000 FCFA/mois"],
-      en: ["📚 Complete JLPT preparation", "🎌 Japanese culture workshops", "🗣️ English Club (optional): +5,000 FCFA (subscription) + 11,000 FCFA/month"],
-      ja: ["📚 JLPT完全対策", "🎌 日本文化ワークショップ", "🗣️ 英会話クラブ（任意）：+5,000 FCFA（登録料）+ 11,000 FCFA/月"]
+      fr: ["🗣️ Club Anglais (optionnel) : +5 000 FCFA (inscription) + 11 000 FCFA/mois"],
+      en: ["🗣️ English Club (optional): +5,000 FCFA (subscription) + 11,000 FCFA/month"],
+      ja: ["🗣️ 英会話クラブ（任意）：+5,000 FCFA（登録料）+ 11,000 FCFA/月"]
     },
     price: "1 315 000 - 1 442 000 FCFA (Club Anglais en option)"
   },
