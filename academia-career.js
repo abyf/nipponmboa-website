@@ -520,7 +520,11 @@ const packRecommendations = {
       en: ["🗣️ English Club (optional): +5,000 FCFA (subscription) + 11,000 FCFA/month"],
       ja: ["🗣️ 英会話クラブ（任意）：+5,000 FCFA（登録料）+ 11,000 FCFA/月"]
     },
-    price: "1 315 000 - 1 442 000 FCFA (Club Anglais en option)"
+    price: {
+      fr: "1 315 000 - 1 442 000 FCFA (Club Anglais en option)",
+      en: "1,315,000 - 1,442,000 FCFA (English Club optional)",
+      ja: "1,315,000 - 1,442,000 FCFA（英会話クラブ任意）"
+    }
   },
   'work-japan': {
     title: {
@@ -555,7 +559,11 @@ const packRecommendations = {
       en: ["🗣️ English Club included", "💻 Data Center Package available", "🤝 Company referrals"],
       ja: ["🗣️ 英会話クラブ含む", "💻 データセンターパック利用可能", "🤝 企業推薦"]
     },
-    price: "750 000 FCFA"
+    price: {
+      fr: "750 000 FCFA",
+      en: "750,000 FCFA",
+      ja: "750,000 FCFA"
+    }
   },
   'work-international': {
     title: {
@@ -590,7 +598,11 @@ const packRecommendations = {
       en: ["💻 Data Center Package included", "🤝 Amazon, Google, Oracle referrals", "🎯 Intensive coaching"],
       ja: ["💻 データセンターパック含む", "🤝 Amazon・Google・Oracle推薦", "🎯  集中コーチング"]
     },
-    price: "850 000 FCFA"
+    price: {
+      fr: "850 000 FCFA",
+      en: "850,000 FCFA",
+      ja: "850,000 FCFA"
+    }
   },
   'orientation': {
     title: {
@@ -625,7 +637,11 @@ const packRecommendations = {
       en: ["✓ 2-3 hour session", "✓ Post-session follow-up", "✓ Personalized roadmap"],
       ja: ["✓ 2〜3時間セッション", "✓ セッション後フォローアップ", "✓ 個別ロードマップ"]
     },
-    price: "50 000 FCFA"
+    price: {
+      fr: "50 000 FCFA",
+      en: "50,000 FCFA",
+      ja: "50,000 FCFA"
+    }
   },
   'tech-giants': {
     title: {
@@ -660,7 +676,11 @@ const packRecommendations = {
       en: ["💻 Data Center Package included", "🤝 Direct referrals", "🎯 Specialized coaching"],
       ja: ["💻 データセンターパック含む", "🤝 直接推薦", "🎯 専門コーチング"]
     },
-    price: "850 000 FCFA"
+    price: {
+      fr: "850 000 FCFA",
+      en: "850,000 FCFA",
+      ja: "850,000 FCFA"
+    }
   }
 };
 
@@ -887,9 +907,10 @@ function showQuizResult(goal) {
   }
 
   // Build pricing HTML
+  const priceText = typeof result.price === 'string' ? result.price : result.price[currentLang];
   const pricingHTML = `
     <h4>${academiaI18n[currentLang].price_from}</h4>
-    <div class="price">${result.price}</div>
+    <div class="price">${priceText}</div>
     <div class="price-note">${academiaI18n[currentLang].timeline_optional_note}</div>
   `;
   pricingEl.innerHTML = pricingHTML;

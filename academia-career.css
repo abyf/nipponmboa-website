@@ -373,41 +373,124 @@
 /* Modules Grid */
 .modules-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
   margin: 3rem 0;
 }
 
 .module-card {
   background: white;
   border: 2px solid #e0e0e0;
-  border-radius: 12px;
-  padding: 2rem;
-  text-align: center;
+  border-radius: 16px;
+  padding: 0;
+  overflow: hidden;
   transition: all 0.3s ease;
+  position: relative;
 }
 
 .module-card:hover {
   border-color: #c8102e;
-  transform: translateY(-5px);
-  box-shadow: 0 8px 25px rgba(200, 16, 46, 0.15);
+  transform: translateY(-8px);
+  box-shadow: 0 12px 35px rgba(200, 16, 46, 0.2);
+}
+
+.module-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #c8102e 0%, #a00d24 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.module-card:hover::before {
+  opacity: 1;
 }
 
 .module-icon {
-  font-size: 3rem;
-  margin-bottom: 1rem;
+  font-size: 3.5rem;
+  margin: 2rem 0 1rem;
+  display: block;
+  text-align: center;
 }
 
 .module-card h4 {
-  font-size: 1.25rem;
+  font-size: 1.4rem;
   color: #1a1a2e;
-  margin-bottom: 0.75rem;
+  margin: 0 2rem 0.75rem;
+  text-align: center;
+  font-weight: 700;
 }
 
-.module-card p {
+.module-card > p {
   color: #666;
+  font-size: 1rem;
+  margin: 0 2rem 1.5rem;
+  text-align: center;
+  line-height: 1.5;
+}
+
+/* Module Details Section */
+.module-details {
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+  padding: 1.5rem 2rem 2rem;
+  border-top: 2px solid #e0e0e0;
+  text-align: left;
+}
+
+.module-details p {
+  margin: 0.75rem 0;
+  color: #444;
   font-size: 0.95rem;
-  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+.module-details p strong:first-child {
+  color: #1a1a2e;
+  font-weight: 600;
+  min-width: fit-content;
+}
+
+.module-details ul {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0 0 0;
+}
+
+.module-details li {
+  padding: 0.4rem 0;
+  color: #666;
+  font-size: 0.9rem;
+  padding-left: 1.25rem;
+  position: relative;
+}
+
+.module-details li::before {
+  content: '•';
+  position: absolute;
+  left: 0.5rem;
+  color: #c8102e;
+  font-weight: bold;
+}
+
+.module-details li strong {
+  color: #c8102e;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.module-details > p:last-child {
+  margin-top: 1.25rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e0e0e0;
+  font-size: 0.85rem;
+  color: #666;
+  font-style: italic;
 }
 
 .module-price {
