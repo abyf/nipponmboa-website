@@ -29,9 +29,9 @@ const academiaI18n = {
     goal_work_intl: "Travailler à l'international",
     goal_work_intl_desc: "Carrière dans une grande entreprise tech",
     goal_orientation: "Trouver ma voie",
-    goal_orientation_desc: "J'ai besoin d'orientation",
-    goal_tech: "Amazon, Google, etc.",
-    goal_tech_desc: "Data centers et grandes entreprises",
+    goal_orientation_desc: "Intégration socio-professionnelle au Cameroun",
+    goal_tech: "Faire carrière dans les métiers Data Centers",
+    goal_tech_desc: "Amazon, Google, Oracle, Microsoft",
 
     // Results
     result_recommended: "✅ Parcours recommandé :",
@@ -167,9 +167,9 @@ const academiaI18n = {
     goal_work_intl: "Work internationally",
     goal_work_intl_desc: "Career at a major tech company",
     goal_orientation: "Find my path",
-    goal_orientation_desc: "I need guidance",
-    goal_tech: "Amazon, Google, etc.",
-    goal_tech_desc: "Data centers and major companies",
+    goal_orientation_desc: "Socio-professional integration in Cameroon",
+    goal_tech: "Build a Data Center Career",
+    goal_tech_desc: "Amazon, Google, Oracle, Microsoft",
 
     result_recommended: "✅ Recommended path:",
     result_learn_more: "Learn more",
@@ -298,9 +298,9 @@ const academiaI18n = {
     goal_work_intl: "国際的に働く",
     goal_work_intl_desc: "大手テック企業でのキャリア",
     goal_orientation: "自分の道を見つける",
-    goal_orientation_desc: "進路相談が必要",
-    goal_tech: "Amazon、Googleなど",
-    goal_tech_desc: "データセンターと大手企業",
+    goal_orientation_desc: "カメルーンでの社会職業統合",
+    goal_tech: "データセンターでキャリアを築く",
+    goal_tech_desc: "Amazon・Google・Oracle・Microsoft",
 
     result_recommended: "✅ おすすめのプログラム：",
     result_learn_more: "詳細を見る",
@@ -749,41 +749,80 @@ const packRecommendations = {
   },
   'tech-giants': {
     title: {
-      fr: "Pack Complet Travail International",
-      en: "Complete International Work Package",
-      ja: "国際就職完全パック"
+      fr: "Pack Data Center",
+      en: "Data Center Package",
+      ja: "データセンターパック"
+    },
+    hasDetailedTimeline: true,
+    timeline: {
+      phases: [
+        {
+          month: 0,
+          duration: { fr: "1-2 heures", en: "1-2 hours", ja: "1〜2時間" },
+          title: { fr: "Orientation", en: "Guidance", ja: "進路相談" },
+          desc: { fr: "Diagnostic personnalisé et plan de carrière Data Center", en: "Personalized assessment and Data Center career plan", ja: "個別診断とデータセンターキャリアプラン" },
+          price: { perHour: 10000 },
+          icon: "🧭"
+        },
+        {
+          month: 0,
+          duration: { fr: "Si nécessaire", en: "If needed", ja: "必要な場合" },
+          title: { fr: "Club Anglais (Conditionnel)", en: "English Club (Conditional)", ja: "英会話クラブ（条件付き）" },
+          desc: { fr: "Perfectionnement oral pour ceux qui ne s'expriment pas couramment en anglais", en: "Oral improvement for those not fluent in English", ja: "英語が流暢でない方向けの会話力向上" },
+          price: { subscription: 5000, monthly: 11000, sixMonths: 62000, yearly: 122000 },
+          icon: "🗣️"
+        },
+        {
+          month: 1,
+          duration: { fr: "6-12 mois", en: "6-12 months", ja: "6〜12ヶ月" },
+          title: { fr: "Formation Professionnelle Data Center", en: "Data Center Professional Training", ja: "データセンター専門研修" },
+          desc: { fr: "Orientation et assistance training professionnelle précise pour les métiers Data Center", en: "Precise professional training guidance and assistance for Data Center careers", ja: "データセンター職種向けの正確な専門研修指導とサポート" },
+          price: { sixMonths: 300000, yearly: 500000 },
+          icon: "💻"
+        },
+        {
+          month: 5,
+          duration: { fr: "2-3 mois", en: "2-3 months", ja: "2〜3ヶ月" },
+          title: { fr: "Coaching & Recommandations", en: "Coaching & Referrals", ja: "コーチング & 推薦" },
+          desc: { fr: "Coaching carrière et recommandations vers Amazon, Google, Oracle, Microsoft (débute vers la fin de la formation)", en: "Career coaching and referrals to Amazon, Google, Oracle, Microsoft (starts near end of training)", ja: "キャリアコーチングとAmazon・Google・Oracle・Microsoftへの推薦（研修終了近くに開始）" },
+          price: 250000,
+          icon: "🤝"
+        }
+      ],
+      totalMin: 582000,
+      totalMax: 897000
     },
     steps: [
       {
         icon: "🧭",
         title: { fr: "Orientation", en: "Guidance", ja: "進路相談" },
-        desc: { fr: "Diagnostic tech", en: "Tech assessment", ja: "テック診断" }
+        desc: { fr: "Diagnostic Data Center", en: "Data Center assessment", ja: "データセンター診断" }
       },
       {
         icon: "🗣️",
         title: { fr: "Club Anglais", en: "English Club", ja: "英会話クラブ" },
-        desc: { fr: "Intensif", en: "Intensive", ja: "集中" }
+        desc: { fr: "Si nécessaire", en: "If needed", ja: "必要な場合" }
       },
       {
         icon: "💻",
-        title: { fr: "Pack Data Center", en: "Data Center Pack", ja: "データセンターパック" },
-        desc: { fr: "Formation technique", en: "Technical training", ja: "技術研修" }
+        title: { fr: "Formation Data Center", en: "Data Center Training", ja: "データセンター研修" },
+        desc: { fr: "6-12 mois", en: "6-12 months", ja: "6〜12ヶ月" }
       },
       {
         icon: "🤝",
-        title: { fr: "Recommandations", en: "Referrals", ja: "推薦" },
-        desc: { fr: "Amazon, Google, Oracle", en: "Amazon, Google, Oracle", ja: "Amazon・Google・Oracle" }
+        title: { fr: "Coaching & Recommandations", en: "Coaching & Referrals", ja: "コーチング & 推薦" },
+        desc: { fr: "Amazon, Google, etc.", en: "Amazon, Google, etc.", ja: "Amazon・Googleなど" }
       }
     ],
     extras: {
-      fr: ["💻 Pack Data Center inclus", "🤝 Recommandations directes", "🎯 Coaching spécialisé"],
-      en: ["💻 Data Center Package included", "🤝 Direct referrals", "🎯 Specialized coaching"],
-      ja: ["💻 データセンターパック含む", "🤝 直接推薦", "🎯 専門コーチング"]
+      fr: [],
+      en: [],
+      ja: []
     },
     price: {
-      fr: "850 000 FCFA",
-      en: "850,000 FCFA",
-      ja: "850,000 FCFA"
+      fr: "582 000 - 897 000 FCFA",
+      en: "582,000 - 897,000 FCFA",
+      ja: "582,000 - 897,000 FCFA"
     }
   }
 };
