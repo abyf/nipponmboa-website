@@ -42,8 +42,9 @@ const academiaI18n = {
     packs_title: "📚 Vue d'ensemble des Packs",
     packs_subtitle: "Nos parcours complets pour réaliser ton projet",
     
-    pack_popular: "⭐ Populaire",
-    pack_recommended: "🎯 Recommandé",
+    pack_popular: "🎓 Étudiez au Japon en confiance",
+    pack_recommended: "🌍 Construisez votre carrière globale",
+    pack3_badge: "🧭 Trouvez votre direction",
     
     pack1_title: "Pack Complet Japonais",
     pack1_subtitle: "Pour étudier ou travailler au Japon",
@@ -177,8 +178,9 @@ const academiaI18n = {
     packs_title: "📚 Overview of Packages",
     packs_subtitle: "Our complete programs to achieve your project",
     
-    pack_popular: "⭐ Popular",
-    pack_recommended: "🎯 Recommended",
+    pack_popular: "🎓 Study in Japan with confidence",
+    pack_recommended: "🌍 Build your global career",
+    pack3_badge: "🧭 Find your direction",
     
     pack1_title: "Complete Japanese Package",
     pack1_subtitle: "To study or work in Japan",
@@ -307,8 +309,9 @@ const academiaI18n = {
     packs_title: "📚 パッケージ一覧",
     packs_subtitle: "あなたの目標を実現するための完全プログラム",
     
-    pack_popular: "⭐ 人気",
-    pack_recommended: "🎯 おすすめ",
+    pack_popular: "🎓 安心して日本へ留学",
+    pack_recommended: "🌍 グローバルキャリアを築く",
+    pack3_badge: "🧭 進路を見つける",
     
     pack1_title: "日本語完全パック",
     pack1_subtitle: "日本での留学・就職向け",
@@ -877,7 +880,7 @@ function showQuizResult(goal) {
           timelineHTML += '<div class="timeline-price">';
           timelineHTML += `<strong>${phase.price.toLocaleString()} FCFA</strong>`;
           timelineHTML += '</div>';
-        } else if (phase.price.perHour && !phase.price.inscription) {
+        } else if (phase.price.perHour && !phase.price.inscription && !phase.price.subscription) {
           // Hourly rate
           timelineHTML += '<div class="timeline-price">';
           timelineHTML += `<strong>10 000 FCFA/heure</strong>`;
@@ -887,6 +890,15 @@ function showQuizResult(goal) {
           timelineHTML += '<div class="timeline-price">';
           timelineHTML += `<div><strong>${academiaI18n[currentLang].timeline_inscription}:</strong> ${phase.price.inscription.toLocaleString()} FCFA</div>`;
           timelineHTML += `<div><strong>${academiaI18n[currentLang].timeline_annual_fee}:</strong> ${phase.price.annual.toLocaleString()} FCFA</div>`;
+          timelineHTML += '</div>';
+        } else if (phase.price.subscription) {
+          // Subscription + payment options (for main phases like Club Anglais)
+          timelineHTML += '<div class="timeline-price">';
+          timelineHTML += `<div><strong>${academiaI18n[currentLang].timeline_inscription}:</strong> ${phase.price.subscription.toLocaleString()} FCFA</div>`;
+          timelineHTML += `<div><strong>${academiaI18n[currentLang].timeline_payment_options}:</strong></div>`;
+          timelineHTML += `<div>• ${academiaI18n[currentLang].timeline_monthly}: ${phase.price.monthly.toLocaleString()} FCFA${academiaI18n[currentLang].timeline_per_month}</div>`;
+          timelineHTML += `<div>• ${academiaI18n[currentLang].timeline_six_months}: ${phase.price.sixMonths.toLocaleString()} FCFA</div>`;
+          timelineHTML += `<div>• ${academiaI18n[currentLang].timeline_yearly}: ${phase.price.yearly.toLocaleString()} FCFA</div>`;
           timelineHTML += '</div>';
         }
       }
