@@ -528,9 +528,58 @@ const packRecommendations = {
   },
   'work-japan': {
     title: {
-      fr: "Pack Complet Japonais",
-      en: "Complete Japanese Package",
-      ja: "日本語完全パック"
+      fr: "Pack Complet Travailler au Japon",
+      en: "Complete Work in Japan Package",
+      ja: "日本就職完全パック"
+    },
+    hasDetailedTimeline: true,
+    timeline: {
+      phases: [
+        {
+          month: 0,
+          duration: { fr: "1-2 heures", en: "1-2 hours", ja: "1〜2時間" },
+          title: { fr: "Orientation", en: "Guidance", ja: "進路相談" },
+          desc: { fr: "Diagnostic personnalisé et plan de carrière", en: "Personalized assessment and career plan", ja: "個別診断とキャリアプラン" },
+          price: { perHour: 10000 },
+          icon: "🧭"
+        },
+        {
+          month: 1,
+          duration: { fr: "12 mois", en: "12 months", ja: "12ヶ月" },
+          title: { fr: "Cours de Japonais", en: "Japanese Courses", ja: "日本語コース" },
+          desc: { fr: "Formation intensive N5 → N2", en: "Intensive training N5 → N2", ja: "集中研修 N5 → N2" },
+          price: { inscription: 50000, annual: 550000 },
+          icon: "🇯🇵",
+          parallel: [
+            {
+              startMonth: 11,
+              duration: { fr: "3 mois", en: "3 months", ja: "3ヶ月" },
+              title: { fr: "JLPT N2 & Culture Japonaise", en: "JLPT N2 & Japanese Culture", ja: "JLPT N2 & 日本文化" },
+              desc: { fr: "Niveau professionnel pour emploi", en: "Professional level for employment", ja: "就職用ビジネスレベル" },
+              price: 200000,
+              icon: "📝"
+            },
+            {
+              startMonth: 1,
+              duration: { fr: "1 an recommandé, sans limite", en: "1 year recommended, unlimited", ja: "1年推奨、無制限" },
+              title: { fr: "Club Anglais (Optionnel mais Recommandé)", en: "English Club (Optional but Recommended)", ja: "英会話クラブ（任意だが推奨）" },
+              desc: { fr: "Perfectionnement oral et confiance professionnelle", en: "Oral improvement and professional confidence", ja: "会話力向上とプロフェッショナルな自信" },
+              price: { subscription: 5000, monthly: 11000, sixMonths: 62000, yearly: 122000 },
+              icon: "🗣️"
+            }
+          ]
+        },
+        {
+          month: 8,
+          duration: { fr: "1-6 mois", en: "1-6 months", ja: "1〜6ヶ月" },
+          title: { fr: "Mentorat Carrière & Recommandations", en: "Career Mentoring & Referrals", ja: "キャリアメンタリング & 推薦" },
+          desc: { fr: "Amazon, Google, Oracle si match profil", en: "Amazon, Google, Oracle if profile match", ja: "プロフィールマッチ時：Amazon・Google・Oracle" },
+          price: 250000,
+          icon: "💼"
+        }
+      ],
+      totalMin: 1065000,
+      totalMax: 1192000
     },
     steps: [
       {
@@ -550,19 +599,19 @@ const packRecommendations = {
       },
       {
         icon: "💼",
-        title: { fr: "Assistance Emploi", en: "Job Assistance", ja: "就職サポート" },
-        desc: { fr: "CV & entretiens", en: "CV & interviews", ja: "履歴書 & 面接" }
+        title: { fr: "Mentorat Carrière", en: "Career Mentoring", ja: "キャリアメンタリング" },
+        desc: { fr: "Recommandations entreprises", en: "Company referrals", ja: "企業推薦" }
       }
     ],
     extras: {
-      fr: ["🗣️ Club Anglais inclus", "💻 Pack Data Center disponible", "🤝 Recommandations entreprises"],
-      en: ["🗣️ English Club included", "💻 Data Center Package available", "🤝 Company referrals"],
-      ja: ["🗣️ 英会話クラブ含む", "💻 データセンターパック利用可能", "🤝 企業推薦"]
+      fr: ["🗣️ Club Anglais (optionnel) : +5 000 FCFA (inscription) + 11 000 FCFA/mois", "💻 Pack Data Center disponible", "🤝 Recommandations Amazon, Google, Oracle"],
+      en: ["🗣️ English Club (optional): +5,000 FCFA (subscription) + 11,000 FCFA/month", "💻 Data Center Package available", "🤝 Amazon, Google, Oracle referrals"],
+      ja: ["🗣️ 英会話クラブ（任意）：+5,000 FCFA（登録料）+ 11,000 FCFA/月", "💻 データセンターパック利用可能", "🤝 Amazon・Google・Oracle推薦"]
     },
     price: {
-      fr: "750 000 FCFA",
-      en: "750,000 FCFA",
-      ja: "750,000 FCFA"
+      fr: "1 065 000 - 1 192 000 FCFA (Club Anglais en option)",
+      en: "1,065,000 - 1,192,000 FCFA (English Club optional)",
+      ja: "1,065,000 - 1,192,000 FCFA（英会話クラブ任意）"
     }
   },
   'work-international': {
@@ -911,7 +960,6 @@ function showQuizResult(goal) {
   const pricingHTML = `
     <h4>${academiaI18n[currentLang].price_from}</h4>
     <div class="price">${priceText}</div>
-    <div class="price-note">${academiaI18n[currentLang].timeline_optional_note}</div>
   `;
   pricingEl.innerHTML = pricingHTML;
 
