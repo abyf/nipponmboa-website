@@ -142,6 +142,8 @@ const academiaI18n = {
     timeline_per_month: "/mois",
     timeline_if_confirmed: "Si",
     timeline_confirmed: "confirmé",
+    timeline_included_in_pack: "Inclus dans ce pack :",
+    timeline_optional_note: "Paiement mensuel disponible",
   },
 
   en: {
@@ -270,6 +272,8 @@ const academiaI18n = {
     timeline_per_month: "/month",
     timeline_if_confirmed: "If",
     timeline_confirmed: "confirmed",
+    timeline_included_in_pack: "Included in this package:",
+    timeline_optional_note: "Monthly payment available",
   },
 
   ja: {
@@ -398,6 +402,8 @@ const academiaI18n = {
     timeline_per_month: "/月",
     timeline_if_confirmed: "もし",
     timeline_confirmed: "確認済み",
+    timeline_included_in_pack: "このパックに含まれるもの：",
+    timeline_optional_note: "月払い可能",
   }
 };
 
@@ -869,7 +875,7 @@ function showQuizResult(goal) {
   // Build extras HTML
   if (result.extras[currentLang].length > 0) {
     const extrasHTML = `
-      <h4>${academiaI18n[currentLang].result_recommended.includes('✅') ? 'Inclus dans ce pack :' : 'Included:'}</h4>
+      <h4>${academiaI18n[currentLang].timeline_included_in_pack}</h4>
       <ul>
         ${result.extras[currentLang].map(extra => `<li>${extra}</li>`).join('')}
       </ul>
@@ -882,9 +888,9 @@ function showQuizResult(goal) {
 
   // Build pricing HTML
   const pricingHTML = `
-    <h4>${academiaI18n[currentLang].price_from || 'À partir de'}</h4>
+    <h4>${academiaI18n[currentLang].price_from}</h4>
     <div class="price">${result.price}</div>
-    <div class="price-note">${academiaI18n[currentLang].form_additional || 'Paiement mensuel disponible'}</div>
+    <div class="price-note">${academiaI18n[currentLang].timeline_optional_note}</div>
   `;
   pricingEl.innerHTML = pricingHTML;
 
