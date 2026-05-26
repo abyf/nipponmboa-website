@@ -688,6 +688,37 @@ const packRecommendations = {
       en: "Guidance & Mentoring",
       ja: "進路相談 & メンタリング"
     },
+    hasDetailedTimeline: true,
+    timeline: {
+      phases: [
+        {
+          month: 0,
+          duration: { fr: "2-3 heures", en: "2-3 hours", ja: "2〜3時間" },
+          title: { fr: "Diagnostic", en: "Assessment", ja: "診断" },
+          desc: { fr: "Session personnalisée de diagnostic", en: "Personalized assessment session", ja: "個別診断セッション" },
+          price: { perHour: 10000 },
+          icon: "🧭"
+        },
+        {
+          month: 0,
+          duration: { fr: "1-3 mois", en: "1-3 months", ja: "1〜3ヶ月" },
+          title: { fr: "Mentorship", en: "Mentorship", ja: "メンターシップ" },
+          desc: { fr: "Accompagnement par le mentor approprié", en: "Guidance by the appropriate mentor", ja: "適切なメンターによる指導" },
+          price: 100000,
+          icon: "👨‍🏫"
+        },
+        {
+          month: 1,
+          duration: { fr: "2-4 semaines", en: "2-4 weeks", ja: "2〜4週間" },
+          title: { fr: "Recommandation & Suivi", en: "Recommendation & Follow-up", ja: "推薦 & フォローアップ" },
+          desc: { fr: "Recommandations vers écoles/entreprises et suivi personnalisé", en: "Referrals to schools/companies and personalized follow-up", ja: "学校・企業への推薦と個別フォローアップ" },
+          price: 50000,
+          icon: "🎯"
+        }
+      ],
+      totalMin: 170000,
+      totalMax: 180000
+    },
     steps: [
       {
         icon: "🧭",
@@ -695,30 +726,25 @@ const packRecommendations = {
         desc: { fr: "2-3h personnalisé", en: "2-3h personalized", ja: "2〜3時間個別" }
       },
       {
-        icon: "📊",
-        title: { fr: "Analyse", en: "Analysis", ja: "分析" },
-        desc: { fr: "Profil & objectifs", en: "Profile & goals", ja: "プロフィール & 目標" }
+        icon: "👨‍🏫",
+        title: { fr: "Mentorship", en: "Mentorship", ja: "メンターシップ" },
+        desc: { fr: "1-3 mois", en: "1-3 months", ja: "1〜3ヶ月" }
       },
       {
         icon: "🎯",
-        title: { fr: "Recommandations", en: "Recommendations", ja: "推薦" },
-        desc: { fr: "Écoles & entreprises", en: "Schools & companies", ja: "学校 & 企業" }
-      },
-      {
-        icon: "📋",
-        title: { fr: "Roadmap", en: "Roadmap", ja: "ロードマップ" },
-        desc: { fr: "Plan personnalisé", en: "Personalized plan", ja: "個別計画" }
+        title: { fr: "Recommandation", en: "Recommendation", ja: "推薦" },
+        desc: { fr: "2-4 semaines", en: "2-4 weeks", ja: "2〜4週間" }
       }
     ],
     extras: {
-      fr: ["✓ Session de 2-3 heures", "✓ Suivi après la session", "✓ Roadmap personnalisée"],
-      en: ["✓ 2-3 hour session", "✓ Post-session follow-up", "✓ Personalized roadmap"],
-      ja: ["✓ 2〜3時間セッション", "✓ セッション後フォローアップ", "✓ 個別ロードマップ"]
+      fr: [],
+      en: [],
+      ja: []
     },
     price: {
-      fr: "50 000 FCFA",
-      en: "50,000 FCFA",
-      ja: "50,000 FCFA"
+      fr: "170 000 - 180 000 FCFA",
+      en: "170,000 - 180,000 FCFA",
+      ja: "170,000 - 180,000 FCFA"
     }
   },
   'tech-giants': {
