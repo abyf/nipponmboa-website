@@ -620,6 +620,37 @@ const packRecommendations = {
       en: "Complete International Work Package",
       ja: "国際就職完全パック"
     },
+    hasDetailedTimeline: true,
+    timeline: {
+      phases: [
+        {
+          month: 0,
+          duration: { fr: "1-2 heures", en: "1-2 hours", ja: "1〜2時間" },
+          title: { fr: "Orientation", en: "Guidance", ja: "進路相談" },
+          desc: { fr: "Diagnostic personnalisé et plan de carrière internationale", en: "Personalized assessment and international career plan", ja: "個別診断と国際キャリアプラン" },
+          price: { perHour: 10000 },
+          icon: "🧭"
+        },
+        {
+          month: 1,
+          duration: { fr: "6-12 mois", en: "6-12 months", ja: "6〜12ヶ月" },
+          title: { fr: "Club Anglais", en: "English Club", ja: "英会話クラブ" },
+          desc: { fr: "Perfectionnement oral et confiance professionnelle", en: "Oral improvement and professional confidence", ja: "会話力向上とプロフェッショナルな自信" },
+          price: { subscription: 5000, monthly: 11000, sixMonths: 62000, yearly: 122000 },
+          icon: "🗣️"
+        },
+        {
+          month: 3,
+          duration: { fr: "1-6 mois", en: "1-6 months", ja: "1〜6ヶ月" },
+          title: { fr: "Mentorat Carrière & Recommandations", en: "Career Mentoring & Referrals", ja: "キャリアメンタリング & 推薦" },
+          desc: { fr: "Recommandations vers Amazon, Google, Oracle selon compatibilité du profil", en: "Referrals to Amazon, Google, Oracle based on profile compatibility", ja: "プロフィール適合性に基づくAmazon・Google・Oracle推薦" },
+          price: 250000,
+          icon: "💼"
+        }
+      ],
+      totalMin: 332000,
+      totalMax: 397000
+    },
     steps: [
       {
         icon: "🧭",
@@ -632,25 +663,20 @@ const packRecommendations = {
         desc: { fr: "Oral professionnel", en: "Professional speaking", ja: "ビジネス会話" }
       },
       {
-        icon: "🇯🇵",
-        title: { fr: "Japonais Bases", en: "Japanese Basics", ja: "日本語基礎" },
-        desc: { fr: "Pour le Japon", en: "For Japan", ja: "日本勤務用" }
-      },
-      {
         icon: "💼",
         title: { fr: "Mentorat Carrière", en: "Career Mentoring", ja: "キャリアメンタリング" },
-        desc: { fr: "Entretiens & networking", en: "Interviews & networking", ja: "面接 & ネットワーキング" }
+        desc: { fr: "Recommandations entreprises", en: "Company referrals", ja: "企業推薦" }
       }
     ],
     extras: {
-      fr: ["💻 Pack Data Center inclus", "🤝 Recommandations Amazon, Google, Oracle", "🎯 Coaching intensif"],
-      en: ["💻 Data Center Package included", "🤝 Amazon, Google, Oracle referrals", "🎯 Intensive coaching"],
-      ja: ["💻 データセンターパック含む", "🤝 Amazon・Google・Oracle推薦", "🎯  集中コーチング"]
+      fr: [],
+      en: [],
+      ja: []
     },
     price: {
-      fr: "850 000 FCFA",
-      en: "850,000 FCFA",
-      ja: "850,000 FCFA"
+      fr: "332 000 - 397 000 FCFA",
+      en: "332,000 - 397,000 FCFA",
+      ja: "332,000 - 397,000 FCFA"
     }
   },
   'orientation': {
