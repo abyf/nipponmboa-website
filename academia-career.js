@@ -127,6 +127,21 @@ const academiaI18n = {
     return_home_title: "Découvrir tous nos services",
     return_home_subtitle: "Explorez l'ensemble de nos pôles et services",
     return_home_btn: "Retour à l'accueil",
+    
+    // Timeline labels
+    timeline_month: "Mois",
+    timeline_total: "Total",
+    timeline_total_cost: "Coût Total",
+    timeline_starts_month: "Démarre au mois",
+    timeline_inscription: "Inscription",
+    timeline_annual_fee: "Pension annuelle",
+    timeline_payment_options: "Options de paiement",
+    timeline_monthly: "Mensuel",
+    timeline_six_months: "6 mois",
+    timeline_yearly: "Annuel",
+    timeline_per_month: "/mois",
+    timeline_if_confirmed: "Si",
+    timeline_confirmed: "confirmé",
   },
 
   en: {
@@ -240,6 +255,21 @@ const academiaI18n = {
     return_home_title: "Discover all our services",
     return_home_subtitle: "Explore all our poles and services",
     return_home_btn: "Back to home",
+    
+    // Timeline labels
+    timeline_month: "Month",
+    timeline_total: "Total",
+    timeline_total_cost: "Total Cost",
+    timeline_starts_month: "Starts at month",
+    timeline_inscription: "Subscription",
+    timeline_annual_fee: "Annual fee",
+    timeline_payment_options: "Payment options",
+    timeline_monthly: "Monthly",
+    timeline_six_months: "6 months",
+    timeline_yearly: "Yearly",
+    timeline_per_month: "/month",
+    timeline_if_confirmed: "If",
+    timeline_confirmed: "confirmed",
   },
 
   ja: {
@@ -353,6 +383,21 @@ const academiaI18n = {
     return_home_title: "すべてのサービスを見る",
     return_home_subtitle: "全部門とサービスをご覧ください",
     return_home_btn: "ホームに戻る",
+    
+    // Timeline labels
+    timeline_month: "月",
+    timeline_total: "合計",
+    timeline_total_cost: "合計費用",
+    timeline_starts_month: "開始月",
+    timeline_inscription: "登録料",
+    timeline_annual_fee: "年間費用",
+    timeline_payment_options: "支払いオプション",
+    timeline_monthly: "月払い",
+    timeline_six_months: "6ヶ月",
+    timeline_yearly: "年払い",
+    timeline_per_month: "/月",
+    timeline_if_confirmed: "もし",
+    timeline_confirmed: "確認済み",
   }
 };
 
@@ -703,7 +748,7 @@ function showQuizResult(goal) {
       // Timeline marker
       timelineHTML += '<div class="timeline-marker">';
       timelineHTML += `<span class="timeline-icon">${phase.icon}</span>`;
-      timelineHTML += `<span class="timeline-month">Mois ${phase.month}</span>`;
+      timelineHTML += `<span class="timeline-month">${academiaI18n[currentLang].timeline_month} ${phase.month}</span>`;
       timelineHTML += '</div>';
       
       // Timeline content
@@ -720,8 +765,8 @@ function showQuizResult(goal) {
           timelineHTML += '</div>';
         } else if (phase.price.inscription) {
           timelineHTML += '<div class="timeline-price">';
-          timelineHTML += `<div><strong>Inscription:</strong> ${phase.price.inscription.toLocaleString()} FCFA</div>`;
-          timelineHTML += `<div><strong>Pension annuelle:</strong> ${phase.price.annual.toLocaleString()} FCFA</div>`;
+          timelineHTML += `<div><strong>${academiaI18n[currentLang].timeline_inscription}:</strong> ${phase.price.inscription.toLocaleString()} FCFA</div>`;
+          timelineHTML += `<div><strong>${academiaI18n[currentLang].timeline_annual_fee}:</strong> ${phase.price.annual.toLocaleString()} FCFA</div>`;
           timelineHTML += '</div>';
         }
       }
@@ -734,18 +779,18 @@ function showQuizResult(goal) {
           timelineHTML += '<div class="parallel-content">';
           timelineHTML += `<strong>${par.title[currentLang]}</strong>`;
           timelineHTML += `<p>${par.desc[currentLang]}</p>`;
-          timelineHTML += `<p class="parallel-timing">Démarre au mois ${par.startMonth} • ${par.duration[currentLang]}</p>`;
+          timelineHTML += `<p class="parallel-timing">${academiaI18n[currentLang].timeline_starts_month} ${par.startMonth} • ${par.duration[currentLang]}</p>`;
           
           // Handle different price formats
           if (typeof par.price === 'number') {
             timelineHTML += `<div class="parallel-price">${par.price.toLocaleString()} FCFA</div>`;
           } else if (par.price.subscription) {
             timelineHTML += '<div class="parallel-price">';
-            timelineHTML += `<div><strong>Inscription:</strong> ${par.price.subscription.toLocaleString()} FCFA</div>`;
-            timelineHTML += '<div><strong>Options de paiement:</strong></div>';
-            timelineHTML += `<div>• Mensuel: ${par.price.monthly.toLocaleString()} FCFA/mois</div>`;
-            timelineHTML += `<div>• 6 mois: ${par.price.sixMonths.toLocaleString()} FCFA</div>`;
-            timelineHTML += `<div>• Annuel: ${par.price.yearly.toLocaleString()} FCFA</div>`;
+            timelineHTML += `<div><strong>${academiaI18n[currentLang].timeline_inscription}:</strong> ${par.price.subscription.toLocaleString()} FCFA</div>`;
+            timelineHTML += `<div><strong>${academiaI18n[currentLang].timeline_payment_options}:</strong></div>`;
+            timelineHTML += `<div>• ${academiaI18n[currentLang].timeline_monthly}: ${par.price.monthly.toLocaleString()} FCFA${academiaI18n[currentLang].timeline_per_month}</div>`;
+            timelineHTML += `<div>• ${academiaI18n[currentLang].timeline_six_months}: ${par.price.sixMonths.toLocaleString()} FCFA</div>`;
+            timelineHTML += `<div>• ${academiaI18n[currentLang].timeline_yearly}: ${par.price.yearly.toLocaleString()} FCFA</div>`;
             timelineHTML += '</div>';
           }
           
@@ -764,7 +809,7 @@ function showQuizResult(goal) {
           timelineHTML += `<span class="substep-label">${substep.step}</span>`;
           timelineHTML += `<strong>${substep.title[currentLang]}</strong>`;
           if (substep.condition) {
-            timelineHTML += `<span class="condition-badge">Si ${substep.condition} confirmé</span>`;
+            timelineHTML += `<span class="condition-badge">${academiaI18n[currentLang].timeline_if_confirmed} ${substep.condition} ${academiaI18n[currentLang].timeline_confirmed}</span>`;
           }
           timelineHTML += '</div>';
           timelineHTML += `<p>${substep.desc[currentLang]}</p>`;
@@ -781,9 +826,9 @@ function showQuizResult(goal) {
     
     // Add total price summary
     timelineHTML += '<div class="timeline-phase">';
-    timelineHTML += '<div class="timeline-marker"><span class="timeline-icon">💰</span><span class="timeline-month">Total</span></div>';
+    timelineHTML += `<div class="timeline-marker"><span class="timeline-icon">💰</span><span class="timeline-month">${academiaI18n[currentLang].timeline_total}</span></div>`;
     timelineHTML += '<div class="timeline-content">';
-    timelineHTML += '<h4>Coût Total</h4>';
+    timelineHTML += `<h4>${academiaI18n[currentLang].timeline_total_cost}</h4>`;
     timelineHTML += '<div class="timeline-price">';
     timelineHTML += `<strong>${timeline.totalMin.toLocaleString()} - ${timeline.totalMax.toLocaleString()} FCFA</strong>`;
     timelineHTML += '</div>';
