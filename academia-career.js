@@ -104,6 +104,9 @@ const academiaI18n = {
 
     // FAQ
     faq_title: "❓ Questions Fréquentes",
+    faq_cat_japanese: "🇯🇵 Langue Japonaise",
+    faq_cat_french: "🇫🇷 Langue Française",
+    faq_cat_career: "💼 Carrière & Emploi",
     faq1_q: "Je n'ai aucune base en japonais, c'est possible ?",
     faq1_a: "Absolument ! Nos cours commencent depuis le niveau débutant complet (N5). Nous t'accompagnons étape par étape, du hiragana jusqu'au niveau requis pour tes études ou ton emploi au Japon.",
     faq2_q: "Combien de temps dure le Pack Complet ?",
@@ -256,6 +259,9 @@ const academiaI18n = {
     module10_desc: "French practice in real situations",
 
     faq_title: "❓ Frequently Asked Questions",
+    faq_cat_japanese: "🇯🇵 Japanese Language",
+    faq_cat_french: "🇫🇷 French Language",
+    faq_cat_career: "💼 Career & Employment",
     faq1_q: "I have no Japanese background, is it possible?",
     faq1_a: "Absolutely! Our courses start from complete beginner level (N5). We guide you step by step, from hiragana to the level required for your studies or job in Japan.",
     faq2_q: "How long does the Complete Package last?",
@@ -405,6 +411,9 @@ const academiaI18n = {
     module10_desc: "実際の状況でのフランス語練習",
 
     faq_title: "❓ よくある質問",
+    faq_cat_japanese: "🇯🇵 日本語",
+    faq_cat_french: "🇫🇷 フランス語",
+    faq_cat_career: "💼 キャリア・就職",
     faq1_q: "日本語の知識が全くなくても大丈夫ですか？",
     faq1_a: "もちろんです！コースは完全初心者レベル（N5）から始まります。ひらがなから、留学や就職に必要なレベルまで段階的にサポートします。",
     faq2_q: "完全パックの期間はどれくらいですか？",
