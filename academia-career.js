@@ -53,6 +53,7 @@ const academiaI18n = {
     pack1_feat3: "✓ Préparation JLPT & culture japonaise",
     pack1_feat4: "✓ Club Anglais inclus tout au long",
     pack1_feat5: "✓ Assistance études ou emploi au Japon",
+    pack1_feat6: "✓ Newsletter Opportunités (gratuit)",
     
     pack2_title: "Pack Complet Travail International",
     pack2_subtitle: "Pour Amazon, Google, Oracle, Microsoft",
@@ -62,6 +63,7 @@ const academiaI18n = {
     pack2_feat4: "✓ Mentorat carrière & préparation entretiens",
     pack2_feat5: "✓ Recommandation auprès des entreprises",
     pack2_feat6: "✓ Pack Data Center inclus",
+    pack2_feat7: "✓ Newsletter Opportunités (gratuit)",
     
     pack3_title: "Orientation & Mentorat",
     pack3_subtitle: "Tu ne sais pas par où commencer ?",
@@ -191,6 +193,7 @@ const academiaI18n = {
     pack1_feat3: "✓ JLPT prep & Japanese culture",
     pack1_feat4: "✓ English Club included throughout",
     pack1_feat5: "✓ Study or employment assistance in Japan",
+    pack1_feat6: "✓ Opportunities Newsletter (free)",
     
     pack2_title: "Complete International Work Package",
     pack2_subtitle: "For Amazon, Google, Oracle, Microsoft",
@@ -200,6 +203,7 @@ const academiaI18n = {
     pack2_feat4: "✓ Career mentoring & interview prep",
     pack2_feat5: "✓ Referrals to companies",
     pack2_feat6: "✓ Data Center Package included",
+    pack2_feat7: "✓ Opportunities Newsletter (free)",
     
     pack3_title: "Guidance & Mentoring",
     pack3_subtitle: "Don't know where to start?",
@@ -324,6 +328,7 @@ const academiaI18n = {
     pack1_feat3: "✓ JLPT対策 & 日本文化",
     pack1_feat4: "✓ 英会話クラブ常時受講可能",
     pack1_feat5: "✓ 留学・就職サポート",
+    pack1_feat6: "✓ 機会ニュースレター（無料）",
     
     pack2_title: "国際就職完全パック",
     pack2_subtitle: "Amazon・Google・Oracle・Microsoft向け",
@@ -333,6 +338,7 @@ const academiaI18n = {
     pack2_feat4: "✓ キャリアメンタリング & 面接対策",
     pack2_feat5: "✓ 企業への推薦",
     pack2_feat6: "✓ データセンターパック含む",
+    pack2_feat7: "✓ 機会ニュースレター（無料）",
     
     pack3_title: "進路相談 & メンタリング",
     pack3_subtitle: "どこから始めればいいかわからない？",
@@ -429,10 +435,10 @@ const packRecommendations = {
       phases: [
         {
           month: 0,
-          duration: { fr: "1-2 heures", en: "1-2 hours", ja: "1〜2時間" },
-          title: { fr: "Orientation", en: "Guidance", ja: "進路相談" },
-          desc: { fr: "Diagnostic personnalisé et plan d'études", en: "Personalized assessment and study plan", ja: "個別診断と学習計画" },
-          price: { perHour: 10000 },
+          duration: { fr: "2 heures", en: "2 hours", ja: "2時間" },
+          title: { fr: "Orientation (1h début + 1h suivi)", en: "Guidance (1h start + 1h follow-up)", ja: "進路相談（1時間開始 + 1時間フォローアップ）" },
+          desc: { fr: "Diagnostic personnalisé, plan d'études et suivi mi-parcours", en: "Personalized assessment, study plan and mid-course follow-up", ja: "個別診断、学習計画、中間フォローアップ" },
+          price: 20000,
           icon: "🧭"
         },
         {
@@ -499,7 +505,7 @@ const packRecommendations = {
           ]
         }
       ],
-      totalMin: 1315000,
+      totalMin: 1325000,
       totalMax: 1442000
     },
     steps: [
@@ -539,9 +545,9 @@ const packRecommendations = {
       ]
     },
     price: {
-      fr: "1 315 000 - 1 442 000 FCFA (Club Anglais en option)",
-      en: "1,315,000 - 1,442,000 FCFA (English Club optional)",
-      ja: "1,315,000 - 1,442,000 FCFA（英会話クラブ任意）"
+      fr: "1 325 000 - 1 442 000 FCFA (Club Anglais en option)",
+      en: "1,325,000 - 1,442,000 FCFA (English Club optional)",
+      ja: "1,325,000 - 1,442,000 FCFA（英会話クラブ任意）"
     }
   },
   'work-japan': {
@@ -555,10 +561,10 @@ const packRecommendations = {
       phases: [
         {
           month: 0,
-          duration: { fr: "1-2 heures", en: "1-2 hours", ja: "1〜2時間" },
-          title: { fr: "Orientation", en: "Guidance", ja: "進路相談" },
-          desc: { fr: "Diagnostic personnalisé et plan de carrière", en: "Personalized assessment and career plan", ja: "個別診断とキャリアプラン" },
-          price: { perHour: 10000 },
+          duration: { fr: "2 heures", en: "2 hours", ja: "2時間" },
+          title: { fr: "Orientation (1h début + 1h suivi)", en: "Guidance (1h start + 1h follow-up)", ja: "進路相談（1時間開始 + 1時間フォローアップ）" },
+          desc: { fr: "Diagnostic personnalisé, plan de carrière et suivi mi-parcours", en: "Personalized assessment, career plan and mid-course follow-up", ja: "個別診断、キャリアプラン、中間フォローアップ" },
+          price: 20000,
           icon: "🧭"
         },
         {
@@ -596,7 +602,7 @@ const packRecommendations = {
           icon: "💼"
         }
       ],
-      totalMin: 1065000,
+      totalMin: 1075000,
       totalMax: 1192000
     },
     steps: [
@@ -636,9 +642,9 @@ const packRecommendations = {
       ]
     },
     price: {
-      fr: "1 065 000 - 1 192 000 FCFA (Club Anglais en option)",
-      en: "1,065,000 - 1,192,000 FCFA (English Club optional)",
-      ja: "1,065,000 - 1,192,000 FCFA（英会話クラブ任意）"
+      fr: "1 075 000 - 1 192 000 FCFA (Club Anglais en option)",
+      en: "1,075,000 - 1,192,000 FCFA (English Club optional)",
+      ja: "1,075,000 - 1,192,000 FCFA（英会話クラブ任意）"
     }
   },
   'work-international': {
@@ -652,10 +658,10 @@ const packRecommendations = {
       phases: [
         {
           month: 0,
-          duration: { fr: "1-2 heures", en: "1-2 hours", ja: "1〜2時間" },
-          title: { fr: "Orientation", en: "Guidance", ja: "進路相談" },
-          desc: { fr: "Diagnostic personnalisé et plan de carrière internationale", en: "Personalized assessment and international career plan", ja: "個別診断と国際キャリアプラン" },
-          price: { perHour: 10000 },
+          duration: { fr: "2 heures", en: "2 hours", ja: "2時間" },
+          title: { fr: "Orientation (1h début + 1h suivi)", en: "Guidance (1h start + 1h follow-up)", ja: "進路相談（1時間開始 + 1時間フォローアップ）" },
+          desc: { fr: "Diagnostic personnalisé, plan de carrière internationale et suivi mi-parcours", en: "Personalized assessment, international career plan and mid-course follow-up", ja: "個別診断、国際キャリアプラン、中間フォローアップ" },
+          price: 20000,
           icon: "🧭"
         },
         {
@@ -675,7 +681,7 @@ const packRecommendations = {
           icon: "💼"
         }
       ],
-      totalMin: 332000,
+      totalMin: 342000,
       totalMax: 397000
     },
     steps: [
@@ -701,9 +707,9 @@ const packRecommendations = {
       ja: ["📬 機会ニュースレター：奨学金・インターンシップの月次アラート"]
     },
     price: {
-      fr: "332 000 - 397 000 FCFA",
-      en: "332,000 - 397,000 FCFA",
-      ja: "332,000 - 397,000 FCFA"
+      fr: "342 000 - 397 000 FCFA",
+      en: "342,000 - 397,000 FCFA",
+      ja: "342,000 - 397,000 FCFA"
     }
   },
   'orientation': {
