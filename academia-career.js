@@ -116,6 +116,12 @@ const academiaI18n = {
     faq5_a: "L'anglais est essentiel ! La plupart des grandes entreprises tech au Japon (Amazon, Google, Oracle) utilisent l'anglais comme langue de travail. Le Club Anglais renforce ta confiance à l'oral et ton aisance professionnelle.",
     faq6_q: "Qu'est-ce que le Pack Data Center ?",
     faq6_a: "C'est un module spécialisé pour ceux qui visent des postes dans les data centers d'Amazon, Google, Microsoft ou Oracle au Japon. Il inclut des formations techniques spécifiques, du networking et des recommandations ciblées.",
+    faq7_q: "Je suis japonais(e) au Cameroun, comment le Pack Intégration Francophone peut-il m'aider ?",
+    faq7_a: "Notre Pack Intégration Francophone est spécialement conçu pour les expatriés japonais et étrangers au Cameroun. Il combine apprentissage linguistique (français général et professionnel) avec des sorties pédagogiques pratiques pour vous aider à naviguer dans la vie quotidienne : faire des achats au marché, gérer vos documents administratifs à la préfecture, ouvrir un compte bancaire, etc. Un guide francophone vous accompagne lors de ces sorties.",
+    faq8_q: "Quelle est la différence entre le français général et le français professionnel/administratif ?",
+    faq8_a: "Le français général couvre les bases de la langue : grammaire, vocabulaire quotidien, conversation courante. Le français professionnel/administratif est sur mesure selon votre secteur d'activité : vocabulaire technique, présentations commerciales, gestion des objections clients, simulation d'appels professionnels. C'est idéal si vous travaillez au Cameroun et avez besoin de communiquer efficacement dans un contexte professionnel.",
+    faq9_q: "Les sorties pédagogiques sont-elles vraiment nécessaires ?",
+    faq9_a: "Oui ! C'est la meilleure façon d'apprendre le français en contexte réel. Nos sorties vous permettent de pratiquer ce que vous avez appris en classe dans des situations authentiques : négocier au marché, remplir des formulaires administratifs, communiquer avec un conseiller bancaire. Vous gagnez en confiance et en autonomie pour votre vie quotidienne au Cameroun.",
 
     // CTA Section
     cta_title: "🚀 Prêt à commencer ton parcours ?",
@@ -262,6 +268,12 @@ const academiaI18n = {
     faq5_a: "English is essential! Most major tech companies in Japan (Amazon, Google, Oracle) use English as the working language. The English Club strengthens your oral confidence and professional ease.",
     faq6_q: "What is the Data Center Package?",
     faq6_a: "It's a specialized module for those targeting positions in Amazon, Google, Microsoft, or Oracle data centers in Japan. It includes specific technical training, networking, and targeted recommendations.",
+    faq7_q: "I'm Japanese living in Cameroon, how can the French Integration Package help me?",
+    faq7_a: "Our French Integration Package is specially designed for Japanese expatriates and foreigners in Cameroon. It combines language learning (general and professional French) with practical educational outings to help you navigate daily life: shopping at the market, managing administrative documents at the prefecture, opening a bank account, etc. A French-speaking guide accompanies you during these outings.",
+    faq8_q: "What's the difference between general French and professional/administrative French?",
+    faq8_a: "General French covers the language basics: grammar, everyday vocabulary, common conversation. Professional/administrative French is customized according to your field of activity: technical vocabulary, commercial presentations, client objection handling, professional call simulations. It's ideal if you work in Cameroon and need to communicate effectively in a professional context.",
+    faq9_q: "Are educational outings really necessary?",
+    faq9_a: "Yes! It's the best way to learn French in a real context. Our outings allow you to practice what you've learned in class in authentic situations: negotiating at the market, filling out administrative forms, communicating with a bank advisor. You gain confidence and autonomy for your daily life in Cameroon.",
 
     cta_title: "🚀 Ready to start your journey?",
     cta_subtitle: "Contact us for a free consultation and discover the path that suits you",
@@ -405,6 +417,12 @@ const academiaI18n = {
     faq5_a: "英語は必須です！日本の大手テック企業（Amazon、Google、Oracle）のほとんどは英語を業務言語として使用します。英会話クラブで会話の自信とビジネスでの流暢さを強化します。",
     faq6_q: "データセンターパックとは何ですか？",
     faq6_a: "日本のAmazon、Google、Microsoft、Oracleのデータセンターでの仕事を目指す方向けの専門モジュールです。専門技術トレーニング、ネットワーキング、ターゲット推薦を含みます。",
+    faq7_q: "カメルーン在住の日本人ですが、フランス語統合パックはどのように役立ちますか？",
+    faq7_a: "フランス語統合パックは、カメルーン在住の日本人駐在員や外国人向けに特別に設計されています。言語学習（一般・ビジネスフランス語）と実践的な教育的外出を組み合わせ、日常生活をナビゲートするお手伝いをします：市場での買い物、県庁での行政手続き、銀行口座の開設など。フランス語を話すガイドが外出に同行します。",
+    faq8_q: "一般フランス語とビジネス・行政フランス語の違いは何ですか？",
+    faq8_a: "一般フランス語は言語の基礎をカバーします：文法、日常語彙、日常会話。ビジネス・行政フランス語は、あなたの活動分野に合わせてカスタマイズされます：専門用語、商業プレゼンテーション、顧客の異議対応、プロフェッショナルな電話シミュレーション。カメルーンで働いており、プロフェッショナルな文脈で効果的にコミュニケーションを取る必要がある場合に最適です。",
+    faq9_q: "教育的外出は本当に必要ですか？",
+    faq9_a: "はい！実際の文脈でフランス語を学ぶ最良の方法です。外出では、クラスで学んだことを本物の状況で実践できます：市場での交渉、行政書類の記入、銀行アドバイザーとのコミュニケーション。カメルーンでの日常生活において自信と自立を得ることができます。",
 
     cta_title: "🚀 あなたの道を始める準備はできましたか？",
     cta_subtitle: "無料相談であなたに合ったプログラムを見つけましょう",
