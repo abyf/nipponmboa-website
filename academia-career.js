@@ -32,6 +32,8 @@ const academiaI18n = {
     goal_orientation_desc: "Intégration socio-professionnelle au Cameroun",
     goal_tech: "Faire carrière dans les métiers Data Centers",
     goal_tech_desc: "Amazon, Google, Oracle, Microsoft",
+    goal_french: "S'intégrer au Cameroun",
+    goal_french_desc: "Maîtriser le français pour vivre au Cameroun",
 
     // Results
     result_recommended: "✅ Parcours recommandé :",
@@ -93,6 +95,12 @@ const academiaI18n = {
     module6_desc: "Préparation CV, entretiens, networking",
     module7_title: "Newsletter Opportunités",
     module7_desc: "Alertes bourses, stages, échanges",
+    module8_title: "Cours Français Général",
+    module8_desc: "Apprentissage général de la langue française",
+    module9_title: "Français Professionnel et/ou Administratif",
+    module9_desc: "Cours sur mesure pour le monde professionnel",
+    module10_title: "Sorties Pédagogiques",
+    module10_desc: "Pratique du français en situation réelle",
 
     // FAQ
     faq_title: "❓ Questions Fréquentes",
@@ -174,6 +182,8 @@ const academiaI18n = {
     goal_orientation_desc: "Socio-professional integration in Cameroon",
     goal_tech: "Build a Data Center Career",
     goal_tech_desc: "Amazon, Google, Oracle, Microsoft",
+    goal_french: "Integrate in Cameroon",
+    goal_french_desc: "Master French to live in Cameroon",
 
     result_recommended: "✅ Recommended path:",
     result_learn_more: "Learn more",
@@ -232,6 +242,12 @@ const academiaI18n = {
     module6_desc: "CV prep, interviews, networking",
     module7_title: "Opportunities Newsletter",
     module7_desc: "Scholarships, internships, exchanges alerts",
+    module8_title: "General French Courses",
+    module8_desc: "General French language learning",
+    module9_title: "Professional and/or Administrative French",
+    module9_desc: "Custom courses for the professional world",
+    module10_title: "Educational Outings",
+    module10_desc: "French practice in real situations",
 
     faq_title: "❓ Frequently Asked Questions",
     faq1_q: "I have no Japanese background, is it possible?",
@@ -309,6 +325,8 @@ const academiaI18n = {
     goal_orientation_desc: "カメルーンでの社会職業統合",
     goal_tech: "データセンターでキャリアを築く",
     goal_tech_desc: "Amazon・Google・Oracle・Microsoft",
+    goal_french: "カメルーンに統合する",
+    goal_french_desc: "カメルーンで生活するためのフランス語習得",
 
     result_recommended: "✅ おすすめのプログラム：",
     result_learn_more: "詳細を見る",
@@ -367,6 +385,12 @@ const academiaI18n = {
     module6_desc: "履歴書・面接・ネットワーキング対策",
     module7_title: "機会ニュースレター",
     module7_desc: "奨学金・インターンシップ・交換留学情報",
+    module8_title: "一般フランス語コース",
+    module8_desc: "一般的なフランス語学習",
+    module9_title: "ビジネス・行政フランス語",
+    module9_desc: "ビジネス向けカスタムコース",
+    module10_title: "教育的外出",
+    module10_desc: "実際の状況でのフランス語練習",
 
     faq_title: "❓ よくある質問",
     faq1_q: "日本語の知識が全くなくても大丈夫ですか？",
@@ -853,6 +877,96 @@ const packRecommendations = {
       fr: "582 000 - 897 000 FCFA",
       en: "582,000 - 897,000 FCFA",
       ja: "582,000 - 897,000 FCFA"
+    }
+  },
+  'french-integration': {
+    title: {
+      fr: "Pack Intégration Francophone",
+      en: "French Integration Package",
+      ja: "フランス語統合パック"
+    },
+    hasDetailedTimeline: true,
+    timeline: {
+      phases: [
+        {
+          month: 0,
+          duration: { fr: "2 heures", en: "2 hours", ja: "2時間" },
+          title: { fr: "Orientation linguistique (1h début + 1h suivi)", en: "Language Guidance (1h start + 1h follow-up)", ja: "言語相談（1時間開始 + 1時間フォローアップ）" },
+          desc: { fr: "Évaluation du niveau, objectifs personnalisés et suivi mi-parcours", en: "Level assessment, personalized goals and mid-course follow-up", ja: "レベル評価、個別目標設定、中間フォローアップ" },
+          price: 20000,
+          icon: "🧭"
+        },
+        {
+          month: 1,
+          duration: { fr: "3-24 mois", en: "3-24 months", ja: "3〜24ヶ月" },
+          title: { fr: "Cours Français Général", en: "General French Courses", ja: "一般フランス語コース" },
+          desc: { fr: "Apprentissage général de la langue française : grammaire, vocabulaire, conversation", en: "General French language learning: grammar, vocabulary, conversation", ja: "一般的なフランス語学習：文法、語彙、会話" },
+          price: { tbd: true },
+          icon: "🇫🇷"
+        },
+        {
+          month: 4,
+          duration: { fr: "Variable", en: "Variable", ja: "可変" },
+          title: { fr: "Français Professionnel et/ou Administratif", en: "Professional and/or Administrative French", ja: "ビジネス・行政フランス語" },
+          desc: { fr: "Cours sur mesure : vocabulaire technique, pitch commercial, gestion des objections, simulation d'appel client", en: "Custom courses: technical vocabulary, sales pitch, objection handling, customer call simulation", ja: "カスタムコース：専門用語、営業プレゼン、異議対応、顧客電話シミュレーション" },
+          price: { tbd: true },
+          icon: "💼"
+        },
+        {
+          month: 6,
+          duration: { fr: "Sessions régulières", en: "Regular sessions", ja: "定期的なセッション" },
+          title: { fr: "Sorties Pédagogiques", en: "Educational Outings", ja: "教育的外出" },
+          desc: { fr: "Pratique en situation réelle : marché (achats), préfecture (dépôt de dossier), banque (ouverture de compte). Guide francophone présent", en: "Real-life practice: market (shopping), prefecture (file submission), bank (account opening). French-speaking guide present", ja: "実際の状況での練習：市場（買い物）、県庁（書類提出）、銀行（口座開設）。フランス語ガイド同行" },
+          price: { tbd: true },
+          icon: "🚶"
+        }
+      ],
+      totalMin: 20000,
+      totalMax: 20000
+    },
+    steps: [
+      {
+        icon: "🧭",
+        title: { fr: "Orientation", en: "Guidance", ja: "相談" },
+        desc: { fr: "Évaluation linguistique", en: "Language assessment", ja: "言語評価" }
+      },
+      {
+        icon: "🇫🇷",
+        title: { fr: "Français Général", en: "General French", ja: "一般フランス語" },
+        desc: { fr: "3-24 mois", en: "3-24 months", ja: "3〜24ヶ月" }
+      },
+      {
+        icon: "💼",
+        title: { fr: "Français Pro/Admin", en: "Professional/Admin French", ja: "ビジネス/行政仏語" },
+        desc: { fr: "Cours sur mesure", en: "Custom courses", ja: "カスタムコース" }
+      },
+      {
+        icon: "🚶",
+        title: { fr: "Sorties Pédagogiques", en: "Educational Outings", ja: "教育的外出" },
+        desc: { fr: "Pratique réelle", en: "Real practice", ja: "実践練習" }
+      }
+    ],
+    extras: {
+      fr: [
+        "📋 Programme flexible adapté à votre rythme",
+        "🎯 Cours individuels ou en petits groupes",
+        "🗣️ Accent sur la pratique orale et l'intégration culturelle"
+      ],
+      en: [
+        "📋 Flexible program adapted to your pace",
+        "🎯 Individual or small group classes",
+        "🗣️ Focus on oral practice and cultural integration"
+      ],
+      ja: [
+        "📋 あなたのペースに合わせた柔軟なプログラム",
+        "🎯 個人レッスンまたは少人数グループ",
+        "🗣️ 会話練習と文化統合に重点"
+      ]
+    },
+    price: {
+      fr: "Prix à définir selon vos besoins",
+      en: "Price to be determined based on your needs",
+      ja: "ニーズに応じて価格決定"
     }
   }
 };
