@@ -89,6 +89,8 @@ const academiaI18n = {
     module5_desc: "Ateliers thématiques immersifs",
     module6_title: "Coaching Carrière",
     module6_desc: "Préparation CV, entretiens, networking",
+    module7_title: "Newsletter Opportunités",
+    module7_desc: "Alertes bourses, stages, échanges",
 
     // FAQ
     faq_title: "❓ Questions Fréquentes",
@@ -224,6 +226,8 @@ const academiaI18n = {
     module5_desc: "Immersive thematic workshops",
     module6_title: "Career Coaching",
     module6_desc: "CV prep, interviews, networking",
+    module7_title: "Opportunities Newsletter",
+    module7_desc: "Scholarships, internships, exchanges alerts",
 
     faq_title: "❓ Frequently Asked Questions",
     faq1_q: "I have no Japanese background, is it possible?",
@@ -355,6 +359,8 @@ const academiaI18n = {
     module5_desc: "テーマ別体験ワークショップ",
     module6_title: "キャリアコーチング",
     module6_desc: "履歴書・面接・ネットワーキング対策",
+    module7_title: "機会ニュースレター",
+    module7_desc: "奨学金・インターンシップ・交換留学情報",
 
     faq_title: "❓ よくある質問",
     faq1_q: "日本語の知識が全くなくても大丈夫ですか？",
@@ -519,9 +525,18 @@ const packRecommendations = {
       }
     ],
     extras: {
-      fr: ["🗣️ Club Anglais (optionnel) : +5 000 FCFA (inscription) + 11 000 FCFA/mois"],
-      en: ["🗣️ English Club (optional): +5,000 FCFA (subscription) + 11,000 FCFA/month"],
-      ja: ["🗣️ 英会話クラブ（任意）：+5,000 FCFA（登録料）+ 11,000 FCFA/月"]
+      fr: [
+        "🗣️ Club Anglais (optionnel) : +5 000 FCFA (inscription) + 11 000 FCFA/mois",
+        "📬 Newsletter Opportunités : Alertes mensuelles sur bourses et stages"
+      ],
+      en: [
+        "🗣️ English Club (optional): +5,000 FCFA (subscription) + 11,000 FCFA/month",
+        "📬 Opportunities Newsletter: Monthly alerts on scholarships and internships"
+      ],
+      ja: [
+        "🗣️ 英会話クラブ（任意）：+5,000 FCFA（登録料）+ 11,000 FCFA/月",
+        "📬 機会ニュースレター：奨学金・インターンシップの月次アラート"
+      ]
     },
     price: {
       fr: "1 315 000 - 1 442 000 FCFA (Club Anglais en option)",
@@ -607,9 +622,18 @@ const packRecommendations = {
       }
     ],
     extras: {
-      fr: ["🗣️ Club Anglais (optionnel) : +5 000 FCFA (inscription) + 11 000 FCFA/mois"],
-      en: ["🗣️ English Club (optional): +5,000 FCFA (subscription) + 11,000 FCFA/month"],
-      ja: ["🗣️ 英会話クラブ（任意）：+5,000 FCFA（登録料）+ 11,000 FCFA/月"]
+      fr: [
+        "🗣️ Club Anglais (optionnel) : +5 000 FCFA (inscription) + 11 000 FCFA/mois",
+        "📬 Newsletter Opportunités : Alertes mensuelles sur bourses et stages"
+      ],
+      en: [
+        "🗣️ English Club (optional): +5,000 FCFA (subscription) + 11,000 FCFA/month",
+        "📬 Opportunities Newsletter: Monthly alerts on scholarships and internships"
+      ],
+      ja: [
+        "🗣️ 英会話クラブ（任意）：+5,000 FCFA（登録料）+ 11,000 FCFA/月",
+        "📬 機会ニュースレター：奨学金・インターンシップの月次アラート"
+      ]
     },
     price: {
       fr: "1 065 000 - 1 192 000 FCFA (Club Anglais en option)",
@@ -672,9 +696,9 @@ const packRecommendations = {
       }
     ],
     extras: {
-      fr: [],
-      en: [],
-      ja: []
+      fr: ["📬 Newsletter Opportunités : Alertes mensuelles sur bourses et stages"],
+      en: ["📬 Opportunities Newsletter: Monthly alerts on scholarships and internships"],
+      ja: ["📬 機会ニュースレター：奨学金・インターンシップの月次アラート"]
     },
     price: {
       fr: "332 000 - 397 000 FCFA",
