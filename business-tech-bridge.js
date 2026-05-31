@@ -1,5 +1,142 @@
 // Business & Technology Bridge - JavaScript Functionality
 
+// i18n translations for Business & Technology Bridge page
+const btbI18n = {
+  fr: {
+    // Navigation
+    nav_home: "Accueil",
+    nav_about: "À propos",
+    nav_poles: "Pôles",
+    nav_contact: "Contact",
+
+    // Hero Section
+    btb_hero_title: "Business & Technology Bridge",
+    btb_hero_subtitle: "Facilitez vos échanges commerciaux et technologiques entre le Cameroun et le Japon",
+
+    // Intro Section
+    btb_intro_title: "Votre Passerelle vers l'Excellence Commerciale",
+    btb_intro_p1: "Le pôle <strong>Business & Technology Bridge</strong> est votre partenaire stratégique pour établir des connexions commerciales durables entre le Cameroun et le Japon.",
+    btb_intro_p2: "De la simple mise en relation à l'accompagnement complet dans vos projets d'expansion, nous vous offrons une gamme complète de services adaptés à vos besoins spécifiques.",
+
+    // Services Section
+    btb_services_title: "Nos Services Détaillés",
+    btb_services_subtitle: "Choisissez le service adapté à vos besoins commerciaux",
+
+    // Service Titles
+    btb_s1_title: "Matchmaking Simple",
+    btb_s2_title: "Accompagnement Complet",
+    btb_s3_title: "Mission Commerciale Organisée",
+    btb_s4_title: "Abonnement Annuel",
+    btb_s5_title: "Paiement à la Performance",
+
+    // À la Carte Section
+    btb_carte_title: "Prestations à la Carte",
+    btb_carte_subtitle: "Services ponctuels disponibles dans les deux sens",
+
+    // CTA Section
+    btb_cta_title: "Prêt à Développer Votre Business ?",
+    btb_cta_subtitle: "Contactez-nous pour discuter de vos projets et obtenir un devis personnalisé"
+  },
+
+  en: {
+    // Navigation
+    nav_home: "Home",
+    nav_about: "About",
+    nav_poles: "Poles",
+    nav_contact: "Contact",
+
+    // Hero Section
+    btb_hero_title: "Business & Technology Bridge",
+    btb_hero_subtitle: "Facilitate your commercial and technological exchanges between Cameroon and Japan",
+
+    // Intro Section
+    btb_intro_title: "Your Gateway to Commercial Excellence",
+    btb_intro_p1: "The <strong>Business & Technology Bridge</strong> division is your strategic partner for establishing lasting commercial connections between Cameroon and Japan.",
+    btb_intro_p2: "From simple networking to complete support in your expansion projects, we offer you a full range of services adapted to your specific needs.",
+
+    // Services Section
+    btb_services_title: "Our Detailed Services",
+    btb_services_subtitle: "Choose the service suited to your business needs",
+
+    // Service Titles
+    btb_s1_title: "Simple Matchmaking",
+    btb_s2_title: "Complete Support",
+    btb_s3_title: "Organized Trade Mission",
+    btb_s4_title: "Annual Subscription",
+    btb_s5_title: "Performance-Based Payment",
+
+    // À la Carte Section
+    btb_carte_title: "À La Carte Services",
+    btb_carte_subtitle: "One-time services available in both directions",
+
+    // CTA Section
+    btb_cta_title: "Ready to Grow Your Business?",
+    btb_cta_subtitle: "Contact us to discuss your projects and get a personalized quote"
+  },
+
+  ja: {
+    // Navigation
+    nav_home: "ホーム",
+    nav_about: "私たちについて",
+    nav_poles: "サービス部門",
+    nav_contact: "お問い合わせ",
+
+    // Hero Section
+    btb_hero_title: "ビジネス・テクノロジーブリッジ",
+    btb_hero_subtitle: "カメルーンと日本間のビジネス・技術交流を促進",
+
+    // Intro Section
+    btb_intro_title: "ビジネス卓越性への架け橋",
+    btb_intro_p1: "<strong>ビジネス・テクノロジーブリッジ</strong>部門は、カメルーンと日本間の永続的なビジネス接続を確立するための戦略的パートナーです。",
+    btb_intro_p2: "シンプルなマッチングから事業拡大プロジェクトの完全サポートまで、お客様の特定のニーズに適応した幅広いサービスを提供します。",
+
+    // Services Section
+    btb_services_title: "詳細サービス",
+    btb_services_subtitle: "ビジネスニーズに適したサービスをお選びください",
+
+    // Service Titles
+    btb_s1_title: "シンプルマッチング",
+    btb_s2_title: "完全サポート",
+    btb_s3_title: "商談ミッション",
+    btb_s4_title: "年間サブスクリプション",
+    btb_s5_title: "成果報酬型",
+
+    // À la Carte Section
+    btb_carte_title: "単品サービス",
+    btb_carte_subtitle: "両方向で利用可能な単発サービス",
+
+    // CTA Section
+    btb_cta_title: "ビジネスを成長させる準備はできましたか？",
+    btb_cta_subtitle: "プロジェクトについて話し合い、カスタム見積もりを取得するために、お問い合わせください"
+  }
+};
+
+// Current language
+let currentLang = 'fr';
+
+// Apply translations
+function applyLang(lang) {
+  currentLang = lang;
+  const t = btbI18n[lang];
+  document.documentElement.lang = lang;
+
+  // Apply translations to elements with data-i18n
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (t[key] !== undefined) {
+      el.innerHTML = t[key];
+    }
+  });
+
+  // Update active language button
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.lang === lang);
+  });
+
+  // Store language preference
+  localStorage.setItem('preferred-language', lang);
+}
+
 document.addEventListener('DOMContentLoaded', function() {
   // Initialize direction selector
   initDirectionSelector();
@@ -7,11 +144,15 @@ document.addEventListener('DOMContentLoaded', function() {
   // Initialize mobile navigation
   initMobileNav();
   
-  // Initialize language switcher (if needed)
+  // Initialize language switcher
   initLanguageSwitcher();
   
   // Initialize smooth scroll
   initSmoothScroll();
+  
+  // Load saved language preference or default to French
+  const savedLang = localStorage.getItem('preferred-language') || 'fr';
+  applyLang(savedLang);
 });
 
 // Direction Selector Functionality
@@ -113,31 +254,9 @@ function initLanguageSwitcher() {
   langBtns.forEach(btn => {
     btn.addEventListener('click', function() {
       const lang = this.dataset.lang;
-      
-      // Update active button
-      langBtns.forEach(b => b.classList.remove('active'));
-      this.classList.add('active');
-      
-      // Store language preference
-      localStorage.setItem('preferred-language', lang);
-      
-      // Here you would implement actual language switching logic
-      // For now, we'll just log it
-      console.log('Language switched to:', lang);
-      
-      // You could load translations here if implemented
-      // loadTranslations(lang);
+      applyLang(lang);
     });
   });
-  
-  // Load saved language preference
-  const savedLang = localStorage.getItem('preferred-language');
-  if (savedLang) {
-    const targetBtn = document.querySelector(`[data-lang="${savedLang}"]`);
-    if (targetBtn) {
-      targetBtn.click();
-    }
-  }
 }
 
 // Smooth Scroll
