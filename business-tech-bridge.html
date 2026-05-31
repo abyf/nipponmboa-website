@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Business & Technology Bridge - NipponMboa Consulting</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="business-tech-bridge.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-brand">
+      <a href="index.html">
+        <img src="NipponMboa-Consulting-Logo.jpeg" alt="NipponMboa Consulting" class="nav-logo" />
+      </a>
+    </div>
+    <div class="nav-links">
+      <a href="index.html">Accueil</a>
+      <a href="index.html#about">À propos</a>
+      <a href="index.html#poles">Pôles</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+    <div class="lang-switcher">
+      <button class="lang-btn active" data-lang="fr">FR</button>
+      <button class="lang-btn" data-lang="en">EN</button>
+      <button class="lang-btn" data-lang="ja">日本語</button>
+    </div>
+    <button class="nav-toggle" aria-label="Menu">&#9776;</button>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="btb-hero">
+    <div class="btb-hero-overlay"></div>
+    <div class="container">
+      <div class="btb-hero-content">
+        <div class="btb-badge">🤝 Pôle 1</div>
+        <h1 class="btb-hero-title" data-i18n="btb_hero_title">Business & Technology Bridge</h1>
+        <p class="btb-hero-subtitle" data-i18n="btb_hero_subtitle">
+          Facilitez vos échanges commerciaux et technologiques entre le Cameroun et le Japon
+        </p>
+        <div class="btb-hero-features">
+          <div class="btb-hero-feature">
+            <span class="btb-hero-icon">🌐</span>
+            <span>Matchmaking B2B</span>
+          </div>
+          <div class="btb-hero-feature">
+            <span class="btb-hero-icon">🤝</span>
+            <span>Accompagnement complet</span>
+          </div>
+          <div class="btb-hero-feature">
+            <span class="btb-hero-icon">✈️</span>
+            <span>Missions commerciales</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTRO SECTION -->
+  <section class="btb-intro">
+    <div class="container">
+      <div class="btb-intro-grid">
+        <div class="btb-intro-text">
+          <h2 data-i18n="btb_intro_title">Votre Passerelle vers l'Excellence Commerciale</h2>
+          <p data-i18n="btb_intro_p1">
+            Le pôle <strong>Business & Technology Bridge</strong> est votre partenaire stratégique pour établir des connexions commerciales durables entre le Cameroun et le Japon.
+          </p>
+          <p data-i18n="btb_intro_p2">
+            De la simple mise en relation à l'accompagnement complet dans vos projets d'expansion, nous vous offrons une gamme complète de services adaptés à vos besoins spécifiques.
+          </p>
+          <div class="btb-intro-stats">
+            <div class="btb-stat">
+              <div class="btb-stat-number">8</div>
+              <div class="btb-stat-label">Services sur mesure</div>
+            </div>
+            <div class="btb-stat">
+              <div class="btb-stat-number">2</div>
+              <div class="btb-stat-label">Sens d'échange</div>
+            </div>
+            <div class="btb-stat">
+              <div class="btb-stat-number">100%</div>
+              <div class="btb-stat-label">Accompagnement</div>
+            </div>
+          </div>
+        </div>
+        <div class="btb-intro-visual">
+          <div class="btb-connection-diagram">
+            <div class="btb-flag btb-flag-cm">🇨🇲<br><small>Cameroun</small></div>
+            <div class="btb-bridge">
+              <div class="btb-bridge-line"></div>
+              <div class="btb-bridge-icon">🤝</div>
+            </div>
+            <div class="btb-flag btb-flag-jp">🇯🇵<br><small>Japon</small></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES SECTION -->
+  <section class="btb-services">
+    <div class="container">
+      <div class="btb-section-header">
+        <h2 data-i18n="btb_services_title">Nos Services Détaillés</h2>
+        <p data-i18n="btb_services_subtitle">Choisissez le service adapté à vos besoins commerciaux</p>
+      </div>
+
+      <!-- Direction Selector -->
+      <div class="btb-direction-selector">
+        <button class="btb-direction-btn active" data-direction="cmr-jpn">
+          <span class="btb-dir-flag">🇨🇲</span>
+          <span class="btb-dir-arrow">→</span>
+          <span class="btb-dir-flag">🇯🇵</span>
+          <span class="btb-dir-label">Cameroun vers Japon</span>
+        </button>
+        <button class="btb-direction-btn" data-direction="jpn-cmr">
+          <span class="btb-dir-flag">🇯🇵</span>
+          <span class="btb-dir-arrow">→</span>
+          <span class="btb-dir-flag">🇨🇲</span>
+          <span class="btb-dir-label">Japon vers Cameroun</span>
+        </button>
+      </div>
+
+      <!-- Service Cards -->
+      <div class="btb-services-grid">
+        
+        <!-- Matchmaking Simple -->
+        <div class="btb-service-card" data-service="matchmaking">
+          <div class="btb-service-header">
+            <div class="btb-service-icon">🎯</div>
+            <h3 data-i18n="btb_s1_title">Matchmaking Simple</h3>
+            <div class="btb-service-badge">Recommandé pour débutants</div>
+          </div>
+          <div class="btb-service-content">
+            <div class="btb-scenarios" data-direction="cmr-jpn">
+              <h4>Scénarios d'utilisation :</h4>
+              <ul>
+                <li>PME camerounaise cherche fournisseur de pièces détachées</li>
+                <li>PME camerounaise cherche partenaire technologique</li>
+                <li>PME camerounaise cherche distributeur japonais</li>
+                <li>Startup camerounaise cherche investisseur japonais</li>
+              </ul>
+            </div>
+            <div class="btb-scenarios" data-direction="jpn-cmr" style="display:none;">
+              <h4>Scénarios d'utilisation :</h4>
+              <ul>
+                <li>PME japonaise cherche distributeur exclusif au Cameroun</li>
+                <li>PME japonaise cherche sous-traitant local</li>
+                <li>PME japonaise cherche partenaire pour co-développement</li>
+                <li>Startup japonaise cherche partenaire pour test terrain</li>
+              </ul>
+            </div>
+            <div class="btb-deliverables">
+              <h4>Livrables :</h4>
+              <ul>
+                <li>3-5 profils de partenaires préqualifiés</li>
+                <li>Introduction écrite par courriel</li>
+                <li>Organisation d'une réunion (visio/présentiel)</li>
+              </ul>
+            </div>
+            <div class="btb-pricing">
+              <div class="btb-price" data-direction="cmr-jpn">
+                <span class="btb-price-amount">185.000 FCFA</span>
+                <span class="btb-price-note">80% payable à l'avance</span>
+              </div>
+              <div class="btb-price" data-direction="jpn-cmr" style="display:none;">
+                <span class="btb-price-amount">80.000 JPY</span>
+                <span class="btb-price-note">500€ pour autres étrangers | 80% à l'avance</span>
+              </div>
+            </div>
+          </div>
+          <button class="btb-service-btn" onclick="window.location.href='index.html#contact'">Demander ce service</button>
+        </div>
+
+        <!-- Accompagnement Complet -->
+        <div class="btb-service-card btb-featured" data-service="accompagnement">
+          <div class="btb-service-header">
+            <div class="btb-service-icon">🎓</div>
+            <h3 data-i18n="btb_s2_title">Accompagnement Complet</h3>
+            <div class="btb-service-badge">Le plus populaire</div>
+          </div>
+          <div class="btb-service-content">
+            <div class="btb-scenarios" data-direction="cmr-jpn">
+              <h4>Scénarios d'utilisation :</h4>
+              <ul>
+                <li>PME camerounaise veut signer une licence de fabrication</li>
+                <li>PME camerounaise veut acquérir un équipement industriel avec SAV</li>
+                <li>PME camerounaise veut créer une co-entreprise au Japon</li>
+              </ul>
+            </div>
+            <div class="btb-scenarios" data-direction="jpn-cmr" style="display:none;">
+              <h4>Scénarios d'utilisation :</h4>
+              <ul>
+                <li>PME japonaise veut établir un contrat de distribution exclusive</li>
+                <li>PME japonaise veut sous-traiter une production au Cameroun</li>
+                <li>PME japonaise veut créer une filiale ou un joint-venture</li>
+              </ul>
+            </div>
+            <div class="btb-deliverables">
+              <h4>Livrables :</h4>
+              <ul>
+                <li>Étude marché ciblée & due diligence</li>
+                <li>Organisation de 2-3 réunions stratégiques</li>
+                <li>LOI bilingue (Letter of Intent)</li>
+                <li>Roadmap d'implémentation</li>
+              </ul>
+            </div>
+            <div class="btb-pricing">
+              <div class="btb-price" data-direction="cmr-jpn">
+                <span class="btb-price-amount">1.185.500 FCFA</span>
+                <span class="btb-price-note">70% payable à l'avance</span>
+              </div>
+              <div class="btb-price" data-direction="jpn-cmr" style="display:none;">
+                <span class="btb-price-amount">640.000 JPY</span>
+                <span class="btb-price-note">70% payable à l'avance</span>
+              </div>
+            </div>
+          </div>
+          <button class="btb-service-btn" onclick="window.location.href='index.html#contact'">Demander ce service</button>
+        </div>
+
+        <!-- Mission Commerciale -->
+        <div class="btb-service-card" data-service="mission">
+          <div class="btb-service-header">
+            <div class="btb-service-icon">✈️</div>
+            <h3 data-i18n="btb_s3_title">Mission Commerciale Organisée</h3>
+            <div class="btb-service-badge">Immersion terrain</div>
+          </div>
+          <div class="btb-service-content">
+            <div class="btb-scenarios" data-direction="cmr-jpn">
+              <h4>Scénarios d'utilisation :</h4>
+              <ul>
+                <li>Délégation sectorielle (agri, énergie, numérique)</li>
+                <li>Mission acheteurs pour sourcing fournisseurs</li>
+                <li>PME camerounaise visite des usines et salons</li>
+              </ul>
+            </div>
+            <div class="btb-scenarios" data-direction="jpn-cmr" style="display:none;">
+              <h4>Scénarios d'utilisation :</h4>
+              <ul>
+                <li>Visites d'usines et de sites potentiels</li>
+                <li>Délégation japonaise rencontre distributeurs</li>
+                <li>Mission explorative pour implantation</li>
+              </ul>
+            </div>
+            <div class="btb-deliverables">
+              <h4>Livrables :</h4>
+              <ul data-direction="cmr-jpn">
+                <li>5-7 jours d'accompagnement</li>
+                <li>Assistance hébergement</li>
+                <li>2-4 rendez-vous qualifiés</li>
+                <li>Accès salon professionnel</li>
+              </ul>
+              <ul data-direction="jpn-cmr" style="display:none;">
+                <li>5-7 jours d'accompagnement</li>
+                <li>Assistance logement & transport local</li>
+                <li>Interprète professionnel</li>
+                <li>3-5 rendez-vous qualifiés</li>
+                <li>Visites terrain organisées</li>
+              </ul>
+            </div>
+            <div class="btb-pricing">
+              <div class="btb-price" data-direction="cmr-jpn">
+                <span class="btb-price-amount">1.441.000 FCFA/pers</span>
+              </div>
+              <div class="btb-price" data-direction="jpn-cmr" style="display:none;">
+                <span class="btb-price-amount">288.000 JPY/pers</span>
+              </div>
+            </div>
+          </div>
+          <button class="btb-service-btn" onclick="window.location.href='index.html#contact'">Demander ce service</button>
+        </div>
+
+        <!-- Abonnement Annuel -->
+        <div class="btb-service-card" data-service="abonnement">
+          <div class="btb-service-header">
+            <div class="btb-service-icon">📅</div>
+            <h3 data-i18n="btb_s4_title">Abonnement Annuel</h3>
+            <div class="btb-service-badge">Meilleur rapport qualité/prix</div>
+          </div>
+          <div class="btb-service-content">
+            <div class="btb-scenarios" data-direction="cmr-jpn">
+              <h4>Scénarios d'utilisation :</h4>
+              <ul>
+                <li>Entreprise cherchant partenaires récurrents</li>
+                <li>Structure d'accompagnement (incubateur, chambre de commerce)</li>
+                <li>PME camerounaise veut une veille continue sur opportunités Japon</li>
+              </ul>
+            </div>
+            <div class="btb-scenarios" data-direction="jpn-cmr" style="display:none;">
+              <h4>Scénarios d'utilisation :</h4>
+              <ul>
+                <li>PME japonaise veut présence commerciale sans engagement lourd</li>
+                <li>Veille sur appels d'offres et partenaires locaux</li>
+                <li>Test de marché sur 12 mois</li>
+              </ul>
+            </div>
+            <div class="btb-deliverables">
+              <h4>Livrables :</h4>
+              <ul data-direction="cmr-jpn">
+                <li>6 dossiers de partenaires/an</li>
+                <li>Newsletter bimensuelle</li>
+                <li>Accès prioritaire événements</li>
+                <li>1 webinaire gratuit</li>
+              </ul>
+              <ul data-direction="jpn-cmr" style="display:none;">
+                <li>4-7 dossiers de partenaires</li>
+                <li>1 rapport sectoriel personnalisé</li>
+                <li>Accès prioritaire événements</li>
+                <li>Participation gratuite à 1 salon</li>
+              </ul>
+            </div>
+            <div class="btb-pricing">
+              <div class="btb-price" data-direction="cmr-jpn">
+                <span class="btb-price-amount">786.000 FCFA/an</span>
+              </div>
+              <div class="btb-price" data-direction="jpn-cmr" style="display:none;">
+                <span class="btb-price-amount">384.000 JPY/an</span>
+              </div>
+            </div>
+          </div>
+          <button class="btb-service-btn" onclick="window.location.href='index.html#contact'">Demander ce service</button>
+        </div>
+
+        <!-- Paiement à la Performance -->
+        <div class="btb-service-card" data-service="performance">
+          <div class="btb-service-header">
+            <div class="btb-service-icon">💰</div>
+            <h3 data-i18n="btb_s5_title">Paiement à la Performance</h3>
+            <div class="btb-service-badge">Sans risque initial</div>
+          </div>
+          <div class="btb-service-content">
+            <div class="btb-scenarios" data-direction="cmr-jpn">
+              <h4>Scénarios d'utilisation :</h4>
+              <ul>
+                <li>Client réticent à payer d'avance</li>
+                <li>Premier test de collaboration</li>
+                <li>Projet avec fort potentiel mais budget limité</li>
+              </ul>
+            </div>
+            <div class="btb-scenarios" data-direction="jpn-cmr" style="display:none;">
+              <h4>Scénarios d'utilisation :</h4>
+              <ul>
+                <li>Entreprise japonaise testant le marché</li>
+                <li>Projet pilote sans certitude de résultat</li>
+                <li>Contrat de représentation temporaire</li>
+              </ul>
+            </div>
+            <div class="btb-deliverables">
+              <h4>Modalités :</h4>
+              <p>Commission sur résultats obtenus</p>
+            </div>
+            <div class="btb-pricing">
+              <div class="btb-price" data-direction="cmr-jpn">
+                <span class="btb-price-amount">327.500 FCFA</span>
+                <span class="btb-price-note">+ 5% commission sur contrat signé</span>
+              </div>
+              <div class="btb-price" data-direction="jpn-cmr" style="display:none;">
+                <span class="btb-price-amount">128.000 JPY</span>
+                <span class="btb-price-note">+ 3% commission sur vente</span>
+              </div>
+            </div>
+          </div>
+          <button class="btb-service-btn" onclick="window.location.href='index.html#contact'">Demander ce service</button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PRESTATIONS À LA CARTE -->
+  <section class="btb-carte">
+    <div class="container">
+      <div class="btb-section-header">
+        <h2 data-i18n="btb_carte_title">Prestations à la Carte</h2>
+        <p data-i18n="btb_carte_subtitle">Services ponctuels disponibles dans les deux sens</p>
+      </div>
+
+      <div class="btb-carte-grid">
+        <div class="btb-carte-item">
+          <div class="btb-carte-icon">🎤</div>
+          <h4>Interprétariat Visio</h4>
+          <p>Réunion B2B, négociation, présentation technique</p>
+          <div class="btb-carte-duration">1/2 journée</div>
+          <div class="btb-carte-prices">
+            <span class="btb-carte-price-cmr">78.600 FCFA</span>
+            <span class="btb-carte-separator">|</span>
+            <span class="btb-carte-price-jpn">19.200 JPY</span>
+          </div>
+        </div>
+
+        <div class="btb-carte-item">
+          <div class="btb-carte-icon">👥</div>
+          <h4>Interprétariat Présentiel</h4>
+          <p>Visite d'usine, salon, mission commerciale</p>
+          <div class="btb-carte-duration">1 journée (défraiements en sus)</div>
+          <div class="btb-carte-prices">
+            <span class="btb-carte-price-cmr">163.750 FCFA</span>
+            <span class="btb-carte-separator">|</span>
+            <span class="btb-carte-price-jpn">40.000 JPY</span>
+          </div>
+        </div>
+
+        <div class="btb-carte-item">
+          <div class="btb-carte-icon">📄</div>
+          <h4>Traduction Technique Certifiée</h4>
+          <p>Contrat, manuel, spécifications techniques, cahier des charges</p>
+          <div class="btb-carte-duration">10 pages</div>
+          <div class="btb-carte-prices">
+            <span class="btb-carte-price-cmr">131.000 FCFA</span>
+            <span class="btb-carte-separator">|</span>
+            <span class="btb-carte-price-jpn">32.000 JPY</span>
+          </div>
+        </div>
+
+        <div class="btb-carte-item">
+          <div class="btb-carte-icon">🔍</div>
+          <h4>Vérification KYC d'un Partenaire</h4>
+          <p>Due diligence légale, vérification d'existence, extrait Kbis, références</p>
+          <div class="btb-carte-duration">Par dossier</div>
+          <div class="btb-carte-prices">
+            <span class="btb-carte-price-cmr">98.250 FCFA</span>
+            <span class="btb-carte-separator">|</span>
+            <span class="btb-carte-price-jpn">24.000 JPY</span>
+          </div>
+        </div>
+
+        <div class="btb-carte-item">
+          <div class="btb-carte-icon">💻</div>
+          <h4>Organisation Webinaire B2B</h4>
+          <p>Présentation sectorielle, démonstration produit, Q&A</p>
+          <div class="btb-carte-duration">2 heures</div>
+          <div class="btb-carte-prices">
+            <span class="btb-carte-price-cmr">524.000 FCFA</span>
+            <span class="btb-carte-separator">|</span>
+            <span class="btb-carte-price-jpn">128.000 JPY</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA SECTION -->
+  <section class="btb-cta">
+    <div class="container">
+      <div class="btb-cta-content">
+        <h2 data-i18n="btb_cta_title">Prêt à Développer Votre Business ?</h2>
+        <p data-i18n="btb_cta_subtitle">Contactez-nous pour discuter de vos projets et obtenir un devis personnalisé</p>
+        <div class="btb-cta-buttons">
+          <a href="index.html#contact" class="btn btn-primary">Nous Contacter</a>
+          <a href="index.html" class="btn btn-outline">Retour à l'Accueil</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="NipponMboa-Consulting-Logo.jpeg" alt="NipponMboa Consulting" class="footer-logo" />
+        <p>Votre passerelle vers l'excellence Cameroun-Japon</p>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Accueil</a>
+        <a href="index.html#about">À propos</a>
+        <a href="index.html#poles">Pôles</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
+      <p class="footer-copy">© 2024 NipponMboa Consulting. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <script src="business-tech-bridge.js"></script>
+</body>
+</html>
