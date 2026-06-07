@@ -1,0 +1,598 @@
+/* Cultural & Tourism Exchange - Specific Styles */
+
+/* Hero Section */
+.cte-hero {
+  position: relative;
+  min-height: 500px;
+  background: linear-gradient(135deg, #8B4789 0%, #C8589C 50%, #E8A5C8 100%);
+  display: flex;
+  align-items: center;
+  padding: 120px 0 80px;
+  overflow: hidden;
+}
+
+.cte-hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><circle cx="200" cy="150" r="100" fill="rgba(255,255,255,0.05)"/><circle cx="800" cy="350" r="130" fill="rgba(255,255,255,0.03)"/><circle cx="1000" cy="100" r="70" fill="rgba(255,255,255,0.04)"/></svg>');
+  opacity: 0.5;
+}
+
+.cte-hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.cte-badge {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  color: #fff;
+  padding: 8px 20px;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.cte-hero-title {
+  font-size: 3.5rem;
+  color: #fff;
+  margin-bottom: 20px;
+  font-weight: 800;
+  line-height: 1.2;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.cte-hero-subtitle {
+  font-size: 1.3rem;
+  color: rgba(255, 255, 255, 0.95);
+  margin-bottom: 40px;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+.cte-hero-features {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.cte-hero-feature {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  padding: 12px 24px;
+  border-radius: 30px;
+  color: #fff;
+  font-weight: 600;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.cte-hero-icon {
+  font-size: 1.5rem;
+}
+
+/* Intro Section */
+.cte-intro {
+  padding: 80px 0;
+  background: #f8f9fa;
+}
+
+.cte-intro-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.cte-intro-text h2 {
+  font-size: 2.5rem;
+  color: #8B4789;
+  margin-bottom: 25px;
+  font-weight: 700;
+}
+
+.cte-intro-text p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.cte-intro-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.cte-stat {
+  text-align: center;
+  padding: 20px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.cte-stat-number {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #C8589C;
+  margin-bottom: 8px;
+}
+
+.cte-stat-label {
+  font-size: 0.9rem;
+  color: #666;
+  font-weight: 600;
+}
+
+/* Connection Diagram */
+.cte-connection-diagram {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.cte-flag {
+  text-align: center;
+  font-size: 3rem;
+  padding: 20px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-radius: 12px;
+  min-width: 120px;
+}
+
+.cte-flag small {
+  display: block;
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 8px;
+  font-weight: 600;
+}
+
+.cte-bridge {
+  flex: 1;
+  position: relative;
+  margin: 0 20px;
+}
+
+.cte-bridge-line {
+  height: 3px;
+  background: linear-gradient(90deg, #8B4789 0%, #C8589C 50%, #8B4789 100%);
+  border-radius: 2px;
+}
+
+.cte-bridge-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  background: #fff;
+  padding: 10px;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Services Section */
+.cte-services {
+  padding: 80px 0;
+  background: #fff;
+}
+
+.cte-section-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.cte-section-header h2 {
+  font-size: 2.5rem;
+  color: #8B4789;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.cte-section-header p {
+  font-size: 1.1rem;
+  color: #666;
+}
+
+/* Direction Selector */
+.cte-direction-selector {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 50px;
+  flex-wrap: wrap;
+}
+
+.cte-direction-btn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 15px 30px;
+  background: #f8f9fa;
+  border: 2px solid #e9ecef;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #666;
+}
+
+.cte-direction-btn:hover {
+  border-color: #C8589C;
+  background: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.cte-direction-btn.active {
+  background: linear-gradient(135deg, #C8589C 0%, #8B4789 100%);
+  border-color: #C8589C;
+  color: #fff;
+  box-shadow: 0 6px 20px rgba(200, 88, 156, 0.3);
+}
+
+.cte-dir-flag {
+  font-size: 1.5rem;
+}
+
+.cte-dir-arrow {
+  font-size: 1.2rem;
+}
+
+.cte-dir-label {
+  font-size: 0.95rem;
+}
+
+/* Service Cards */
+.cte-services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.cte-service-card {
+  background: #fff;
+  border-radius: 16px;
+  border: 2px solid #e9ecef;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.cte-service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  border-color: #C8589C;
+}
+
+.cte-service-card.cte-featured {
+  border-color: #C8589C;
+  box-shadow: 0 8px 24px rgba(200, 88, 156, 0.2);
+}
+
+.cte-service-header {
+  padding: 25px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #fff 100%);
+  border-bottom: 2px solid #e9ecef;
+  text-align: center;
+}
+
+.cte-service-icon {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.cte-service-header h3 {
+  font-size: 1.4rem;
+  color: #8B4789;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.cte-service-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, #C8589C 0%, #8B4789 100%);
+  color: #fff;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.cte-service-content {
+  padding: 25px;
+  flex: 1;
+}
+
+.cte-scenarios h4,
+.cte-deliverables h4 {
+  font-size: 1rem;
+  color: #8B4789;
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+
+.cte-scenarios ul,
+.cte-deliverables ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.cte-scenarios li,
+.cte-deliverables li {
+  padding: 8px 0 8px 25px;
+  position: relative;
+  color: #555;
+  line-height: 1.6;
+}
+
+.cte-scenarios li:before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #C8589C;
+  font-weight: 700;
+}
+
+.cte-deliverables li:before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #8B4789;
+  font-weight: 700;
+}
+
+.cte-pricing {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 2px solid #e9ecef;
+}
+
+.cte-price {
+  text-align: center;
+}
+
+.cte-price-label {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #8B4789;
+  margin-bottom: 10px;
+}
+
+.cte-price-note {
+  display: block;
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.cte-service-btn {
+  margin: 0 25px 25px;
+  padding: 15px 30px;
+  background: linear-gradient(135deg, #C8589C 0%, #8B4789 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.cte-service-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(200, 88, 156, 0.4);
+}
+
+/* Cultural Activities Section */
+.cte-activities {
+  padding: 80px 0;
+  background: #f8f9fa;
+}
+
+.cte-activities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.cte-activity-card {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  border: 2px solid #e9ecef;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.cte-activity-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  border-color: #C8589C;
+}
+
+.cte-activity-icon {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.cte-activity-card h4 {
+  font-size: 1.2rem;
+  color: #8B4789;
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+
+.cte-activity-card p {
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* CTA Section */
+.cte-cta {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #8B4789 0%, #C8589C 100%);
+}
+
+.cte-cta-content {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.cte-cta-content h2 {
+  font-size: 2.5rem;
+  color: #fff;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.cte-cta-content p {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 40px;
+}
+
+.cte-cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .cte-hero {
+    padding: 100px 0 60px;
+  }
+
+  .cte-hero-title {
+    font-size: 2.2rem;
+  }
+
+  .cte-hero-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .cte-intro-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .cte-intro-text h2 {
+    font-size: 2rem;
+  }
+
+  .cte-intro-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .cte-connection-diagram {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .cte-bridge {
+    width: 100%;
+    height: 60px;
+    margin: 0;
+  }
+
+  .cte-bridge-line {
+    width: 3px;
+    height: 100%;
+    margin: 0 auto;
+  }
+
+  .cte-direction-selector {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .cte-direction-btn {
+    justify-content: center;
+  }
+
+  .cte-services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cte-section-header h2 {
+    font-size: 2rem;
+  }
+
+  .cte-activities-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cte-cta-content h2 {
+    font-size: 2rem;
+  }
+
+  .cte-cta-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .cte-cta-buttons .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .cte-hero-title {
+    font-size: 1.8rem;
+  }
+
+  .cte-hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .cte-hero-features {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .cte-intro-text h2 {
+    font-size: 1.6rem;
+  }
+
+  .cte-section-header h2 {
+    font-size: 1.6rem;
+  }
+
+  .cte-service-header h3 {
+    font-size: 1.2rem;
+  }
+}

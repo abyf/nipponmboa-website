@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cultural & Tourism Exchange - NipponMboa Consulting</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="cultural-tourism.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-brand">
+      <a href="index.html">
+        <img src="NipponMboa-Consulting-Logo.jpeg" alt="NipponMboa Consulting" class="nav-logo" />
+      </a>
+    </div>
+    <div class="nav-links">
+      <a href="index.html">Accueil</a>
+      <a href="index.html#about">À propos</a>
+      <a href="index.html#poles">Pôles</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+    <div class="lang-switcher">
+      <button class="lang-btn active" data-lang="fr">FR</button>
+      <button class="lang-btn" data-lang="en">EN</button>
+      <button class="lang-btn" data-lang="ja">日本語</button>
+    </div>
+    <button class="nav-toggle" aria-label="Menu">&#9776;</button>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="cte-hero">
+    <div class="cte-hero-overlay"></div>
+    <div class="container">
+      <div class="cte-hero-content">
+        <div class="cte-badge">🌸 Pôle 3</div>
+        <h1 class="cte-hero-title" data-i18n="cte_hero_title">Cultural & Tourism Exchange</h1>
+        <p class="cte-hero-subtitle" data-i18n="cte_hero_subtitle">
+          Découvrez et partagez la richesse culturelle entre le Cameroun et le Japon
+        </p>
+        <div class="cte-hero-features">
+          <div class="cte-hero-feature">
+            <span class="cte-hero-icon">✈️</span>
+            <span data-i18n="cte_hero_feat1">Circuits découverte</span>
+          </div>
+          <div class="cte-hero-feature">
+            <span class="cte-hero-icon">🏠</span>
+            <span data-i18n="cte_hero_feat2">Séjours en famille</span>
+          </div>
+          <div class="cte-hero-feature">
+            <span class="cte-hero-icon">🎎</span>
+            <span data-i18n="cte_hero_feat3">Événements culturels</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTRO SECTION -->
+  <section class="cte-intro">
+    <div class="container">
+      <div class="cte-intro-grid">
+        <div class="cte-intro-text">
+          <h2 data-i18n="cte_intro_title">Votre Pont Culturel entre Deux Mondes</h2>
+          <p data-i18n="cte_intro_p1">
+            Le pôle <strong>Cultural & Tourism Exchange</strong> vous invite à découvrir et à célébrer la richesse des cultures camerounaise et japonaise à travers des expériences immersives et authentiques.
+          </p>
+          <p data-i18n="cte_intro_p2">
+            Des circuits touristiques aux séjours en famille d'accueil, en passant par des événements culturels enrichissants, nous créons des ponts humains qui transcendent les frontières.
+          </p>
+          <div class="cte-intro-stats">
+            <div class="cte-stat">
+              <div class="cte-stat-number">5</div>
+              <div class="cte-stat-label" data-i18n="cte_stat1">Types d'expériences</div>
+            </div>
+            <div class="cte-stat">
+              <div class="cte-stat-number">2</div>
+              <div class="cte-stat-label" data-i18n="cte_stat2">Sens d'échange</div>
+            </div>
+            <div class="cte-stat">
+              <div class="cte-stat-number">100%</div>
+              <div class="cte-stat-label" data-i18n="cte_stat3">Immersion culturelle</div>
+            </div>
+          </div>
+        </div>
+        <div class="cte-intro-visual">
+          <div class="cte-connection-diagram">
+            <div class="cte-flag cte-flag-cm">🇨🇲<br><small data-i18n="cte_flag_cm">Cameroun</small></div>
+            <div class="cte-bridge">
+              <div class="cte-bridge-line"></div>
+              <div class="cte-bridge-icon">🌸</div>
+            </div>
+            <div class="cte-flag cte-flag-jp">🇯🇵<br><small data-i18n="cte_flag_jp">Japon</small></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES SECTION -->
+  <section class="cte-services">
+    <div class="container">
+      <div class="cte-section-header">
+        <h2 data-i18n="cte_services_title">Nos Services Détaillés</h2>
+        <p data-i18n="cte_services_subtitle">Choisissez l'expérience culturelle qui vous correspond</p>
+      </div>
+
+      <!-- Direction Selector -->
+      <div class="cte-direction-selector">
+        <button class="cte-direction-btn active" data-direction="cmr-jpn">
+          <span class="cte-dir-flag">🇨🇲</span>
+          <span class="cte-dir-arrow">→</span>
+          <span class="cte-dir-flag">🇯🇵</span>
+          <span class="cte-dir-label" data-i18n="cte_dir_cmr_jpn">Cameroun vers Japon</span>
+        </button>
+        <button class="cte-direction-btn" data-direction="jpn-cmr">
+          <span class="cte-dir-flag">🇯🇵</span>
+          <span class="cte-dir-arrow">→</span>
+          <span class="cte-dir-flag">🇨🇲</span>
+          <span class="cte-dir-label" data-i18n="cte_dir_jpn_cmr">Japon vers Cameroun</span>
+        </button>
+      </div>
+
+      <!-- Service Cards -->
+      <div class="cte-services-grid">
+        
+        <!-- Circuit Découverte -->
+        <div class="cte-service-card cte-featured" data-service="circuit">
+          <div class="cte-service-header">
+            <div class="cte-service-icon">✈️</div>
+            <h3 data-i18n="cte_s1_title">Circuit Découverte</h3>
+            <div class="cte-service-badge" data-i18n="cte_badge_popular">Le plus populaire</div>
+          </div>
+          <div class="cte-service-content">
+            <div class="cte-scenarios" data-direction="cmr-jpn">
+              <h4 data-i18n="cte_scenarios">Scénarios d'utilisation :</h4>
+              <ul>
+                <li data-i18n="cte_s1_cmr_sc1">Groupe de camerounais visitant le Japon</li>
+                <li data-i18n="cte_s1_cmr_sc2">Couple souhaitant découvrir la culture japonaise</li>
+                <li data-i18n="cte_s1_cmr_sc3">Professionnels en voyage d'affaires avec extension touristique</li>
+              </ul>
+            </div>
+            <div class="cte-scenarios" data-direction="jpn-cmr" style="display:none;">
+              <h4 data-i18n="cte_scenarios">Scénarios d'utilisation :</h4>
+              <ul>
+                <li data-i18n="cte_s1_jpn_sc1">Touriste japonais découvrant le Cameroun</li>
+                <li data-i18n="cte_s1_jpn_sc2">Groupe visitant les sites touristiques camerounais</li>
+                <li data-i18n="cte_s1_jpn_sc3">Voyageurs individuels ou en famille</li>
+              </ul>
+            </div>
+            <div class="cte-deliverables">
+              <h4 data-i18n="cte_deliverables">Livrables :</h4>
+              <ul data-direction="cmr-jpn">
+                <li data-i18n="cte_s1_cmr_del1">Visite des zones et villes touristiques japonaises</li>
+                <li data-i18n="cte_s1_cmr_del2">Guide francophone/anglophone</li>
+                <li data-i18n="cte_s1_cmr_del3">Programme culturel personnalisé</li>
+                <li data-i18n="cte_s1_cmr_del4">Assistance logistique complète</li>
+              </ul>
+              <ul data-direction="jpn-cmr" style="display:none;">
+                <li data-i18n="cte_s1_jpn_del1">Visite des zones touristiques camerounaises</li>
+                <li data-i18n="cte_s1_jpn_del2">Guide japonophone</li>
+                <li data-i18n="cte_s1_jpn_del3">Découverte de la culture locale</li>
+                <li data-i18n="cte_s1_jpn_del4">Hébergement et transport organisés</li>
+              </ul>
+            </div>
+            <div class="cte-pricing">
+              <div class="cte-price" data-direction="cmr-jpn">
+                <span class="cte-price-label">Tarif modulable selon :</span>
+                <span class="cte-price-note">• Durée du séjour<br>• Nombre de participants<br>• Destinations choisies<br>• Niveau de confort souhaité</span>
+              </div>
+              <div class="cte-price" data-direction="jpn-cmr" style="display:none;">
+                <span class="cte-price-label">Tarif modulable selon :</span>
+                <span class="cte-price-note">• Durée du séjour<br>• Nombre de participants<br>• Sites à visiter<br>• Services additionnels</span>
+              </div>
+            </div>
+          </div>
+          <button class="cte-service-btn" onclick="window.location.href='index.html#contact'" data-i18n="cte_btn_request">Demander un devis</button>
+        </div>
+
+        <!-- Homestay Cameroun -->
+        <div class="cte-service-card" data-service="homestay">
+          <div class="cte-service-header">
+            <div class="cte-service-icon">🏠</div>
+            <h3 data-i18n="cte_s2_title">Homestay Cameroun</h3>
+            <div class="cte-service-badge" data-i18n="cte_badge_immersion">Immersion totale</div>
+          </div>
+          <div class="cte-service-content">
+            <div class="cte-scenarios">
+              <h4 data-i18n="cte_scenarios">Scénarios d'utilisation :</h4>
+              <ul>
+                <li data-i18n="cte_s2_sc1">Touriste japonais souhaitant vivre avec une famille camerounaise</li>
+                <li data-i18n="cte_s2_sc2">Volontaire japonais en mission au Cameroun</li>
+                <li data-i18n="cte_s2_sc3">Étudiant japonais en échange culturel</li>
+                <li data-i18n="cte_s2_sc4">Professionnel en longue mission</li>
+              </ul>
+            </div>
+            <div class="cte-deliverables">
+              <h4 data-i18n="cte_deliverables">Livrables :</h4>
+              <ul>
+                <li data-i18n="cte_s2_del1">Hébergement en famille d'accueil sélectionnée</li>
+                <li data-i18n="cte_s2_del2">Repas traditionnels inclus</li>
+                <li data-i18n="cte_s2_del3">Immersion culturelle quotidienne</li>
+                <li data-i18n="cte_s2_del4">Support et suivi régulier</li>
+                <li data-i18n="cte_s2_del5">Programme modulable selon vos priorités</li>
+              </ul>
+            </div>
+            <div class="cte-pricing">
+              <div class="cte-price">
+                <span class="cte-price-label">Tarif modulable selon :</span>
+                <span class="cte-price-note">• Durée du séjour<br>• Type d'hébergement<br>• Services inclus<br>• Localisation</span>
+              </div>
+            </div>
+          </div>
+          <button class="cte-service-btn" onclick="window.location.href='index.html#contact'" data-i18n="cte_btn_request">Demander un devis</button>
+        </div>
+
+        <!-- Célébration Culture Japonaise -->
+        <div class="cte-service-card" data-service="culture-jp">
+          <div class="cte-service-header">
+            <div class="cte-service-icon">🎎</div>
+            <h3 data-i18n="cte_s3_title">Célébration de la Culture Japonaise au Cameroun</h3>
+            <div class="cte-service-badge" data-i18n="cte_badge_event">Événement sur mesure</div>
+          </div>
+          <div class="cte-service-content">
+            <div class="cte-scenarios">
+              <h4 data-i18n="cte_scenarios">Scénarios d'utilisation :</h4>
+              <ul>
+                <li data-i18n="cte_s3_sc1">Organisation de conférences culturelles</li>
+                <li data-i18n="cte_s3_sc2">Ateliers d'arts japonais (calligraphie, ikebana, origami)</li>
+                <li data-i18n="cte_s3_sc3">Démonstrations culinaires et cérémonies du thé</li>
+                <li data-i18n="cte_s3_sc4">Projections de films et découverte des mangas</li>
+                <li data-i18n="cte_s3_sc5">Initiation aux arts martiaux (judo, karaté, aïkido)</li>
+              </ul>
+            </div>
+            <div class="cte-deliverables">
+              <h4 data-i18n="cte_deliverables">Livrables :</h4>
+              <ul>
+                <li data-i18n="cte_s3_del1">Conférences avec experts</li>
+                <li data-i18n="cte_s3_del2">Ateliers pratiques animés par des maîtres</li>
+                <li data-i18n="cte_s3_del3">Concerts de musique traditionnelle (koto, shamisen)</li>
+                <li data-i18n="cte_s3_del4">Matériel et fournitures inclus</li>
+                <li data-i18n="cte_s3_del5">Certificats de participation</li>
+              </ul>
+            </div>
+            <div class="cte-pricing">
+              <div class="cte-price">
+                <span class="cte-price-label">Tarif modulable selon :</span>
+                <span class="cte-price-note">• Type d'événement<br>• Nombre de participants<br>• Durée de l'événement<br>• Intervenants requis<br>• Matériel nécessaire</span>
+              </div>
+            </div>
+          </div>
+          <button class="cte-service-btn" onclick="window.location.href='index.html#contact'" data-i18n="cte_btn_request">Demander un devis</button>
+        </div>
+
+        <!-- Célébration Culture Camerounaise -->
+        <div class="cte-service-card" data-service="culture-cm">
+          <div class="cte-service-header">
+            <div class="cte-service-icon">🎭</div>
+            <h3 data-i18n="cte_s4_title">Célébration de la Culture Camerounaise au Japon</h3>
+            <div class="cte-service-badge" data-i18n="cte_badge_event">Événement sur mesure</div>
+          </div>
+          <div class="cte-service-content">
+            <div class="cte-scenarios">
+              <h4 data-i18n="cte_scenarios">Scénarios d'utilisation :</h4>
+              <ul>
+                <li data-i18n="cte_s4_sc1">Présentation de la culture camerounaise au Japon</li>
+                <li data-i18n="cte_s4_sc2">Festivals culturels et gastronomiques</li>
+                <li data-i18n="cte_s4_sc3">Expositions d'art et d'artisanat camerounais</li>
+                <li data-i18n="cte_s4_sc4">Concerts de musique traditionnelle</li>
+                <li data-i18n="cte_s4_sc5">Démonstrations de danses traditionnelles</li>
+              </ul>
+            </div>
+            <div class="cte-deliverables">
+              <h4 data-i18n="cte_deliverables">Livrables :</h4>
+              <ul>
+                <li data-i18n="cte_s4_del1">Organisation complète de l'événement</li>
+                <li data-i18n="cte_s4_del2">Coordination avec artistes camerounais</li>
+                <li data-i18n="cte_s4_del3">Interprétation japonais-français/anglais</li>
+                <li data-i18n="cte_s4_del4">Matériel promotionnel bilingue</li>
+                <li data-i18n="cte_s4_del5">Gestion logistique complète</li>
+              </ul>
+            </div>
+            <div class="cte-pricing">
+              <div class="cte-price">
+                <span class="cte-price-label">Tarif modulable selon :</span>
+                <span class="cte-price-note">• Envergure de l'événement<br>• Nombre d'artistes<br>• Durée et lieu<br>• Services de traduction<br>• Matériel requis</span>
+              </div>
+            </div>
+          </div>
+          <button class="cte-service-btn" onclick="window.location.href='index.html#contact'" data-i18n="cte_btn_request">Demander un devis</button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CULTURAL ACTIVITIES -->
+  <section class="cte-activities">
+    <div class="container">
+      <div class="cte-section-header">
+        <h2 data-i18n="cte_activities_title">Activités Culturelles Disponibles</h2>
+        <p data-i18n="cte_activities_subtitle">Découvrez la richesse de nos ateliers et expériences culturelles</p>
+      </div>
+
+      <div class="cte-activities-grid">
+        <div class="cte-activity-card">
+          <div class="cte-activity-icon">✍️</div>
+          <h4 data-i18n="cte_act1_title">Calligraphie Japonaise</h4>
+          <p data-i18n="cte_act1_desc">Apprenez l'art ancestral de l'écriture japonaise avec des maîtres calligraphes</p>
+        </div>
+
+        <div class="cte-activity-card">
+          <div class="cte-activity-icon">🌸</div>
+          <h4 data-i18n="cte_act2_title">Ikebana (Art Floral)</h4>
+          <p data-i18n="cte_act2_desc">Maîtrisez l'art japonais de l'arrangement floral et sa philosophie</p>
+        </div>
+
+        <div class="cte-activity-card">
+          <div class="cte-activity-icon">🦢</div>
+          <h4 data-i18n="cte_act3_title">Origami</h4>
+          <p data-i18n="cte_act3_desc">Découvrez l'art du pliage de papier, de la grue aux créations complexes</p>
+        </div>
+
+        <div class="cte-activity-card">
+          <div class="cte-activity-icon">🍵</div>
+          <h4 data-i18n="cte_act4_title">Cérémonie du Thé</h4>
+          <p data-i18n="cte_act4_desc">Participez à une authentique cérémonie du thé et apprenez sa philosophie</p>
+        </div>
+
+        <div class="cte-activity-card">
+          <div class="cte-activity-icon">🍱</div>
+          <h4 data-i18n="cte_act5_title">Cuisine Japonaise</h4>
+          <p data-i18n="cte_act5_desc">Ateliers de sushi, ramen, et autres spécialités de la gastronomie japonaise</p>
+        </div>
+
+        <div class="cte-activity-card">
+          <div class="cte-activity-icon">🥋</div>
+          <h4 data-i18n="cte_act6_title">Arts Martiaux</h4>
+          <p data-i18n="cte_act6_desc">Initiations au judo, karaté, aïkido avec instructeurs certifiés</p>
+        </div>
+
+        <div class="cte-activity-card">
+          <div class="cte-activity-icon">🎬</div>
+          <h4 data-i18n="cte_act7_title">Cinéma & Manga</h4>
+          <p data-i18n="cte_act7_desc">Projections de films japonais et découverte de l'univers des mangas</p>
+        </div>
+
+        <div class="cte-activity-card">
+          <div class="cte-activity-icon">🎵</div>
+          <h4 data-i18n="cte_act8_title">Musique Traditionnelle</h4>
+          <p data-i18n="cte_act8_desc">Concerts et initiations aux instruments traditionnels (koto, shamisen)</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA SECTION -->
+  <section class="cte-cta">
+    <div class="container">
+      <div class="cte-cta-content">
+        <h2 data-i18n="cte_cta_title">Prêt à Vivre une Expérience Culturelle Unique ?</h2>
+        <p data-i18n="cte_cta_subtitle">Contactez-nous pour organiser votre circuit, séjour ou événement culturel sur mesure</p>
+        <div class="cte-cta-buttons">
+          <a href="index.html#contact" class="btn btn-primary" data-i18n="cte_cta_btn1">Nous Contacter</a>
+          <a href="index.html" class="btn btn-outline" data-i18n="cte_cta_btn2">Retour à l'Accueil</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="NipponMboa-Consulting-Logo.jpeg" alt="NipponMboa Consulting" class="footer-logo" />
+        <p data-i18n="footer_tagline">Votre passerelle vers l'excellence Cameroun-Japon</p>
+      </div>
+      <div class="footer-links">
+        <a href="index.html" data-i18n="nav_home">Accueil</a>
+        <a href="index.html#about" data-i18n="nav_about">À propos</a>
+        <a href="index.html#poles" data-i18n="nav_poles">Pôles</a>
+        <a href="index.html#contact" data-i18n="nav_contact">Contact</a>
+      </div>
+      <p class="footer-copy" data-i18n="footer_copy">© 2024 NipponMboa Consulting. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <script src="cultural-tourism.js"></script>
+</body>
+</html>
