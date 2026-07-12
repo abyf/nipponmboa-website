@@ -63,9 +63,19 @@ const btbI18n = {
     btb_s1_jpn_sc4: "Startup japonaise cherche partenaire pour test terrain",
     
     // Service 1 - Matchmaking deliverables
-    btb_s1_del1: "3-5 profils de partenaires préqualifiés",
+    btb_s1_del1: "1-2 profils de partenaires préqualifiés",
     btb_s1_del2: "Introduction écrite par courriel",
     btb_s1_del3: "Organisation d'une réunion (visio/présentiel)",
+    
+    // Service 1 - New pricing steps
+    btb_pricing_steps: "Étapes et tarifs :",
+    btb_step_registration: "Registration",
+    btb_step_matchmaking: "Matchmaking",
+    btb_step_implementation: "Implementation Support",
+    btb_payment_full: "Paiement complet requis",
+    btb_payment_50_50: "50% à l'avance, 50% après matchmaking trouvé et accepté",
+    btb_payment_50_10: "50% à l'avance, 10% à la finalisation du projet",
+    btb_included_package: "Inclus dans le package",
 
     // Service 2 - Complete Support scenarios CMR->JPN
     btb_s2_cmr_sc1: "PME camerounaise veut signer une licence de fabrication",
@@ -232,9 +242,19 @@ const btbI18n = {
     btb_s1_jpn_sc4: "Japanese startup seeks field test partner",
     
     // Service 1 - Matchmaking deliverables
-    btb_s1_del1: "3-5 pre-qualified partner profiles",
+    btb_s1_del1: "1-2 pre-qualified partner profiles",
     btb_s1_del2: "Written introduction by email",
     btb_s1_del3: "Meeting organization (video/in-person)",
+    
+    // Service 1 - New pricing steps
+    btb_pricing_steps: "Steps and pricing:",
+    btb_step_registration: "Registration",
+    btb_step_matchmaking: "Matchmaking",
+    btb_step_implementation: "Implementation Support",
+    btb_payment_full: "Full payment required",
+    btb_payment_50_50: "50% upfront, 50% after matchmaking found and accepted",
+    btb_payment_50_10: "50% upfront, 10% upon project completion",
+    btb_included_package: "Included in package",
 
     // Service 2 - Complete Support scenarios CMR->JPN
     btb_s2_cmr_sc1: "Cameroonian SME wants to sign a manufacturing license",
@@ -401,9 +421,19 @@ const btbI18n = {
     btb_s1_jpn_sc4: "日本のスタートアップが現場テストパートナーを探している",
     
     // Service 1 - Matchmaking deliverables
-    btb_s1_del1: "事前審査済みパートナープロフィール3〜5件",
+    btb_s1_del1: "事前審査済みパートナープロフィール1〜2件",
     btb_s1_del2: "メールによる紹介文書",
     btb_s1_del3: "会議の手配（オンライン/対面）",
+    
+    // Service 1 - New pricing steps
+    btb_pricing_steps: "手順と料金：",
+    btb_step_registration: "登録",
+    btb_step_matchmaking: "マッチング",
+    btb_step_implementation: "実施サポート",
+    btb_payment_full: "全額支払い必須",
+    btb_payment_50_50: "50%前払い、50%はマッチング成立・承認後",
+    btb_payment_50_10: "50%前払い、10%はプロジェクト完了時",
+    btb_included_package: "パッケージに含まれる",
 
     // Service 2 - Complete Support scenarios CMR->JPN
     btb_s2_cmr_sc1: "カメルーン中小企業が製造ライセンス契約を希望",
