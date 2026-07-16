@@ -227,19 +227,19 @@ body { font-family: var(--font); background: var(--bg-deep); color: var(--text);
 .stat-label { font-size: 0.8rem; color: var(--text-dim); margin-top: 4px; }
 
 /* ===== CONTACT ===== */
-.contact-grid { display: grid; grid-template-columns: 1fr 1.5fr; gap: 48px; margin-top: 40px; }
-.contact-info { display: flex; flex-direction: column; gap: 24px; }
-.contact-item { display: flex; gap: 14px; align-items: flex-start; }
-.contact-icon { font-size: 1.4rem; }
-.contact-item strong { display: block; font-weight: 700; color: #0d2137; margin-bottom: 3px; font-size: 0.9rem; }
-.contact-item p { color: #4a6a82; font-size: 0.88rem; }
+.contact-grid { display: grid; grid-template-columns: 1fr 1.5fr; gap: 32px; margin-top: 32px; }
+.contact-info { display: flex; flex-direction: column; gap: 12px; }
+.contact-item { display: flex; gap: 10px; align-items: flex-start; }
+.contact-icon { font-size: 1.2rem; }
+.contact-item strong { display: block; font-weight: 700; color: #0d2137; margin-bottom: 2px; font-size: 0.85rem; }
+.contact-item p { color: #4a6a82; font-size: 0.82rem; line-height: 1.4; }
 
-.contact-form { display: flex; flex-direction: column; gap: 14px; }
+.contact-form { display: flex; flex-direction: column; gap: 12px; }
 .contact-form input,
 .contact-form select,
 .contact-form textarea {
-  padding: 11px 14px; border: 1px solid var(--border);
-  border-radius: 8px; font-size: 0.9rem; font-family: var(--font);
+  padding: 10px 12px; border: 1px solid var(--border);
+  border-radius: 8px; font-size: 0.88rem; font-family: var(--font);
   color: var(--text); background: var(--white);
   transition: border-color 0.2s; width: 100%;
 }
