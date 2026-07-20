@@ -93,9 +93,8 @@ const i18n = {
     contact_email_label: "Email", contact_phone_label: "Téléphone / WhatsApp",
     contact_pobox_label: "Boîte Postale", contact_pobox_value: "B.P. 1190",
     contact_phone_placeholder: "À venir", contact_location_label: "Localisation",
-    form_name: "Votre nom", form_email: "Votre email",
-    form_service_default: "Sélectionner un pôle",
-    form_message: "Votre message", form_submit: "Envoyer le message",
+    form_description: "Cliquez sur le bouton ci-dessous pour remplir notre formulaire de contact et nous vous répondrons dans les plus brefs délais.",
+    form_open_button: "📝 Ouvrir le formulaire de contact",
 
     footer_tagline: "Une expérience unique au service de votre réussite",
     footer_copy: "© 2025 NipponMboa Consulting. Tous droits réservés.",
@@ -195,9 +194,8 @@ const i18n = {
     contact_email_label: "Email", contact_phone_label: "Phone / WhatsApp",
     contact_pobox_label: "P.O Box", contact_pobox_value: "P.O Box 1190",
     contact_phone_placeholder: "Coming soon", contact_location_label: "Location",
-    form_name: "Your name", form_email: "Your email",
-    form_service_default: "Select a pole",
-    form_message: "Your message", form_submit: "Send message",
+    form_description: "Click the button below to fill out our contact form and we will respond to you as soon as possible.",
+    form_open_button: "📝 Open Contact Form",
 
     footer_tagline: "A unique experience at the service of your success",
     footer_copy: "© 2025 NipponMboa Consulting. All rights reserved.",
@@ -297,9 +295,8 @@ const i18n = {
     contact_email_label: "メール", contact_phone_label: "電話 / WhatsApp",
     contact_pobox_label: "私書箱", contact_pobox_value: "私書箱 1190",
     contact_phone_placeholder: "近日公開", contact_location_label: "所在地",
-    form_name: "お名前", form_email: "メールアドレス",
-    form_service_default: "部門を選択",
-    form_message: "メッセージ", form_submit: "送信する",
+    form_description: "下のボタンをクリックしてお問い合わせフォームにご記入ください。できるだけ早くご返信いたします。",
+    form_open_button: "📝 お問い合わせフォームを開く",
 
     footer_tagline: "カメルーンと日本をつなぐ架け橋",
     footer_copy: "© 2025 NipponMboa Consulting. All rights reserved.",
@@ -366,4 +363,9 @@ function openFormWithLang(e) {
   e.preventDefault();
   const formUrl = `bridge-it-form-v2.html?lang=${currentLang}`;
   window.location.href = formUrl;
+}
+
+// Function to open Google Form for contact
+function openContactForm() {
+  window.open('https://forms.gle/MVnEEwQ3kff55KgZ9', '_blank');
 }

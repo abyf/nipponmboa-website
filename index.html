@@ -224,19 +224,12 @@
             <div><strong data-i18n="contact_location_label"></strong><p>Yaoundé, Maetur Nkomo — Antenne Orange, Cameroun</p></div>
           </div>
         </div>
-        <form class="contact-form" onsubmit="handleSubmit(event)">
-          <input type="text"  data-i18n-placeholder="form_name"  required />
-          <input type="email" data-i18n-placeholder="form_email" required />
-          <select>
-            <option value=""  data-i18n="form_service_default"></option>
-            <option value="p1" data-i18n="pole1_title"></option>
-            <option value="p2" data-i18n="pole2_title"></option>
-            <option value="p3" data-i18n="pole3_title"></option>
-            <option value="p4" data-i18n="pole4_title"></option>
-          </select>
-          <textarea rows="4" data-i18n-placeholder="form_message" required></textarea>
-          <button type="submit" class="btn btn-primary" data-i18n="form_submit"></button>
-        </form>
+        <div class="contact-form-container">
+          <p class="contact-form-description" data-i18n="form_description"></p>
+          <button onclick="openContactForm()" class="btn btn-primary btn-contact-form" data-i18n="form_open_button">
+            📝 Ouvrir le formulaire de contact
+          </button>
+        </div>
       </div>
     </div>
   </section>
