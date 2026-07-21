@@ -90,9 +90,9 @@ const i18n = {
 
     contact_title: "Contactez-nous",
     contact_subtitle: "Vous avez un projet ? Parlons-en.",
-    contact_email_label: "Email", contact_phone_label: "Téléphone / WhatsApp",
+    contact_email_label: "Email", contact_phone_label: "Téléphone",
     contact_pobox_label: "Boîte Postale", contact_pobox_value: "B.P. 1190",
-    contact_phone_placeholder: "À venir", contact_location_label: "Localisation",
+    contact_phone_value: "+237 622-549-642", contact_location_label: "Localisation",
     form_description: "Cliquez sur le bouton ci-dessous pour remplir notre formulaire de contact et nous vous répondrons dans les plus brefs délais.",
     form_open_button: "📝 Ouvrir le formulaire de contact",
 
@@ -191,9 +191,9 @@ const i18n = {
 
     contact_title: "Contact Us",
     contact_subtitle: "Have a project? Let's talk.",
-    contact_email_label: "Email", contact_phone_label: "Phone / WhatsApp",
+    contact_email_label: "Email", contact_phone_label: "Phone",
     contact_pobox_label: "P.O Box", contact_pobox_value: "P.O Box 1190",
-    contact_phone_placeholder: "Coming soon", contact_location_label: "Location",
+    contact_phone_value: "+237 622-549-642", contact_location_label: "Location",
     form_description: "Click the button below to fill out our contact form and we will respond to you as soon as possible.",
     form_open_button: "📝 Open Contact Form",
 
@@ -292,9 +292,9 @@ const i18n = {
 
     contact_title: "お問い合わせ",
     contact_subtitle: "プロジェクトがありますか？ぜひご相談ください。",
-    contact_email_label: "メール", contact_phone_label: "電話 / WhatsApp",
+    contact_email_label: "メール", contact_phone_label: "電話",
     contact_pobox_label: "私書箱", contact_pobox_value: "私書箱 1190",
-    contact_phone_placeholder: "近日公開", contact_location_label: "所在地",
+    contact_phone_value: "+237 622-549-642", contact_location_label: "所在地",
     form_description: "下のボタンをクリックしてお問い合わせフォームにご記入ください。できるだけ早くご返信いたします。",
     form_open_button: "📝 お問い合わせフォームを開く",
 
