@@ -82,6 +82,13 @@ const i18n = {
     s3_3_title: "Événements Culturels",
     s3_3_desc: "Mois de la culture japonaise au Cameroun, semaine camerounaise au Japon, conférences et ateliers interculturels.",
 
+    s5_1_title: "Distribution de Produits Japonais",
+    s5_1_desc: "Vente et distribution de produits japonais innovants au Cameroun : technologies, équipements, biens de consommation de haute qualité répondant aux besoins spécifiques du marché camerounais.",
+    s5_2_title: "Promotion de Produits Japonais",
+    s5_2_desc: "Campagnes marketing, démonstrations produits, participation aux salons et événements pour promouvoir l'excellence des produits japonais auprès des entreprises et consommateurs camerounais.",
+    s5_3_title: "Export de Produits Camerounais",
+    s5_3_desc: "Promotion et commercialisation de produits camerounais de qualité sur le marché japonais : produits agricoles, artisanat, spécialités locales et ressources naturelles.",
+
     targets_title: "Nos Cibles",
     targets_subtitle: "Nous accompagnons une diversité d'acteurs",
     t1_title: "PME Camerounaises", t1_desc: "Accès aux technologies, partenaires et marchés japonais",
@@ -185,6 +192,13 @@ const i18n = {
     s3_3_title: "Cultural Events",
     s3_3_desc: "Japanese culture month in Cameroon, Cameroonian week in Japan, intercultural conferences and workshops.",
 
+    s5_1_title: "Japanese Product Distribution",
+    s5_1_desc: "Sale and distribution of innovative Japanese products in Cameroon: technologies, equipment, high-quality consumer goods meeting specific needs of the Cameroonian market.",
+    s5_2_title: "Japanese Product Promotion",
+    s5_2_desc: "Marketing campaigns, product demonstrations, trade fair participation and events to promote the excellence of Japanese products to Cameroonian businesses and consumers.",
+    s5_3_title: "Cameroonian Product Export",
+    s5_3_desc: "Promotion and marketing of quality Cameroonian products in the Japanese market: agricultural products, handicrafts, local specialties and natural resources.",
+
     targets_title: "Who We Serve",
     targets_subtitle: "We support a diverse range of stakeholders",
     t1_title: "Cameroonian SMEs",    t1_desc: "Access to Japanese technologies, partners and markets",
@@ -287,6 +301,13 @@ const i18n = {
     s3_2_desc: "カメルーンまたは日本の日常生活への深い没入体験。文化サポート付きのホストファミリー宿泊。",
     s3_3_title: "文化イベント",
     s3_3_desc: "カメルーンでの日本文化月間、日本でのカメルーン週間、異文化会議・ワークショップ。",
+
+    s5_1_title: "日本製品の流通",
+    s5_1_desc: "カメルーンにおける革新的な日本製品の販売・流通：技術、機器、カメルーン市場の特定ニーズに応える高品質消費財。",
+    s5_2_title: "日本製品のプロモーション",
+    s5_2_desc: "マーケティングキャンペーン、製品デモンストレーション、展示会参加、カメルーンの企業・消費者向けに日本製品の優秀性を促進するイベント。",
+    s5_3_title: "カメルーン製品の輸出",
+    s5_3_desc: "日本市場における高品質カメルーン製品のプロモーションとマーケティング：農産物、手工芸品、地域特産品、天然資源。",
 
     targets_title: "対象者",
     targets_subtitle: "多様なステークホルダーをサポート",
