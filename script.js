@@ -102,6 +102,7 @@ const i18n = {
     contact_email_label: "Email", contact_phone_label: "Téléphone",
     contact_pobox_label: "Boîte Postale", contact_pobox_value: "B.P. 1190",
     contact_phone_value: "+237 622-549-642", contact_location_label: "Localisation",
+    contact_facebook_label: "Facebook",
     form_description: "Cliquez sur le bouton ci-dessous pour remplir notre formulaire de contact et nous vous répondrons dans les plus brefs délais.",
     form_open_button: "📝 Ouvrir le formulaire de contact",
 
@@ -212,6 +213,7 @@ const i18n = {
     contact_email_label: "Email", contact_phone_label: "Phone",
     contact_pobox_label: "P.O Box", contact_pobox_value: "P.O Box 1190",
     contact_phone_value: "+237 622-549-642", contact_location_label: "Location",
+    contact_facebook_label: "Facebook",
     form_description: "Click the button below to fill out our contact form and we will respond to you as soon as possible.",
     form_open_button: "📝 Open Contact Form",
 
@@ -322,6 +324,7 @@ const i18n = {
     contact_email_label: "メール", contact_phone_label: "電話",
     contact_pobox_label: "私書箱", contact_pobox_value: "私書箱 1190",
     contact_phone_value: "+237 622-549-642", contact_location_label: "所在地",
+    contact_facebook_label: "フェイスブック",
     form_description: "下のボタンをクリックしてお問い合わせフォームにご記入ください。できるだけ早くご返信いたします。",
     form_open_button: "📝 お問い合わせフォームを開く",
 
