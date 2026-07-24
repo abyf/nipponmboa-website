@@ -106,6 +106,19 @@ const i18n = {
     form_description: "Cliquez sur le bouton ci-dessous pour remplir notre formulaire de contact et nous vous répondrons dans les plus brefs délais.",
     form_open_button: "📝 Ouvrir le formulaire de contact",
 
+    // News & Events
+    news_title: "Actualités & Événements",
+    news_subtitle: "Restez informés de nos dernières nouvelles et événements à venir",
+    news_1_title: "Nouveau Partenariat Stratégique",
+    news_1_desc: "NipponMboa Consulting annonce un nouveau partenariat avec des entreprises japonaises leaders pour faciliter les échanges commerciaux et technologiques entre le Cameroun et le Japon.",
+    news_1_date: "Mars 2025",
+    news_2_title: "Session de Formation en IA",
+    news_2_desc: "Inscrivez-vous à notre prochaine formation intensive en Intelligence Artificielle et Machine Learning. Places limitées disponibles pour les professionnels camerounais.",
+    news_2_date: "Avril 2025",
+    news_3_title: "Salon du Commerce Bilatéral",
+    news_3_desc: "Participez à notre salon annuel réunissant des PME camerounaises et japonaises. Une opportunité unique de networking et de développement commercial.",
+    news_3_date: "Mai 2025",
+
     footer_tagline: "Une expérience unique au service de votre réussite",
     footer_copy: "© 2025 NipponMboa Consulting. Tous droits réservés.",
   },
@@ -216,6 +229,19 @@ const i18n = {
     contact_facebook_label: "Facebook",
     form_description: "Click the button below to fill out our contact form and we will respond to you as soon as possible.",
     form_open_button: "📝 Open Contact Form",
+
+    // News & Events
+    news_title: "News & Events",
+    news_subtitle: "Stay informed about our latest news and upcoming events",
+    news_1_title: "New Strategic Partnership",
+    news_1_desc: "NipponMboa Consulting announces a new partnership with leading Japanese companies to facilitate trade and technological exchanges between Cameroon and Japan.",
+    news_1_date: "March 2025",
+    news_2_title: "AI Training Session",
+    news_2_desc: "Register for our upcoming intensive training in Artificial Intelligence and Machine Learning. Limited spaces available for Cameroonian professionals.",
+    news_2_date: "April 2025",
+    news_3_title: "Bilateral Trade Fair",
+    news_3_desc: "Join our annual fair bringing together Cameroonian and Japanese SMEs. A unique opportunity for networking and business development.",
+    news_3_date: "May 2025",
 
     footer_tagline: "A unique experience at the service of your success",
     footer_copy: "© 2025 NipponMboa Consulting. All rights reserved.",
@@ -328,6 +354,19 @@ const i18n = {
     form_description: "下のボタンをクリックしてお問い合わせフォームにご記入ください。できるだけ早くご返信いたします。",
     form_open_button: "📝 お問い合わせフォームを開く",
 
+    // News & Events
+    news_title: "ニュース＆イベント",
+    news_subtitle: "最新ニュースと今後のイベント情報をお届けします",
+    news_1_title: "新戦略的パートナーシップ",
+    news_1_desc: "NipponMboaコンサルティングは、カメルーンと日本間の貿易・技術交流を促進するため、日本の大手企業との新たなパートナーシップを発表します。",
+    news_1_date: "2025年3月",
+    news_2_title: "AI研修セッション",
+    news_2_desc: "人工知能と機械学習の集中研修にご登録ください。カメルーン専門家向けの限定枠をご用意しています。",
+    news_2_date: "2025年4月",
+    news_3_title: "二国間貿易フェア",
+    news_3_desc: "カメルーンと日本の中小企業が集まる年次フェアにご参加ください。ネットワーキングとビジネス開発の絶好の機会です。",
+    news_3_date: "2025年5月",
+
     footer_tagline: "カメルーンと日本をつなぐ架け橋",
     footer_copy: "© 2025 NipponMboa Consulting. All rights reserved.",
   }
@@ -399,3 +438,83 @@ function openFormWithLang(e) {
 function openContactForm() {
   window.open('https://forms.gle/MVnEEwQ3kff55KgZ9', '_blank');
 }
+
+// ===== NEWS & EVENTS CAROUSEL =====
+let currentSlide = 1;
+let autoSlideInterval;
+
+function showSlide(slideNumber) {
+  const slides = document.querySelectorAll('.carousel-slide');
+  const dots = document.querySelectorAll('.dot');
+  
+  // Wrap around if needed
+  if (slideNumber > slides.length) currentSlide = 1;
+  if (slideNumber < 1) currentSlide = slides.length;
+  else currentSlide = slideNumber;
+  
+  // Hide all slides and deactivate dots
+  slides.forEach(slide => slide.classList.remove('active'));
+  dots.forEach(dot => dot.classList.remove('active'));
+  
+  // Show current slide and activate corresponding dot
+  slides[currentSlide - 1].classList.add('active');
+  dots[currentSlide - 1].classList.add('active');
+}
+
+function nextSlide() {
+  showSlide(currentSlide + 1);
+}
+
+function prevSlide() {
+  showSlide(currentSlide - 1);
+}
+
+function startAutoSlide() {
+  // Auto-slide every 5 seconds
+  autoSlideInterval = setInterval(nextSlide, 5000);
+}
+
+function stopAutoSlide() {
+  clearInterval(autoSlideInterval);
+}
+
+// Initialize carousel when DOM is loaded
+document.addEventListener('DOMContentLoaded', () => {
+  // Set up navigation buttons
+  const prevBtn = document.querySelector('.prev-btn');
+  const nextBtn = document.querySelector('.next-btn');
+  
+  if (prevBtn && nextBtn) {
+    prevBtn.addEventListener('click', () => {
+      prevSlide();
+      stopAutoSlide();
+      startAutoSlide(); // Restart auto-slide after manual interaction
+    });
+    
+    nextBtn.addEventListener('click', () => {
+      nextSlide();
+      stopAutoSlide();
+      startAutoSlide();
+    });
+  }
+  
+  // Set up dot navigation
+  const dots = document.querySelectorAll('.dot');
+  dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => {
+      showSlide(index + 1);
+      stopAutoSlide();
+      startAutoSlide();
+    });
+  });
+  
+  // Start auto-slide
+  startAutoSlide();
+  
+  // Pause auto-slide when hovering over carousel
+  const carouselContainer = document.querySelector('.carousel-container');
+  if (carouselContainer) {
+    carouselContainer.addEventListener('mouseenter', stopAutoSlide);
+    carouselContainer.addEventListener('mouseleave', startAutoSlide);
+  }
+});
