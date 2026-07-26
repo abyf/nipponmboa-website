@@ -427,11 +427,10 @@ function handleSubmit(e) {
 
 applyLang('fr');
 
-// Function to open form with current language
+// Function to open Bridge IT Solutions Google Form
 function openFormWithLang(e) {
   e.preventDefault();
-  const formUrl = `bridge-it-form-v2.html?lang=${currentLang}`;
-  window.location.href = formUrl;
+  window.open('https://forms.gle/b8GzGrzbdTKnrg3Q6', '_blank');
 }
 
 // Function to open Google Form for contact
