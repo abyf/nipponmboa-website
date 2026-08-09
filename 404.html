@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Redirecting...</title>
+  <script>
+    // GitHub Pages SPA routing solution
+    // This file handles client-side routing for language-specific URLs
+    (function() {
+      var path = window.location.pathname;
+      var hash = window.location.hash;
+      
+      // Extract language from path
+      var langMatch = path.match(/^\/(en|fr|ja)(\/.*)?$/);
+      
+      if (langMatch) {
+        // Valid language path, redirect to index.html with the full path preserved
+        var newUrl = window.location.origin + '/?p=' + encodeURIComponent(path) + hash;
+        window.location.replace(newUrl);
+      } else {
+        // No valid language, redirect to French (default)
+        var cleanPath = path === '/' ? '' : path;
+        window.location.replace(window.location.origin + '/fr' + cleanPath + hash);
+      }
+    })();
+  </script>
+</head>
+<body>
+  <p>Redirecting...</p>
+</body>
+</html>

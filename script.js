@@ -374,6 +374,28 @@ const i18n = {
 
 let currentLang = 'fr';
 
+// Function to get language from URL path
+function getLangFromURL() {
+  const path = window.location.pathname;
+  const langMatch = path.match(/^\/(en|fr|ja)(\/|$)/);
+  return langMatch ? langMatch[1] : null;
+}
+
+// Function to get clean path without language prefix
+function getCleanPath() {
+  const path = window.location.pathname;
+  const langMatch = path.match(/^\/(en|fr|ja)(\/.*)?$/);
+  return langMatch && langMatch[2] ? langMatch[2] : '/';
+}
+
+// Function to navigate to a specific language
+function navigateToLang(lang) {
+  const cleanPath = getCleanPath();
+  const hash = window.location.hash;
+  const newPath = `/${lang}${cleanPath === '/' ? '' : cleanPath}${hash}`;
+  window.location.href = newPath;
+}
+
 function applyLang(lang) {
   currentLang = lang;
   const t = i18n[lang];
@@ -392,8 +414,39 @@ function applyLang(lang) {
   });
 }
 
+// Initialize language from URL on page load
+function initLanguage() {
+  // Check if we're coming from 404.html redirect (GitHub Pages SPA routing)
+  const urlParams = new URLSearchParams(window.location.search);
+  const redirectPath = urlParams.get('p');
+  
+  if (redirectPath) {
+    // Remove the query parameter and use the path
+    const decodedPath = decodeURIComponent(redirectPath);
+    const hash = window.location.hash;
+    window.history.replaceState(null, '', decodedPath + hash);
+  }
+  
+  const urlLang = getLangFromURL();
+  
+  if (urlLang && i18n[urlLang]) {
+    // Language found in URL, apply it
+    applyLang(urlLang);
+  } else {
+    // No valid language in URL, redirect to default language (French)
+    const defaultLang = 'fr';
+    const cleanPath = window.location.pathname === '/' ? '' : window.location.pathname;
+    const hash = window.location.hash;
+    window.location.replace(`/${defaultLang}${cleanPath}${hash}`);
+  }
+}
+
+// Update language buttons to navigate instead of just applying language
 document.querySelectorAll('.lang-btn').forEach(btn => {
-  btn.addEventListener('click', () => applyLang(btn.dataset.lang));
+  btn.addEventListener('click', (e) => {
+    e.preventDefault();
+    navigateToLang(btn.dataset.lang);
+  });
 });
 
 document.querySelectorAll('.tab-btn').forEach(btn => {
@@ -425,7 +478,8 @@ function handleSubmit(e) {
   }, 3000);
 }
 
-applyLang('fr');
+// Initialize language on page load
+initLanguage();
 
 // Function to open Bridge IT Solutions Google Form
 function openFormWithLang(e) {

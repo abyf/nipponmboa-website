@@ -1,0 +1,13 @@
+# Enable RewriteEngine
+RewriteEngine On
+
+# Redirect root to default language (French)
+RewriteRule ^$ /fr/ [R=302,L]
+
+# Allow language-specific routes
+RewriteRule ^(en|fr|ja)(/.*)?$ /index.html [L]
+
+# Redirect any other path to default language
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ /fr/$1 [R=302,L]
