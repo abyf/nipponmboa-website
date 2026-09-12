@@ -527,8 +527,8 @@ function prevSlide() {
 }
 
 function startAutoSlide() {
-  // Auto-slide every 5 seconds
-  autoSlideInterval = setInterval(nextSlide, 5000);
+  // Auto-slide every 65 seconds
+  autoSlideInterval = setInterval(nextSlide, 65000);
 }
 
 function stopAutoSlide() {
