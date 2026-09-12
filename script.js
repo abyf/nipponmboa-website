@@ -501,9 +501,13 @@ function showSlide(slideNumber) {
   const dots = document.querySelectorAll('.dot');
   
   // Wrap around if needed
-  if (slideNumber > slides.length) currentSlide = 1;
-  if (slideNumber < 1) currentSlide = slides.length;
-  else currentSlide = slideNumber;
+  if (slideNumber > slides.length) {
+    currentSlide = 1;
+  } else if (slideNumber < 1) {
+    currentSlide = slides.length;
+  } else {
+    currentSlide = slideNumber;
+  }
   
   // Hide all slides and deactivate dots
   slides.forEach(slide => slide.classList.remove('active'));
