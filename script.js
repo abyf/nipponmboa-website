@@ -110,7 +110,7 @@ const i18n = {
     news_title: "Actualités & Événements",
     news_subtitle: "Restez informés de nos dernières nouvelles et événements à venir",
     news_1_title: "Nouveau Partenariat Stratégique",
-    news_1_desc: "NipponMboa Consulting annonce un nouveau partenariat avec des entreprises japonaises leaders pour faciliter les échanges commerciaux et technologiques entre le Cameroun et le Japon.",
+    news_1_desc: "NipponMboa Consulting a signé des partenariats avec des structures japonaises afin de faciliter les échanges commerciaux et technologiques, et de promouvoir l'entrepreneuriat, la carrière et la formation des ingénieurs entre le Cameroun et le Japon.",
     news_1_date: "Mars 2025",
     news_2_title: "Formation Japonais en Ligne — Batch Décembre 2026",
     news_2_desc: "Cours en ligne en direct avec professeur professionnel → 3x/semaine • 52 semaines • 210 heures. Système d'auto-apprentissage guidé quotidien → 30 min/jour • 52 semaines • 190 heures. Total : 400 heures/an d'immersion structurée en japonais. Parcours réels pour étudier et travailler au Japon. Tout depuis votre écran. À votre rythme. ⚠️ BATCH DÉCEMBRE 2026 — SEULEMENT 6 PLACES RESTANTES. 👉 C'est pour VOUS si : ✅ Vous avez zéro japonais — et c'est parfaitement bien ✅ Vous avez accès à Internet et un PC ✅ Vous avez la motivation d'investir en vous-même",
@@ -118,6 +118,9 @@ const i18n = {
     news_3_title: "SÉMINAIRE EN LIGNE : Transfert Technologique & Matchmaking Business Japon-Cameroun",
     news_3_desc: "📅 Samedi 19 septembre 2026 • 🕙 10h00 – 11h00 • 💻 En direct sur Zoom • 💰 Gratuit. NipponMboa Business Services vise à connecter le Japon et le Cameroun pour le transfert technologique et la collaboration commerciale. Ce séminaire vous guidera à travers les diverses opportunités : 🚗 Partenariats Véhicules d'Occasion • 🤝 Co-Création B2B • 💡 Matchmaking Subventions & Financement • 🎯 Matchmaking Pitch & Partenariat. 👉 Ce séminaire est pour : 🏢 Entreprises | 🚀 Startups | 🏪 PME | 🌱 ONG & Associations | 💡 Innovateurs",
     news_3_date: "19 Septembre 2026",
+    news_4_title: "Académie de Langues NipponMboa",
+    news_4_desc: "NipponMboa a lancé son Académie de langues (https://languageacademy.nipponmboa.com), proposant des cours en autonomie en japonais, français et anglais aux apprenants intéressés à travers le monde. L'académie est gratuite et constitue une ressource complémentaire pour les apprenants inscrits à des programmes de longue durée, en présentiel ou en ligne.",
+    news_4_date: "Janvier 2027",
 
     footer_tagline: "Une expérience unique au service de votre réussite",
     footer_copy: "© 2025 NipponMboa Consulting. Tous droits réservés.",
@@ -234,7 +237,7 @@ const i18n = {
     news_title: "News & Events",
     news_subtitle: "Stay informed about our latest news and upcoming events",
     news_1_title: "New Strategic Partnership",
-    news_1_desc: "NipponMboa Consulting announces a new partnership with leading Japanese companies to facilitate trade and technological exchanges between Cameroon and Japan.",
+    news_1_desc: "NipponMboa Consulting has signed partnerships with Japanese organizations to facilitate trade and technological exchanges, and to promote entrepreneurship, careers and engineer training between Cameroon and Japan.",
     news_1_date: "March 2025",
     news_2_title: "Online Japanese Training — December 2026 Batch",
     news_2_desc: "Live online classes with a professional teacher → 3x/week • 52 weeks • 210 hours. Guided daily self-learning system → 30 min/day • 52 weeks • 190 hours. Total: 400 hours/year of structured Japanese immersion. Real pathways to study and work in Japan. All from your screen. All at your pace. ⚠️ DECEMBER 2026 BATCH — ONLY 6 SEATS LEFT. 👉 This is for YOU if: ✅ You have zero Japanese — and that's perfectly fine ✅ You have access to the internet and a PC ✅ You have the motivation to invest in yourself",
@@ -242,6 +245,9 @@ const i18n = {
     news_3_title: "ONLINE SEMINAR: Japan-Cameroon Technology Transfer & Business Matchmaking",
     news_3_desc: "📅 Saturday, September 19th, 2026 • 🕙 10:00 AM – 11:00 AM • 💻 Live on Zoom • 💰 Cost: FREE. NipponMboa Business Services aims to bridge Japan and Cameroon for technology transfer and business collaboration. This seminar will walk you through various opportunities: 🚗 Used Vehicle Partnerships • 🤝 B2B Co-Creation • 💡 Grant & Funding Matchmaking • 🎯 Pitch & Partnership Matchmaking. 👉 This seminar is for: 🏢 Corporations | 🚀 Startups | 🏪 SMEs | 🌱 NGOs & Associations | 💡 Innovators & Idea Holders",
     news_3_date: "September 19, 2026",
+    news_4_title: "NipponMboa Language Academy",
+    news_4_desc: "NipponMboa has launched its Language Academy (https://languageacademy.nipponmboa.com), offering self-paced courses in Japanese, French, and English to interested learners worldwide. The academy is free and serves as a complementary resource for learners enrolled in long-term programs, whether in-person or online.",
+    news_4_date: "January 2027",
 
     footer_tagline: "A unique experience at the service of your success",
     footer_copy: "© 2025 NipponMboa Consulting. All rights reserved.",
@@ -358,7 +364,7 @@ const i18n = {
     news_title: "ニュース＆イベント",
     news_subtitle: "最新ニュースと今後のイベント情報をお届けします",
     news_1_title: "新戦略的パートナーシップ",
-    news_1_desc: "NipponMboaコンサルティングは、カメルーンと日本間の貿易・技術交流を促進するため、日本の大手企業との新たなパートナーシップを発表します。",
+    news_1_desc: "NipponMboaコンサルティングは、カメルーンと日本間の貿易・技術交流を促進し、起業家精神、キャリア、エンジニア育成を推進するため、日本の組織とのパートナーシップを締結しました。",
     news_1_date: "2025年3月",
     news_2_title: "オンライン日本語研修 — 2026年12月バッチ",
     news_2_desc: "プロの教師によるライブオンライン授業 → 週3回 • 52週間 • 210時間。毎日のガイド付き自習システム → 30分/日 • 52週間 • 190時間。合計：年間400時間の構造化された日本語イマージョン。日本での留学・就職への実際の道筋。すべて画面から。自分のペースで。⚠️ 2026年12月バッチ — 残り6席のみ。👉 こんな方におすすめ：✅ 日本語ゼロ — それで全く問題ありません ✅ インターネットとPCをお持ちの方 ✅ 自己投資する意欲のある方",
@@ -366,6 +372,9 @@ const i18n = {
     news_3_title: "オンラインセミナー：日本・カメルーン技術移転＆ビジネスマッチメイキング",
     news_3_desc: "📅 2026年9月19日（土）• 🕙 10:00 – 11:00 • 💻 Zoomライブ配信 • 💰 参加費：無料。NipponMboa Business Servicesは、技術移転とビジネス協力のために日本とカメルーンを結びます。このセミナーでは様々な機会をご紹介：🚗 中古車両パートナーシップ • 🤝 B2B共創 • 💡 助成金・資金調達マッチング • 🎯 ピッチ＆パートナーシップマッチング。👉 対象：🏢 企業 | 🚀 スタートアップ | 🏪 中小企業 | 🌱 NGO・協会 | 💡 イノベーター・アイデア保有者",
     news_3_date: "2026年9月19日",
+    news_4_title: "NipponMboa言語アカデミー",
+    news_4_desc: "NipponMboaは言語アカデミー（https://languageacademy.nipponmboa.com）を開設し、世界中の学習者に日本語、フランス語、英語の自習コースを提供しています。アカデミーは無料で、対面またはオンラインの長期プログラムに登録している学習者のための補完的なリソースとして機能します。",
+    news_4_date: "2027年1月",
 
     footer_tagline: "カメルーンと日本をつなぐ架け橋",
     footer_copy: "© 2025 NipponMboa Consulting. All rights reserved.",
@@ -527,8 +536,8 @@ function prevSlide() {
 }
 
 function startAutoSlide() {
-  // Auto-slide every 65 seconds
-  autoSlideInterval = setInterval(nextSlide, 65000);
+  // Auto-slide every 20 seconds
+  autoSlideInterval = setInterval(nextSlide, 20000);
 }
 
 function stopAutoSlide() {
