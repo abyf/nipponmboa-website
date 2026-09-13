@@ -591,7 +591,7 @@ function openContactForm() {
 // Function to navigate to other pages with current language
 function navigateToPage(page) {
   const currentLang = getLangFromURL() || 'fr';
-  window.location.href = `/${currentLang}/${page}`;
+  window.location.href = `/${currentLang}/${page}.html`;
 }
 
 // ===== NEWS & EVENTS CAROUSEL =====
