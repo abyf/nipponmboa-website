@@ -1001,6 +1001,19 @@ const packRecommendations = {
 // Current language
 let currentLang = 'fr';
 
+// Language routing functions
+function getLangFromURL() {
+  const path = window.location.pathname;
+  const langMatch = path.match(/^\/(en|fr|ja)\//);
+  return langMatch ? langMatch[1] : null;
+}
+
+function navigateToLang(lang) {
+  const currentPath = window.location.pathname;
+  const currentPage = currentPath.split('/').pop();
+  window.location.href = `/${lang}/${currentPage}`;
+}
+
 // Apply translations
 function applyLang(lang) {
   currentLang = lang;
@@ -1025,10 +1038,25 @@ function applyLang(lang) {
   });
 }
 
+// Initialize language from URL
+function initLanguage() {
+  const urlLang = getLangFromURL();
+  
+  if (urlLang && academiaI18n[urlLang]) {
+    applyLang(urlLang);
+  } else {
+    // Redirect to default language if not in URL
+    const defaultLang = 'fr';
+    const currentPage = window.location.pathname.split('/').pop();
+    window.location.replace(`/${defaultLang}/${currentPage}`);
+  }
+}
+
 // Initialize language switcher
 document.querySelectorAll('.lang-btn').forEach(btn => {
-  btn.addEventListener('click', () => {
-    applyLang(btn.dataset.lang);
+  btn.addEventListener('click', (e) => {
+    e.preventDefault();
+    navigateToLang(btn.dataset.lang);
     
     // If a quiz result is currently displayed, regenerate it in the new language
     const resultSection = document.getElementById('quiz-result');
@@ -1300,7 +1328,7 @@ function handleAcademySubmit(event) {
 }
 
 // Initialize page
-applyLang('fr');
+initLanguage();
 
 // Smooth scrolling for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {

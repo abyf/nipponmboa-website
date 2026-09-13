@@ -384,6 +384,19 @@ const cteI18n = {
 // Current language
 let currentLang = 'fr';
 
+// Language routing functions
+function getLangFromURL() {
+  const path = window.location.pathname;
+  const langMatch = path.match(/^\/(en|fr|ja)\//);
+  return langMatch ? langMatch[1] : null;
+}
+
+function navigateToLang(lang) {
+  const currentPath = window.location.pathname;
+  const currentPage = currentPath.split('/').pop();
+  window.location.href = `/${lang}/${currentPage}`;
+}
+
 // Apply translations
 function applyLang(lang) {
   currentLang = lang;
@@ -402,12 +415,26 @@ function applyLang(lang) {
   document.querySelectorAll('.lang-btn').forEach(btn => {
     btn.classList.toggle('active', btn.dataset.lang === lang);
   });
+}
 
-  // Store language preference
-  localStorage.setItem('preferred-language', lang);
+// Initialize language from URL
+function initLanguage() {
+  const urlLang = getLangFromURL();
+  
+  if (urlLang && cteI18n[urlLang]) {
+    applyLang(urlLang);
+  } else {
+    // Redirect to default language if not in URL
+    const defaultLang = 'fr';
+    const currentPage = window.location.pathname.split('/').pop();
+    window.location.replace(`/${defaultLang}/${currentPage}`);
+  }
 }
 
 document.addEventListener('DOMContentLoaded', function() {
+  // Initialize language first
+  initLanguage();
+  
   // Initialize direction selector
   initDirectionSelector();
   
@@ -419,10 +446,6 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // Initialize smooth scroll
   initSmoothScroll();
-  
-  // Load saved language preference or default to French
-  const savedLang = localStorage.getItem('preferred-language') || 'fr';
-  applyLang(savedLang);
 });
 
 // Direction Selector Functionality
@@ -522,9 +545,10 @@ function initLanguageSwitcher() {
   const langBtns = document.querySelectorAll('.lang-btn');
   
   langBtns.forEach(btn => {
-    btn.addEventListener('click', function() {
+    btn.addEventListener('click', function(e) {
+      e.preventDefault();
       const lang = this.dataset.lang;
-      applyLang(lang);
+      navigateToLang(lang);
     });
   });
 }
