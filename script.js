@@ -588,6 +588,12 @@ function openContactForm() {
   window.open('https://forms.gle/MVnEEwQ3kff55KgZ9', '_blank');
 }
 
+// Function to navigate to other pages with current language
+function navigateToPage(page) {
+  const currentLang = getLangFromURL() || 'fr';
+  window.location.href = `/${currentLang}/${page}`;
+}
+
 // ===== NEWS & EVENTS CAROUSEL =====
 let currentSlide = 1;
 let autoSlideInterval;

@@ -4,8 +4,13 @@ RewriteEngine On
 # Redirect root to default language (French)
 RewriteRule ^$ /fr/ [R=302,L]
 
-# Allow language-specific routes
-RewriteRule ^(en|fr|ja)(/.*)?$ /index.html [L]
+# Route language-specific pages to their HTML files
+RewriteRule ^(en|fr|ja)/business-tech-bridge/?$ /business-tech-bridge.html [L]
+RewriteRule ^(en|fr|ja)/academia-career/?$ /academia-career.html [L]
+RewriteRule ^(en|fr|ja)/cultural-tourism/?$ /cultural-tourism.html [L]
+
+# Allow language-specific routes for main page
+RewriteRule ^(en|fr|ja)/?$ /index.html [L]
 
 # Redirect any other path to default language
 RewriteCond %{REQUEST_FILENAME} !-f
