@@ -1,5 +1,6 @@
 const i18n = {
   fr: {
+    nav_group: "← NipponMboa",
     nav_about: "À propos", nav_poles: "Nos Pôles", nav_services: "Services",
     nav_targets: "Cibles", nav_contact: "Contact",
 
@@ -156,6 +157,7 @@ const i18n = {
   },
 
   en: {
+    nav_group: "← NipponMboa",
     nav_about: "About", nav_poles: "Our Poles", nav_services: "Services",
     nav_targets: "Clients", nav_contact: "Contact",
 
@@ -312,6 +314,7 @@ const i18n = {
   },
 
   ja: {
+    nav_group: "← NipponMboa",
     nav_about: "私たちについて", nav_poles: "サービス部門", nav_services: "サービス",
     nav_targets: "対象", nav_contact: "お問い合わせ",
 
@@ -470,8 +473,11 @@ const i18n = {
 
 let currentLang = 'fr';
 
-// Function to get language from URL path
+// Function to get language from URL path (also supports ?lang= query)
 function getLangFromURL() {
+  const params = new URLSearchParams(window.location.search);
+  const q = params.get('lang');
+  if (q && ['en', 'fr', 'ja'].includes(q)) return q;
   const path = window.location.pathname;
   const langMatch = path.match(/^\/(en|fr|ja)(\/|$)/);
   return langMatch ? langMatch[1] : null;
@@ -484,12 +490,19 @@ function getCleanPath() {
   return langMatch && langMatch[2] ? langMatch[2] : '/';
 }
 
-// Function to navigate to a specific language
+// Function to navigate to a specific language (query-param based, GitHub Pages friendly)
 function navigateToLang(lang) {
-  const cleanPath = getCleanPath();
-  const hash = window.location.hash;
-  const newPath = `/${lang}${cleanPath === '/' ? '' : cleanPath}${hash}`;
-  window.location.href = newPath;
+  const url = new URL(window.location.href);
+  // Legacy path-prefix support: if the path has a /{lang} prefix, swap it;
+  // otherwise use the ?lang= query so root-served .html pages keep working.
+  const prefixMatch = url.pathname.match(/^\/(en|fr|ja)(\/.*)?$/);
+  if (prefixMatch) {
+    const rest = prefixMatch[2] || '';
+    window.location.href = `/${lang}${rest}${url.hash}`;
+  } else {
+    url.searchParams.set('lang', lang);
+    window.location.href = url.pathname + url.search + url.hash;
+  }
 }
 
 function applyLang(lang) {
@@ -515,25 +528,35 @@ function initLanguage() {
   // Check if we're coming from 404.html redirect (GitHub Pages SPA routing)
   const urlParams = new URLSearchParams(window.location.search);
   const redirectPath = urlParams.get('p');
-  
+
   if (redirectPath) {
-    // Remove the query parameter and use the path
-    const decodedPath = decodeURIComponent(redirectPath);
-    const hash = window.location.hash;
-    window.history.replaceState(null, '', decodedPath + hash);
+    // A legacy /{lang}/page redirect arrived. Extract the language and the
+    // target page, then normalize to a root-served .html with ?lang=.
+    const decoded = decodeURIComponent(redirectPath);
+    const langMatch = decoded.match(/^\/(en|fr|ja)(\/|$)/);
+    const lang = (langMatch && i18n[langMatch[1]]) ? langMatch[1] : 'fr';
+    const stripped = decoded.replace(/^\/(en|fr|ja)/, '');
+    const fileMatch = stripped.match(/\/([a-z0-9-]+)(?:\.html)?\/?$/i);
+    const file = fileMatch ? fileMatch[1] : '';
+    const currentFile = window.location.pathname.split('/').pop().replace('.html', '');
+    const targetFile = (file && file !== 'index') ? file : (currentFile || 'index');
+    const currentNorm = currentFile || 'index';
+    if (targetFile !== currentNorm) {
+      const dest = (targetFile === 'index') ? 'index.html' : `${targetFile}.html`;
+      window.location.replace(`/${dest}?lang=${lang}${window.location.hash}`);
+      return;
+    }
+    window.history.replaceState(null, '', `${window.location.pathname}?lang=${lang}${window.location.hash}`);
   }
-  
+
   const urlLang = getLangFromURL();
-  
+
   if (urlLang && i18n[urlLang]) {
-    // Language found in URL, apply it
     applyLang(urlLang);
   } else {
-    // No valid language in URL, redirect to default language (French)
-    const defaultLang = 'fr';
-    const cleanPath = window.location.pathname === '/' ? '' : window.location.pathname;
-    const hash = window.location.hash;
-    window.location.replace(`/${defaultLang}${cleanPath}${hash}`);
+    // No language indicated: default to French in place (no path redirect,
+    // which would 404 on GitHub Pages for root-served .html files).
+    applyLang('fr');
   }
 }
 
@@ -588,10 +611,16 @@ function openContactForm() {
   window.open('https://forms.gle/MVnEEwQ3kff55KgZ9', '_blank');
 }
 
-// Function to navigate to other pages with current language
+// Function to navigate to other pages with current language (root-served .html)
 function navigateToPage(page) {
   const currentLang = getLangFromURL() || 'fr';
-  window.location.href = `/${currentLang}/${page}.html`;
+  window.location.href = `/${page}.html?lang=${currentLang}`;
+}
+
+// Function to navigate back to the NipponMboa group hub with current language
+function navigateToGroup() {
+  const currentLang = getLangFromURL() || 'fr';
+  window.location.href = `/index.html?lang=${currentLang}`;
 }
 
 // ===== NEWS & EVENTS CAROUSEL =====

@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NipponMboa Consulting — Business &amp; Technology Bridge</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
+  
+  <!-- Meta Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '3660402574116403');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=3660402574116403&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-brand">
+      <img src="NipponMboa-Consulting-Logo.jpeg" alt="NipponMboa Consulting" class="nav-logo" />
+    </div>
+    <div class="nav-links">
+      <a href="#" onclick="navigateToGroup(); return false;" data-i18n="nav_group">← NipponMboa</a>
+      <a href="#about"    data-i18n="nav_about"></a>
+      <a href="#poles"    data-i18n="nav_poles"></a>
+      <a href="#services" data-i18n="nav_services"></a>
+      <a href="#targets"  data-i18n="nav_targets"></a>
+      <a href="#contact"  data-i18n="nav_contact"></a>
+    </div>
+    <div class="lang-switcher">
+      <button class="lang-btn active" data-lang="fr">FR</button>
+      <button class="lang-btn" data-lang="en">EN</button>
+      <button class="lang-btn" data-lang="ja">日本語</button>
+    </div>
+    <button class="nav-toggle" aria-label="Menu">&#9776;</button>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-corner-bl"></div>
+    <div class="hero-corner-br"></div>
+    <div class="hero-inner">
+      <div class="flag-blend">
+        <div class="flag-cm"></div>
+        <div class="flag-torii">⛩</div>
+        <div class="flag-jp"></div>
+      </div>
+      <h1 data-i18n="hero_title"></h1>
+      <p class="hero-sub" data-i18n="hero_sub"></p>
+      <div class="hero-badge-wrap">
+        <div class="hero-badge">
+          <div class="hero-badge-inner" data-i18n="hero_badge_inner"></div>
+        </div>
+      </div>
+      <div class="hero-cta">
+        <a href="#poles" class="btn btn-primary" data-i18n="hero_cta1"></a>
+        <a href="#contact"  class="btn btn-outline"  data-i18n="hero_cta2"></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWS & EVENTS CAROUSEL -->
+  <section class="section news-events-section">
+    <div class="container">
+      <span class="section-title-underline">
+        <h2 class="section-title" data-i18n="news_title"></h2>
+      </span>
+      <p class="section-subtitle" data-i18n="news_subtitle"></p>
+      
+      <div class="carousel-container">
+        <div class="carousel-wrapper">
+          <div class="carousel-slide active" data-slide="1">
+            <div class="slide-content">
+              <div class="slide-icon">📢</div>
+              <h3 data-i18n="news_1_title"></h3>
+              <p data-i18n="news_1_desc"></p>
+            </div>
+          </div>
+          
+          <div class="carousel-slide" data-slide="2">
+            <div class="slide-content">
+              <div class="slide-icon">🎓</div>
+              <h3 data-i18n="news_2_title"></h3>
+              <p data-i18n="news_2_desc"></p>
+              <div class="slide-flyer">
+                <img src="Online_japanese_training_up.png" alt="Online Japanese Training" class="flyer-image">
+              </div>
+            </div>
+          </div>
+          
+          <div class="carousel-slide" data-slide="3">
+            <div class="slide-content">
+              <div class="slide-icon">💼</div>
+              <h3 data-i18n="news_3_title"></h3>
+              <p data-i18n="news_3_desc"></p>
+              <div class="slide-flyer">
+                <img src="NipponMboa Bilingual Business Flyer.png" alt="NipponMboa Business Seminar Flyer" class="flyer-image">
+              </div>
+            </div>
+          </div>
+          
+          <div class="carousel-slide" data-slide="4">
+            <div class="slide-content">
+              <div class="slide-icon">📚</div>
+              <h3 data-i18n="news_4_title"></h3>
+              <p data-i18n="news_4_desc"></p>
+              <div class="slide-flyer">
+                <a href="https://languageacademy.nipponmboa.com" target="_blank" rel="noopener noreferrer">
+                  <img src="Trilingual Japanese Learning Flyer Warm, Modern, Inviting.png" alt="NipponMboa Language Academy" class="flyer-image">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <button class="carousel-btn prev-btn" aria-label="Previous">‹</button>
+        <button class="carousel-btn next-btn" aria-label="Next">›</button>
+        
+        <div class="carousel-dots">
+          <span class="dot active" data-slide="1"></span>
+          <span class="dot" data-slide="2"></span>
+          <span class="dot" data-slide="3"></span>
+          <span class="dot" data-slide="4"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section section-alt" id="about">
+    <div class="container">
+      <span class="section-title-underline">
+        <h2 class="section-title" data-i18n="about_title"></h2>
+      </span>
+      <p class="section-subtitle" data-i18n="about_subtitle"></p>
+      <div class="about-grid">
+        <div class="about-card featured">
+          <div class="about-icon">🎯</div>
+          <h3 data-i18n="about_mission_title"></h3>
+          <p data-i18n="about_mission_text"></p>
+        </div>
+        <div class="about-card">
+          <div class="about-icon">🔭</div>
+          <h3 data-i18n="about_vision_title"></h3>
+          <p data-i18n="about_vision_text"></p>
+        </div>
+        <div class="about-card">
+          <div class="about-icon">⚖️</div>
+          <h3 data-i18n="about_values_title"></h3>
+          <ul class="values-list">
+            <li data-i18n="about_val1"></li>
+            <li data-i18n="about_val2"></li>
+            <li data-i18n="about_val3"></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- POLES -->
+  <section class="section" id="poles">
+    <div class="container">
+      <span class="section-title-underline">
+        <h2 class="section-title" data-i18n="poles_title"></h2>
+      </span>
+      <p class="section-subtitle" data-i18n="poles_subtitle"></p>
+      <p class="section-sub" data-i18n="poles_sub"></p>
+      <div class="poles-grid">
+        <div class="pole-card">
+          <div class="pole-num">01</div>
+          <div class="pole-icon">🤝</div>
+          <h3 data-i18n="pole1_title"></h3>
+          <p data-i18n="pole1_desc"></p>
+          <a href="#services" class="pole-link" data-i18n="pole_link"></a>
+          <a href="#" onclick="navigateToPage('business-tech-bridge'); return false;" class="pole-link" style="background: linear-gradient(135deg, #c8102e 0%, #a00d24 100%); color: #fff; padding: 8px 16px; border-radius: 4px; margin-top: 8px; display: inline-block;" data-i18n="pole1_link">🤝 Explorer les services en détails</a>
+        </div>
+        <div class="pole-card">
+          <div class="pole-num">02</div>
+          <div class="pole-icon">🎓</div>
+          <h3 data-i18n="pole2_title"></h3>
+          <p data-i18n="pole2_desc"></p>
+          <a href="#services" class="pole-link" data-i18n="pole_link"></a>
+          <a href="#" onclick="navigateToPage('academia-career'); return false;" class="pole-link" style="background: linear-gradient(135deg, #c8102e 0%, #a00d24 100%); color: #fff; padding: 8px 16px; border-radius: 4px; margin-top: 8px; display: inline-block;" data-i18n="pole2_link">📚 Explorer les options en détails</a>
+        </div>
+        <div class="pole-card">
+          <div class="pole-num">03</div>
+          <div class="pole-icon">🌸</div>
+          <h3 data-i18n="pole3_title"></h3>
+          <p data-i18n="pole3_desc"></p>
+          <a href="#services" class="pole-link" data-i18n="pole_link"></a>
+          <a href="#" onclick="navigateToPage('cultural-tourism'); return false;" class="pole-link" style="background: linear-gradient(135deg, #c8102e 0%, #a00d24 100%); color: #fff; padding: 8px 16px; border-radius: 4px; margin-top: 8px; display: inline-block;" data-i18n="pole3_link">🌸 Explorer les options en détails</a>
+        </div>
+        <div class="pole-card">
+          <div class="pole-num">04</div>
+          <div class="pole-icon">💻</div>
+          <h3 data-i18n="pole4_title"></h3>
+          <p data-i18n="pole4_desc"></p>
+          <a href="#services" class="pole-link" data-i18n="pole_link"></a>
+          <a href="#" onclick="openFormWithLang(event)" class="pole-link" style="background: linear-gradient(135deg, #c8102e 0%, #a00d24 100%); color: #fff; padding: 8px 16px; border-radius: 4px; margin-top: 8px; display: inline-block;" data-i18n="pole_request_link">📝 Faire une demande</a>
+        </div>
+        <div class="pole-card">
+          <div class="pole-num">05</div>
+          <div class="pole-icon">🛍️</div>
+          <h3 data-i18n="pole5_title"></h3>
+          <p data-i18n="pole5_desc"></p>
+          <a href="#services" class="pole-link" data-i18n="pole_link"></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="section section-alt" id="services">
+    <div class="container">
+      <span class="section-title-underline">
+        <h2 class="section-title" data-i18n="services_title"></h2>
+      </span>
+      <p class="section-subtitle" data-i18n="services_subtitle"></p>
+      <div class="services-tabs">
+        <button class="tab-btn active" data-tab="s1" data-i18n="pole1_title"></button>
+        <button class="tab-btn"        data-tab="s2" data-i18n="pole2_title"></button>
+        <button class="tab-btn"        data-tab="s3" data-i18n="pole3_title"></button>
+        <button class="tab-btn"        data-tab="s4" data-i18n="pole4_title"></button>
+        <button class="tab-btn"        data-tab="s5" data-i18n="pole5_title"></button>
+      </div>
+
+      <div class="tab-content active" id="s1">
+        <div class="services-grid">
+          <div class="service-card"><h4 data-i18n="s1_1_title"></h4><p data-i18n="s1_1_desc"></p></div>
+          <div class="service-card"><h4 data-i18n="s1_2_title"></h4><p data-i18n="s1_2_desc"></p></div>
+          <div class="service-card"><h4 data-i18n="s1_3_title"></h4><p data-i18n="s1_3_desc"></p></div>
+          <div class="service-card"><h4 data-i18n="s1_4_title"></h4><p data-i18n="s1_4_desc"></p></div>
+          <div class="service-card"><h4 data-i18n="s1_5_title"></h4><p data-i18n="s1_5_desc"></p></div>
+        </div>
+      </div>
+      <div class="tab-content" id="s2">
+        <div class="services-grid">
+          <div class="service-card"><h4 data-i18n="s2_1_title"></h4><p data-i18n="s2_1_desc"></p></div>
+          <div class="service-card"><h4 data-i18n="s2_2_title"></h4><p data-i18n="s2_2_desc"></p></div>
+          <div class="service-card"><h4 data-i18n="s2_3_title"></h4><p data-i18n="s2_3_desc"></p></div>
+          <div class="service-card"><h4 data-i18n="s2_4_title"></h4><p data-i18n="s2_4_desc"></p></div>
+          <div class="service-card"><h4 data-i18n="s2_5_title"></h4><p data-i18n="s2_5_desc"></p></div>
+        </div>
+      </div>
+      <div class="tab-content" id="s3">
+        <div class="services-grid">
+          <div class="service-card"><h4 data-i18n="s3_1_title"></h4><p data-i18n="s3_1_desc"></p></div>
+          <div class="service-card"><h4 data-i18n="s3_2_title"></h4><p data-i18n="s3_2_desc"></p></div>
+          <div class="service-card"><h4 data-i18n="s3_3_title"></h4><p data-i18n="s3_3_desc"></p></div>
+        </div>
+      </div>
+      <div class="tab-content" id="s4">
+        <div class="services-grid">
+          <div class="service-card"><h4 data-i18n="s4_1_title"></h4><p data-i18n="s4_1_desc"></p></div>
+          <div class="service-card"><h4 data-i18n="s4_2_title"></h4><p data-i18n="s4_2_desc"></p></div>
+          <div class="service-card"><h4 data-i18n="s4_3_title"></h4><p data-i18n="s4_3_desc"></p></div>
+          <div class="service-card"><h4 data-i18n="s4_4_title"></h4><p data-i18n="s4_4_desc"></p></div>
+          <div class="service-card"><h4 data-i18n="s4_5_title"></h4><p data-i18n="s4_5_desc"></p></div>
+          <div class="service-card"><h4 data-i18n="s4_6_title"></h4><p data-i18n="s4_6_desc"></p></div>
+        </div>
+      </div>
+      <div class="tab-content" id="s5">
+        <div class="services-grid">
+          <div class="service-card"><h4 data-i18n="s5_1_title"></h4><p data-i18n="s5_1_desc"></p></div>
+          <div class="service-card"><h4 data-i18n="s5_2_title"></h4><p data-i18n="s5_2_desc"></p></div>
+          <div class="service-card"><h4 data-i18n="s5_3_title"></h4><p data-i18n="s5_3_desc"></p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TARGETS -->
+  <section class="section" id="targets">
+    <div class="container">
+      <span class="section-title-underline">
+        <h2 class="section-title" data-i18n="targets_title"></h2>
+      </span>
+      <p class="section-subtitle" data-i18n="targets_subtitle"></p>
+      <div class="targets-grid">
+        <div class="target-card"><div class="target-icon">�</div><h4 data-i18n="t1_title"></h4><p data-i18n="t1_desc"></p></div>
+        <div class="target-card"><div class="target-icon">�</div><h4 data-i18n="t2_title"></h4><p data-i18n="t2_desc"></p></div>
+        <div class="target-card"><div class="target-icon">👨‍🎓</div><h4 data-i18n="t3_title"></h4><p data-i18n="t3_desc"></p></div>
+        <div class="target-card"><div class="target-icon">🌍</div><h4 data-i18n="t4_title"></h4><p data-i18n="t4_desc"></p></div>
+        <div class="target-card"><div class="target-icon">🏛️</div><h4 data-i18n="t5_title"></h4><p data-i18n="t5_desc"></p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section section-alt" id="contact">
+    <div class="container">
+      <span class="section-title-underline">
+        <h2 class="section-title" data-i18n="contact_title"></h2>
+      </span>
+      <p class="section-subtitle" data-i18n="contact_subtitle"></p>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="contact-item">
+            <span class="contact-icon">📧</span>
+            <div><strong data-i18n="contact_email_label"></strong><p>nipponmboaconsulting@gmail.com</p></div>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">📱</span>
+            <div><strong data-i18n="contact_phone_label"></strong><p data-i18n="contact_phone_value"></p></div>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">📫</span>
+            <div><strong data-i18n="contact_pobox_label"></strong><p data-i18n="contact_pobox_value"></p></div>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">📍</span>
+            <div><strong data-i18n="contact_location_label"></strong><p>Yaoundé, Maetur Nkomo — Antenne Orange, Cameroun</p></div>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">👥</span>
+            <div><strong data-i18n="contact_facebook_label"></strong><p><a href="https://www.facebook.com/nipponmboa/" target="_blank" rel="noopener noreferrer" style="color: #c8102e; text-decoration: none;">facebook.com/nipponmboa</a></p></div>
+          </div>
+        </div>
+        <div class="contact-form-container">
+          <p class="contact-form-description" data-i18n="form_description"></p>
+          <button onclick="openContactForm()" class="btn btn-primary btn-contact-form" data-i18n="form_open_button">
+            📝 Ouvrir le formulaire de contact
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="NipponMboa-Consulting-Logo.jpeg" alt="NipponMboa Consulting" class="footer-logo" />
+        <p data-i18n="footer_tagline"></p>
+      </div>
+      <div class="footer-links">
+        <a href="#about"    data-i18n="nav_about"></a>
+        <a href="#poles"    data-i18n="nav_poles"></a>
+        <a href="#services" data-i18n="nav_services"></a>
+        <a href="#contact"  data-i18n="nav_contact"></a>
+      </div>
+      <p class="footer-copy" data-i18n="footer_copy"></p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

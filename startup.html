@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NipponMboa Startups — De la vision à l'impact</title>
+  <meta name="description" content="Les ventures que NipponMboa incube et développe, à commencer par un projet pilote de biogaz au Cameroun." />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Meta Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '3660402574116403');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=3660402574116403&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-brand">
+      <a href="#" onclick="groupNavigateToPage(''); return false;" class="nav-wordmark"><span class="wm-nip">Nippon</span><span class="wm-mboa">Mboa</span></a>
+    </div>
+    <div class="nav-links">
+      <a href="#" onclick="groupNavigateToPage(''); return false;" data-i18n="nav_group"></a>
+      <a href="#intro" data-i18n="s_intro_title"></a>
+      <a href="#ventures" data-i18n="s_ventures_title"></a>
+      <a href="#propose" data-i18n="cta_contact"></a>
+    </div>
+    <div class="lang-switcher">
+      <button class="lang-btn active" data-lang="fr">FR</button>
+      <button class="lang-btn" data-lang="en">EN</button>
+      <button class="lang-btn" data-lang="ja">日本語</button>
+    </div>
+    <button class="nav-toggle" aria-label="Menu">&#9776;</button>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero hero-startup">
+    <div class="hero-corner-bl"></div>
+    <div class="hero-corner-br"></div>
+    <div class="hero-inner">
+      <div class="flag-blend">
+        <div class="flag-cm"></div>
+        <div class="flag-torii">⛩</div>
+        <div class="flag-jp"></div>
+      </div>
+      <h1 data-i18n="s_hero_title"></h1>
+      <p class="hero-sub" data-i18n="s_hero_sub"></p>
+      <div class="hero-badge-wrap">
+        <div class="hero-badge">
+          <div class="hero-badge-inner" data-i18n="s_hero_badge"></div>
+        </div>
+      </div>
+      <div class="hero-cta">
+        <a href="#ventures" class="btn btn-primary" data-i18n="s_hero_cta1"></a>
+        <a href="#propose" class="btn btn-outline" data-i18n="s_hero_cta2"></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTRO -->
+  <section class="section section-alt" id="intro">
+    <div class="container">
+      <span class="section-title-underline">
+        <h2 class="section-title" data-i18n="s_intro_title"></h2>
+      </span>
+      <p class="section-subtitle" data-i18n="s_intro_subtitle"></p>
+      <div class="prose-block"><p data-i18n="s_intro_text"></p></div>
+    </div>
+  </section>
+
+  <!-- VENTURES -->
+  <section class="section" id="ventures">
+    <div class="container">
+      <span class="section-title-underline">
+        <h2 class="section-title" data-i18n="s_ventures_title"></h2>
+      </span>
+      <p class="section-subtitle" data-i18n="s_ventures_subtitle"></p>
+
+      <!-- Biogas (first venture) -->
+      <div class="venture-card">
+        <span class="venture-tag" data-i18n="s_biogas_tag"></span>
+        <h3 data-i18n="s_biogas_title"></h3>
+        <p data-i18n="s_biogas_desc"></p>
+        <ul class="venture-features">
+          <li data-i18n="s_biogas_f1"></li>
+          <li data-i18n="s_biogas_f2"></li>
+          <li data-i18n="s_biogas_f3"></li>
+        </ul>
+        <span class="venture-status" data-i18n="s_biogas_status"></span>
+      </div>
+
+      <!-- Coming soon -->
+      <div class="venture-card" style="border-top-color:#90a4ae;">
+        <span class="venture-tag soon" data-i18n="s_soon_tag"></span>
+        <h3 data-i18n="s_soon_title"></h3>
+        <p data-i18n="s_soon_desc"></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section section-alt" id="propose">
+    <div class="container">
+      <div class="cta-band cta-orange">
+        <h2 data-i18n="s_cta_title"></h2>
+        <p data-i18n="s_cta_text"></p>
+        <a href="#" onclick="groupOpenContactForm(); return false;" class="btn btn-primary" data-i18n="s_cta_btn"></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="#" onclick="groupNavigateToPage(''); return false;" class="nav-wordmark" style="font-size:1.5rem;"><span class="wm-nip">Nippon</span><span class="wm-mboa">Mboa</span></a>
+        <p data-i18n="footer_tagline"></p>
+      </div>
+      <div class="footer-links">
+        <a href="#" onclick="groupNavigateToPage(''); return false;" data-i18n="footer_group"></a>
+        <a href="#" onclick="groupNavigateToPage('consulting'); return false;" data-i18n="nav_consulting"></a>
+        <a href="#" onclick="groupNavigateToPage('foundation'); return false;" data-i18n="nav_foundation"></a>
+        <a href="#" onclick="groupNavigateToPage('training'); return false;" data-i18n="nav_training"></a>
+        <a href="https://languageacademy.nipponmboa.com" target="_blank" rel="noopener noreferrer" data-i18n="nav_academy"></a>
+      </div>
+      <p class="footer-copy" data-i18n="footer_copy"></p>
+    </div>
+  </footer>
+
+  <script src="group.js"></script>
+</body>
+</html>

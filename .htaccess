@@ -1,18 +1,23 @@
 # Enable RewriteEngine
 RewriteEngine On
 
-# Redirect root to default language (French)
-RewriteRule ^$ /fr/ [R=302,L]
+# NOTE: GitHub Pages ignores .htaccess. Client-side routing is handled by
+# 404.html + group.js/script.js (?p= and ?lang= handling). These rules are
+# kept for correctness on Apache-based hosting / future migrations.
 
-# Route language-specific pages to their HTML files
+# Route language-specific clean URLs to their root-level HTML files
+RewriteRule ^(en|fr|ja)/consulting/?$          /consulting.html          [L]
+RewriteRule ^(en|fr|ja)/foundation/?$          /foundation.html          [L]
+RewriteRule ^(en|fr|ja)/startup/?$             /startup.html             [L]
+RewriteRule ^(en|fr|ja)/training/?$            /training.html            [L]
 RewriteRule ^(en|fr|ja)/business-tech-bridge/?$ /business-tech-bridge.html [L]
-RewriteRule ^(en|fr|ja)/academia-career/?$ /academia-career.html [L]
-RewriteRule ^(en|fr|ja)/cultural-tourism/?$ /cultural-tourism.html [L]
+RewriteRule ^(en|fr|ja)/academia-career/?$     /academia-career.html     [L]
+RewriteRule ^(en|fr|ja)/cultural-tourism/?$    /cultural-tourism.html    [L]
 
-# Allow language-specific routes for main page
+# Language-specific root maps to the group hub (index.html)
 RewriteRule ^(en|fr|ja)/?$ /index.html [L]
 
-# Redirect any other path to default language
+# Redirect any other non-existent path to the group hub (default French)
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)$ /fr/$1 [R=302,L]
+RewriteRule ^(.*)$ /index.html?lang=fr [R=302,L]

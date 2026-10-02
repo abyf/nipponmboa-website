@@ -3,10 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>NipponMboa Consulting</title>
+  <title>NipponMboa — Un pont entre deux mondes</title>
+  <meta name="description" content="NipponMboa relie le Japon et le Cameroun : Consulting, Fondation, Startups, Formation professionnelle et Académie de langues." />
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
-  
+
   <!-- Meta Pixel Code -->
   <script>
   !function(f,b,e,v,n,t,s)
@@ -30,14 +31,14 @@
   <!-- NAVBAR -->
   <nav class="navbar">
     <div class="nav-brand">
-      <img src="NipponMboa-Consulting-Logo.jpeg" alt="NipponMboa Consulting" class="nav-logo" />
+      <a href="#" onclick="groupNavigateToPage(''); return false;" class="nav-wordmark"><span class="wm-nip">Nippon</span><span class="wm-mboa">Mboa</span></a>
     </div>
     <div class="nav-links">
-      <a href="#about"    data-i18n="nav_about"></a>
-      <a href="#poles"    data-i18n="nav_poles"></a>
-      <a href="#services" data-i18n="nav_services"></a>
-      <a href="#targets"  data-i18n="nav_targets"></a>
-      <a href="#contact"  data-i18n="nav_contact"></a>
+      <a href="#" onclick="groupNavigateToPage('consulting'); return false;" data-i18n="nav_consulting"></a>
+      <a href="#" onclick="groupNavigateToPage('foundation'); return false;" data-i18n="nav_foundation"></a>
+      <a href="#" onclick="groupNavigateToPage('startup'); return false;" data-i18n="nav_startup"></a>
+      <a href="#" onclick="groupNavigateToPage('training'); return false;" data-i18n="nav_training"></a>
+      <a href="https://languageacademy.nipponmboa.com" target="_blank" rel="noopener noreferrer" data-i18n="nav_academy"></a>
     </div>
     <div class="lang-switcher">
       <button class="lang-btn active" data-lang="fr">FR</button>
@@ -57,282 +58,71 @@
         <div class="flag-torii">⛩</div>
         <div class="flag-jp"></div>
       </div>
-      <h1 data-i18n="hero_title"></h1>
-      <p class="hero-sub" data-i18n="hero_sub"></p>
+      <h1 data-i18n="hub_hero_title"></h1>
+      <p class="hero-sub" data-i18n="hub_hero_sub"></p>
       <div class="hero-badge-wrap">
         <div class="hero-badge">
-          <div class="hero-badge-inner" data-i18n="hero_badge_inner"></div>
+          <div class="hero-badge-inner" data-i18n="hub_hero_badge"></div>
         </div>
       </div>
       <div class="hero-cta">
-        <a href="#poles" class="btn btn-primary" data-i18n="hero_cta1"></a>
-        <a href="#contact"  class="btn btn-outline"  data-i18n="hero_cta2"></a>
+        <a href="#entities" class="btn btn-primary" data-i18n="hub_hero_cta1"></a>
+        <a href="#" onclick="groupOpenContactForm(); return false;" class="btn btn-outline" data-i18n="hub_hero_cta2"></a>
       </div>
     </div>
   </section>
 
-  <!-- NEWS & EVENTS CAROUSEL -->
-  <section class="section news-events-section">
+  <!-- BRAND STORY -->
+  <section class="section section-alt" id="story">
     <div class="container">
       <span class="section-title-underline">
-        <h2 class="section-title" data-i18n="news_title"></h2>
+        <h2 class="section-title" data-i18n="hub_story_title"></h2>
       </span>
-      <p class="section-subtitle" data-i18n="news_subtitle"></p>
-      
-      <div class="carousel-container">
-        <div class="carousel-wrapper">
-          <div class="carousel-slide active" data-slide="1">
-            <div class="slide-content">
-              <div class="slide-icon">📢</div>
-              <h3 data-i18n="news_1_title"></h3>
-              <p data-i18n="news_1_desc"></p>
-            </div>
-          </div>
-          
-          <div class="carousel-slide" data-slide="2">
-            <div class="slide-content">
-              <div class="slide-icon">🎓</div>
-              <h3 data-i18n="news_2_title"></h3>
-              <p data-i18n="news_2_desc"></p>
-              <div class="slide-flyer">
-                <img src="Online_japanese_training_up.png" alt="Online Japanese Training" class="flyer-image">
-              </div>
-            </div>
-          </div>
-          
-          <div class="carousel-slide" data-slide="3">
-            <div class="slide-content">
-              <div class="slide-icon">💼</div>
-              <h3 data-i18n="news_3_title"></h3>
-              <p data-i18n="news_3_desc"></p>
-              <div class="slide-flyer">
-                <img src="NipponMboa Bilingual Business Flyer.png" alt="NipponMboa Business Seminar Flyer" class="flyer-image">
-              </div>
-            </div>
-          </div>
-          
-          <div class="carousel-slide" data-slide="4">
-            <div class="slide-content">
-              <div class="slide-icon">📚</div>
-              <h3 data-i18n="news_4_title"></h3>
-              <p data-i18n="news_4_desc"></p>
-              <div class="slide-flyer">
-                <a href="https://languageacademy.nipponmboa.com" target="_blank" rel="noopener noreferrer">
-                  <img src="Trilingual Japanese Learning Flyer Warm, Modern, Inviting.png" alt="NipponMboa Language Academy" class="flyer-image">
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <button class="carousel-btn prev-btn" aria-label="Previous">‹</button>
-        <button class="carousel-btn next-btn" aria-label="Next">›</button>
-        
-        <div class="carousel-dots">
-          <span class="dot active" data-slide="1"></span>
-          <span class="dot" data-slide="2"></span>
-          <span class="dot" data-slide="3"></span>
-          <span class="dot" data-slide="4"></span>
-        </div>
+      <p class="section-subtitle" data-i18n="hub_story_subtitle"></p>
+      <div class="story-text">
+        <p data-i18n="hub_story_p1"></p>
+        <p data-i18n="hub_story_p2"></p>
       </div>
     </div>
   </section>
 
-  <!-- ABOUT -->
-  <section class="section section-alt" id="about">
+  <!-- ENTITIES -->
+  <section class="section" id="entities">
     <div class="container">
       <span class="section-title-underline">
-        <h2 class="section-title" data-i18n="about_title"></h2>
+        <h2 class="section-title" data-i18n="hub_entities_title"></h2>
       </span>
-      <p class="section-subtitle" data-i18n="about_subtitle"></p>
-      <div class="about-grid">
-        <div class="about-card featured">
-          <div class="about-icon">🎯</div>
-          <h3 data-i18n="about_mission_title"></h3>
-          <p data-i18n="about_mission_text"></p>
+      <p class="section-subtitle" data-i18n="hub_entities_subtitle"></p>
+      <div class="entities-grid">
+        <div class="entity-card">
+          <div class="entity-icon">🤝</div>
+          <h3 data-i18n="ent_consulting_title"></h3>
+          <p data-i18n="ent_consulting_desc"></p>
+          <a href="#" onclick="groupNavigateToPage('consulting'); return false;" class="entity-link" data-i18n="ent_consulting_link"></a>
         </div>
-        <div class="about-card">
-          <div class="about-icon">🔭</div>
-          <h3 data-i18n="about_vision_title"></h3>
-          <p data-i18n="about_vision_text"></p>
+        <div class="entity-card">
+          <div class="entity-icon">🌍</div>
+          <h3 data-i18n="ent_foundation_title"></h3>
+          <p data-i18n="ent_foundation_desc"></p>
+          <a href="#" onclick="groupNavigateToPage('foundation'); return false;" class="entity-link" data-i18n="ent_foundation_link"></a>
         </div>
-        <div class="about-card">
-          <div class="about-icon">⚖️</div>
-          <h3 data-i18n="about_values_title"></h3>
-          <ul class="values-list">
-            <li data-i18n="about_val1"></li>
-            <li data-i18n="about_val2"></li>
-            <li data-i18n="about_val3"></li>
-          </ul>
+        <div class="entity-card">
+          <div class="entity-icon">🚀</div>
+          <h3 data-i18n="ent_startup_title"></h3>
+          <p data-i18n="ent_startup_desc"></p>
+          <a href="#" onclick="groupNavigateToPage('startup'); return false;" class="entity-link" data-i18n="ent_startup_link"></a>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- POLES -->
-  <section class="section" id="poles">
-    <div class="container">
-      <span class="section-title-underline">
-        <h2 class="section-title" data-i18n="poles_title"></h2>
-      </span>
-      <p class="section-subtitle" data-i18n="poles_subtitle"></p>
-      <p class="section-sub" data-i18n="poles_sub"></p>
-      <div class="poles-grid">
-        <div class="pole-card">
-          <div class="pole-num">01</div>
-          <div class="pole-icon">🤝</div>
-          <h3 data-i18n="pole1_title"></h3>
-          <p data-i18n="pole1_desc"></p>
-          <a href="#services" class="pole-link" data-i18n="pole_link"></a>
-          <a href="#" onclick="navigateToPage('business-tech-bridge'); return false;" class="pole-link" style="background: linear-gradient(135deg, #c8102e 0%, #a00d24 100%); color: #fff; padding: 8px 16px; border-radius: 4px; margin-top: 8px; display: inline-block;" data-i18n="pole1_link">🤝 Explorer les services en détails</a>
+        <div class="entity-card">
+          <div class="entity-icon">🔧</div>
+          <h3 data-i18n="ent_training_title"></h3>
+          <p data-i18n="ent_training_desc"></p>
+          <a href="#" onclick="groupNavigateToPage('training'); return false;" class="entity-link" data-i18n="ent_training_link"></a>
         </div>
-        <div class="pole-card">
-          <div class="pole-num">02</div>
-          <div class="pole-icon">🎓</div>
-          <h3 data-i18n="pole2_title"></h3>
-          <p data-i18n="pole2_desc"></p>
-          <a href="#services" class="pole-link" data-i18n="pole_link"></a>
-          <a href="#" onclick="navigateToPage('academia-career'); return false;" class="pole-link" style="background: linear-gradient(135deg, #c8102e 0%, #a00d24 100%); color: #fff; padding: 8px 16px; border-radius: 4px; margin-top: 8px; display: inline-block;" data-i18n="pole2_link">📚 Explorer les options en détails</a>
-        </div>
-        <div class="pole-card">
-          <div class="pole-num">03</div>
-          <div class="pole-icon">🌸</div>
-          <h3 data-i18n="pole3_title"></h3>
-          <p data-i18n="pole3_desc"></p>
-          <a href="#services" class="pole-link" data-i18n="pole_link"></a>
-          <a href="#" onclick="navigateToPage('cultural-tourism'); return false;" class="pole-link" style="background: linear-gradient(135deg, #c8102e 0%, #a00d24 100%); color: #fff; padding: 8px 16px; border-radius: 4px; margin-top: 8px; display: inline-block;" data-i18n="pole3_link">🌸 Explorer les options en détails</a>
-        </div>
-        <div class="pole-card">
-          <div class="pole-num">04</div>
-          <div class="pole-icon">💻</div>
-          <h3 data-i18n="pole4_title"></h3>
-          <p data-i18n="pole4_desc"></p>
-          <a href="#services" class="pole-link" data-i18n="pole_link"></a>
-          <a href="#" onclick="openFormWithLang(event)" class="pole-link" style="background: linear-gradient(135deg, #c8102e 0%, #a00d24 100%); color: #fff; padding: 8px 16px; border-radius: 4px; margin-top: 8px; display: inline-block;" data-i18n="pole_request_link">📝 Faire une demande</a>
-        </div>
-        <div class="pole-card">
-          <div class="pole-num">05</div>
-          <div class="pole-icon">🛍️</div>
-          <h3 data-i18n="pole5_title"></h3>
-          <p data-i18n="pole5_desc"></p>
-          <a href="#services" class="pole-link" data-i18n="pole_link"></a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SERVICES -->
-  <section class="section section-alt" id="services">
-    <div class="container">
-      <span class="section-title-underline">
-        <h2 class="section-title" data-i18n="services_title"></h2>
-      </span>
-      <p class="section-subtitle" data-i18n="services_subtitle"></p>
-      <div class="services-tabs">
-        <button class="tab-btn active" data-tab="s1" data-i18n="pole1_title"></button>
-        <button class="tab-btn"        data-tab="s2" data-i18n="pole2_title"></button>
-        <button class="tab-btn"        data-tab="s3" data-i18n="pole3_title"></button>
-        <button class="tab-btn"        data-tab="s4" data-i18n="pole4_title"></button>
-        <button class="tab-btn"        data-tab="s5" data-i18n="pole5_title"></button>
-      </div>
-
-      <div class="tab-content active" id="s1">
-        <div class="services-grid">
-          <div class="service-card"><h4 data-i18n="s1_1_title"></h4><p data-i18n="s1_1_desc"></p></div>
-          <div class="service-card"><h4 data-i18n="s1_2_title"></h4><p data-i18n="s1_2_desc"></p></div>
-          <div class="service-card"><h4 data-i18n="s1_3_title"></h4><p data-i18n="s1_3_desc"></p></div>
-          <div class="service-card"><h4 data-i18n="s1_4_title"></h4><p data-i18n="s1_4_desc"></p></div>
-          <div class="service-card"><h4 data-i18n="s1_5_title"></h4><p data-i18n="s1_5_desc"></p></div>
-        </div>
-      </div>
-      <div class="tab-content" id="s2">
-        <div class="services-grid">
-          <div class="service-card"><h4 data-i18n="s2_1_title"></h4><p data-i18n="s2_1_desc"></p></div>
-          <div class="service-card"><h4 data-i18n="s2_2_title"></h4><p data-i18n="s2_2_desc"></p></div>
-          <div class="service-card"><h4 data-i18n="s2_3_title"></h4><p data-i18n="s2_3_desc"></p></div>
-          <div class="service-card"><h4 data-i18n="s2_4_title"></h4><p data-i18n="s2_4_desc"></p></div>
-          <div class="service-card"><h4 data-i18n="s2_5_title"></h4><p data-i18n="s2_5_desc"></p></div>
-        </div>
-      </div>
-      <div class="tab-content" id="s3">
-        <div class="services-grid">
-          <div class="service-card"><h4 data-i18n="s3_1_title"></h4><p data-i18n="s3_1_desc"></p></div>
-          <div class="service-card"><h4 data-i18n="s3_2_title"></h4><p data-i18n="s3_2_desc"></p></div>
-          <div class="service-card"><h4 data-i18n="s3_3_title"></h4><p data-i18n="s3_3_desc"></p></div>
-        </div>
-      </div>
-      <div class="tab-content" id="s4">
-        <div class="services-grid">
-          <div class="service-card"><h4 data-i18n="s4_1_title"></h4><p data-i18n="s4_1_desc"></p></div>
-          <div class="service-card"><h4 data-i18n="s4_2_title"></h4><p data-i18n="s4_2_desc"></p></div>
-          <div class="service-card"><h4 data-i18n="s4_3_title"></h4><p data-i18n="s4_3_desc"></p></div>
-          <div class="service-card"><h4 data-i18n="s4_4_title"></h4><p data-i18n="s4_4_desc"></p></div>
-          <div class="service-card"><h4 data-i18n="s4_5_title"></h4><p data-i18n="s4_5_desc"></p></div>
-          <div class="service-card"><h4 data-i18n="s4_6_title"></h4><p data-i18n="s4_6_desc"></p></div>
-        </div>
-      </div>
-      <div class="tab-content" id="s5">
-        <div class="services-grid">
-          <div class="service-card"><h4 data-i18n="s5_1_title"></h4><p data-i18n="s5_1_desc"></p></div>
-          <div class="service-card"><h4 data-i18n="s5_2_title"></h4><p data-i18n="s5_2_desc"></p></div>
-          <div class="service-card"><h4 data-i18n="s5_3_title"></h4><p data-i18n="s5_3_desc"></p></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- TARGETS -->
-  <section class="section" id="targets">
-    <div class="container">
-      <span class="section-title-underline">
-        <h2 class="section-title" data-i18n="targets_title"></h2>
-      </span>
-      <p class="section-subtitle" data-i18n="targets_subtitle"></p>
-      <div class="targets-grid">
-        <div class="target-card"><div class="target-icon">�</div><h4 data-i18n="t1_title"></h4><p data-i18n="t1_desc"></p></div>
-        <div class="target-card"><div class="target-icon">�</div><h4 data-i18n="t2_title"></h4><p data-i18n="t2_desc"></p></div>
-        <div class="target-card"><div class="target-icon">👨‍🎓</div><h4 data-i18n="t3_title"></h4><p data-i18n="t3_desc"></p></div>
-        <div class="target-card"><div class="target-icon">🌍</div><h4 data-i18n="t4_title"></h4><p data-i18n="t4_desc"></p></div>
-        <div class="target-card"><div class="target-icon">🏛️</div><h4 data-i18n="t5_title"></h4><p data-i18n="t5_desc"></p></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section class="section section-alt" id="contact">
-    <div class="container">
-      <span class="section-title-underline">
-        <h2 class="section-title" data-i18n="contact_title"></h2>
-      </span>
-      <p class="section-subtitle" data-i18n="contact_subtitle"></p>
-      <div class="contact-grid">
-        <div class="contact-info">
-          <div class="contact-item">
-            <span class="contact-icon">📧</span>
-            <div><strong data-i18n="contact_email_label"></strong><p>nipponmboaconsulting@gmail.com</p></div>
-          </div>
-          <div class="contact-item">
-            <span class="contact-icon">📱</span>
-            <div><strong data-i18n="contact_phone_label"></strong><p data-i18n="contact_phone_value"></p></div>
-          </div>
-          <div class="contact-item">
-            <span class="contact-icon">📫</span>
-            <div><strong data-i18n="contact_pobox_label"></strong><p data-i18n="contact_pobox_value"></p></div>
-          </div>
-          <div class="contact-item">
-            <span class="contact-icon">📍</span>
-            <div><strong data-i18n="contact_location_label"></strong><p>Yaoundé, Maetur Nkomo — Antenne Orange, Cameroun</p></div>
-          </div>
-          <div class="contact-item">
-            <span class="contact-icon">👥</span>
-            <div><strong data-i18n="contact_facebook_label"></strong><p><a href="https://www.facebook.com/nipponmboa/" target="_blank" rel="noopener noreferrer" style="color: #c8102e; text-decoration: none;">facebook.com/nipponmboa</a></p></div>
-          </div>
-        </div>
-        <div class="contact-form-container">
-          <p class="contact-form-description" data-i18n="form_description"></p>
-          <button onclick="openContactForm()" class="btn btn-primary btn-contact-form" data-i18n="form_open_button">
-            📝 Ouvrir le formulaire de contact
-          </button>
+        <div class="entity-card">
+          <div class="entity-icon">🗣️</div>
+          <h3 data-i18n="ent_academy_title"></h3>
+          <p data-i18n="ent_academy_desc"></p>
+          <a href="https://languageacademy.nipponmboa.com" target="_blank" rel="noopener noreferrer" class="entity-link" data-i18n="ent_academy_link"></a>
         </div>
       </div>
     </div>
@@ -342,19 +132,20 @@
   <footer class="footer">
     <div class="container footer-inner">
       <div class="footer-brand">
-        <img src="NipponMboa-Consulting-Logo.jpeg" alt="NipponMboa Consulting" class="footer-logo" />
+        <a href="#" onclick="groupNavigateToPage(''); return false;" class="nav-wordmark" style="font-size:1.5rem;"><span class="wm-nip">Nippon</span><span class="wm-mboa">Mboa</span></a>
         <p data-i18n="footer_tagline"></p>
       </div>
       <div class="footer-links">
-        <a href="#about"    data-i18n="nav_about"></a>
-        <a href="#poles"    data-i18n="nav_poles"></a>
-        <a href="#services" data-i18n="nav_services"></a>
-        <a href="#contact"  data-i18n="nav_contact"></a>
+        <a href="#" onclick="groupNavigateToPage('consulting'); return false;" data-i18n="nav_consulting"></a>
+        <a href="#" onclick="groupNavigateToPage('foundation'); return false;" data-i18n="nav_foundation"></a>
+        <a href="#" onclick="groupNavigateToPage('startup'); return false;" data-i18n="nav_startup"></a>
+        <a href="#" onclick="groupNavigateToPage('training'); return false;" data-i18n="nav_training"></a>
+        <a href="https://languageacademy.nipponmboa.com" target="_blank" rel="noopener noreferrer" data-i18n="nav_academy"></a>
       </div>
       <p class="footer-copy" data-i18n="footer_copy"></p>
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="group.js"></script>
 </body>
 </html>
