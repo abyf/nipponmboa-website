@@ -31,7 +31,7 @@
   <!-- NAVBAR -->
   <nav class="navbar">
     <div class="nav-brand">
-      <a href="#" onclick="groupNavigateToPage(''); return false;" class="nav-wordmark"><span class="wm-nip">Nippon</span><span class="wm-mboa">Mboa</span></a>
+      <a href="#" onclick="groupNavigateToPage(''); return false;"><img src="NipponMboa-Logo.png" alt="NipponMboa" class="brand-logo" /></a>
     </div>
     <div class="nav-links">
       <a href="#" onclick="groupNavigateToPage('consulting'); return false;" data-i18n="nav_consulting"></a>
@@ -39,6 +39,7 @@
       <a href="#" onclick="groupNavigateToPage('startup'); return false;" data-i18n="nav_startup"></a>
       <a href="#" onclick="groupNavigateToPage('training'); return false;" data-i18n="nav_training"></a>
       <a href="https://languageacademy.nipponmboa.com" target="_blank" rel="noopener noreferrer" data-i18n="nav_academy"></a>
+      <a href="#contact" data-i18n="cta_contact"></a>
     </div>
     <div class="lang-switcher">
       <button class="lang-btn active" data-lang="fr">FR</button>
@@ -53,11 +54,6 @@
     <div class="hero-corner-bl"></div>
     <div class="hero-corner-br"></div>
     <div class="hero-inner">
-      <div class="flag-blend">
-        <div class="flag-cm"></div>
-        <div class="flag-torii">⛩</div>
-        <div class="flag-jp"></div>
-      </div>
       <h1 data-i18n="hub_hero_title"></h1>
       <p class="hero-sub" data-i18n="hub_hero_sub"></p>
       <div class="hero-badge-wrap">
@@ -95,34 +91,61 @@
       <p class="section-subtitle" data-i18n="hub_entities_subtitle"></p>
       <div class="entities-grid">
         <div class="entity-card">
-          <div class="entity-icon">🤝</div>
           <h3 data-i18n="ent_consulting_title"></h3>
           <p data-i18n="ent_consulting_desc"></p>
           <a href="#" onclick="groupNavigateToPage('consulting'); return false;" class="entity-link" data-i18n="ent_consulting_link"></a>
         </div>
         <div class="entity-card">
-          <div class="entity-icon">🌍</div>
           <h3 data-i18n="ent_foundation_title"></h3>
           <p data-i18n="ent_foundation_desc"></p>
           <a href="#" onclick="groupNavigateToPage('foundation'); return false;" class="entity-link" data-i18n="ent_foundation_link"></a>
         </div>
         <div class="entity-card">
-          <div class="entity-icon">🚀</div>
           <h3 data-i18n="ent_startup_title"></h3>
           <p data-i18n="ent_startup_desc"></p>
           <a href="#" onclick="groupNavigateToPage('startup'); return false;" class="entity-link" data-i18n="ent_startup_link"></a>
         </div>
         <div class="entity-card">
-          <div class="entity-icon">🔧</div>
           <h3 data-i18n="ent_training_title"></h3>
           <p data-i18n="ent_training_desc"></p>
           <a href="#" onclick="groupNavigateToPage('training'); return false;" class="entity-link" data-i18n="ent_training_link"></a>
         </div>
         <div class="entity-card">
-          <div class="entity-icon">🗣️</div>
           <h3 data-i18n="ent_academy_title"></h3>
           <p data-i18n="ent_academy_desc"></p>
           <a href="https://languageacademy.nipponmboa.com" target="_blank" rel="noopener noreferrer" class="entity-link" data-i18n="ent_academy_link"></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section section-alt" id="contact">
+    <div class="container">
+      <span class="section-title-underline">
+        <h2 class="section-title" data-i18n="contact_title"></h2>
+      </span>
+      <p class="section-subtitle" data-i18n="contact_subtitle"></p>
+      <div class="contact-block">
+        <div class="contact-tile">
+          <div class="c-label" data-i18n="contact_email_label"></div>
+          <div class="c-value"><a href="mailto:nipponmboaconsulting@gmail.com">nipponmboaconsulting@gmail.com</a></div>
+        </div>
+        <div class="contact-tile">
+          <div class="c-label" data-i18n="contact_phone_label"></div>
+          <div class="c-value" data-i18n="contact_phone_value"></div>
+        </div>
+        <div class="contact-tile">
+          <div class="c-label" data-i18n="contact_pobox_label"></div>
+          <div class="c-value" data-i18n="contact_pobox_value"></div>
+        </div>
+        <div class="contact-tile">
+          <div class="c-label" data-i18n="contact_location_label"></div>
+          <div class="c-value" data-i18n="contact_location_value"></div>
+        </div>
+        <div class="contact-tile">
+          <div class="c-label" data-i18n="contact_facebook_label"></div>
+          <div class="c-value"><a href="https://www.facebook.com/nipponmboa/" target="_blank" rel="noopener noreferrer">facebook.com/nipponmboa</a></div>
         </div>
       </div>
     </div>
@@ -132,7 +155,7 @@
   <footer class="footer">
     <div class="container footer-inner">
       <div class="footer-brand">
-        <a href="#" onclick="groupNavigateToPage(''); return false;" class="nav-wordmark" style="font-size:1.5rem;"><span class="wm-nip">Nippon</span><span class="wm-mboa">Mboa</span></a>
+        <a href="#" onclick="groupNavigateToPage(''); return false;"><img src="NipponMboa-Logo.png" alt="NipponMboa" class="footer-logo-img" /></a>
         <p data-i18n="footer_tagline"></p>
       </div>
       <div class="footer-links">
