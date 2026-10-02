@@ -96,7 +96,7 @@ const groupI18n = {
     f_name_president: "Omoko Brigitte",
     f_name_vp: "ABEME Freddy",
     f_name_sg: "Bikolene Wilfried",
-    f_name_treasurer: "Mengue Cédric",
+    f_name_treasurer: "Mengue Cydric",
 
     f_blog_title: "Blog",
     f_blog_subtitle: "Nos activités à venir et déjà réalisées",
@@ -260,7 +260,7 @@ const groupI18n = {
     f_name_president: "Omoko Brigitte",
     f_name_vp: "ABEME Freddy",
     f_name_sg: "Bikolene Wilfried",
-    f_name_treasurer: "Mengue Cédric",
+    f_name_treasurer: "Mengue Cydric",
 
     f_blog_title: "Blog",
     f_blog_subtitle: "Our upcoming and completed activities",
