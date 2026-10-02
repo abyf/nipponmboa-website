@@ -628,6 +628,28 @@ body { font-family: var(--font); background: var(--bg-deep); color: var(--text);
 .blog-placeholder h3::before { content: ""; display: block; width: 44px; height: 3px; border-radius: 2px; background: #0097a7; margin: 0 auto 16px; }
 .blog-placeholder p { color: var(--text); font-size: 0.95rem; line-height: 1.7; margin-bottom: 24px; }
 
+/* Board (foundation governance) */
+.board-heading {
+  text-align: center; font-size: 1.3rem; font-weight: 800; color: #0d2137;
+  margin: 48px 0 4px;
+}
+.board-heading::before { content: ""; display: block; width: 44px; height: 3px; border-radius: 2px; background: #0097a7; margin: 0 auto 14px; }
+.board-sub { text-align: center; color: #0277bd; font-size: 0.9rem; font-style: italic; font-weight: 600; margin-bottom: 36px; }
+.board-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 28px; max-width: 920px; margin: 0 auto; }
+.board-card {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 28px 20px; text-align: center; box-shadow: var(--shadow); transition: transform 0.2s;
+}
+.board-card:hover { transform: translateY(-4px); }
+.board-photo {
+  width: 130px; height: 130px; object-fit: cover; border-radius: 50%;
+  margin: 0 auto 16px; display: block;
+  border: 4px solid #e8f4fd; box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+  background: #d9e8f3; /* graceful placeholder tint if image missing */
+}
+.board-name { font-size: 1rem; font-weight: 700; color: #0d2137; margin-bottom: 4px; }
+.board-role { font-size: 0.85rem; color: #0097a7; font-weight: 600; }
+
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
   .nav-links { display: none; }

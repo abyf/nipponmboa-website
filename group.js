@@ -86,7 +86,13 @@ const groupI18n = {
 
     f_gov_title: "Gouvernance",
     f_gov_subtitle: "Une association transparente et structurée",
-    f_gov_text: "La Fondation est administrée par une Assemblée Générale souveraine et un Conseil d'Administration (Bureau exécutif). Son siège social est établi à Yaoundé, Maetur Nkomo — Antenne Orange. À terme, l'association aspire à évoluer vers le statut d'organisation non gouvernementale (ONG).",
+    f_gov_text: "La Fondation est administrée par une Assemblée Générale souveraine et un Conseil d'Administration (Bureau exécutif).",
+    f_board_title: "Le Bureau",
+    f_board_subtitle: "Les membres du Conseil d'Administration",
+    f_role_president: "Présidente",
+    f_role_vp: "Vice-Président",
+    f_role_sg: "Secrétaire Général",
+    f_role_treasurer: "Trésorier",
 
     f_blog_title: "Blog",
     f_blog_subtitle: "Nos activités à venir et déjà réalisées",
@@ -240,7 +246,13 @@ const groupI18n = {
 
     f_gov_title: "Governance",
     f_gov_subtitle: "A transparent, structured association",
-    f_gov_text: "The Foundation is governed by a sovereign General Assembly and a Board (executive bureau). Its registered seat is in Yaoundé, Maetur Nkomo — Antenne Orange. In time, the association aspires to evolve toward NGO status.",
+    f_gov_text: "The Foundation is governed by a sovereign General Assembly and a Board (executive bureau).",
+    f_board_title: "The Board",
+    f_board_subtitle: "Members of the executive bureau",
+    f_role_president: "President",
+    f_role_vp: "Vice-President",
+    f_role_sg: "General Secretary",
+    f_role_treasurer: "Treasurer",
 
     f_blog_title: "Blog",
     f_blog_subtitle: "Our upcoming and completed activities",
@@ -392,7 +404,13 @@ const groupI18n = {
 
     f_gov_title: "ガバナンス",
     f_gov_subtitle: "透明で体系的な団体",
-    f_gov_text: "財団は主権的な総会と理事会（執行局）によって運営されます。登録事務所はヤウンデ、Maetur Nkomo — Antenne Orange にあります。将来的には NGO への発展を目指します。",
+    f_gov_text: "財団は主権的な総会と理事会（執行局）によって運営されます。",
+    f_board_title: "理事会",
+    f_board_subtitle: "執行局のメンバー",
+    f_role_president: "会長",
+    f_role_vp: "副会長",
+    f_role_sg: "事務局長",
+    f_role_treasurer: "会計",
 
     f_blog_title: "ブログ",
     f_blog_subtitle: "これからの活動と、これまでの活動",
