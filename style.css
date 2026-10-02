@@ -477,14 +477,14 @@ body { font-family: var(--font); background: var(--bg-deep); color: var(--text);
    Sits on a light rounded backing so the dark wordmark stays legible over
    any hero colour (blue hub, green foundation, orange startup, red training). */
 .brand-logo {
-  height: 68px; width: auto; object-fit: contain; display: block;
-  background: #ffffff; padding: 8px 18px; border-radius: 10px;
-  box-shadow: 0 4px 14px rgba(0,0,0,0.18);
+  height: 40px; width: auto; object-fit: contain; display: block;
+  background: #ffffff; padding: 5px 12px; border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
 }
 .footer-logo-img {
-  height: 70px; width: auto; object-fit: contain; margin-bottom: 10px;
-  background: #ffffff; padding: 8px 16px; border-radius: 10px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.12);
+  height: 48px; width: auto; object-fit: contain; margin-bottom: 10px;
+  background: #ffffff; padding: 6px 12px; border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
 }
 
 /* Text-based brand wordmark (fallback, kept for safety) */
