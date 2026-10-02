@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Redirecting...</title>
-  
+  <title>Redirecting…</title>
+
   <!-- Meta Pixel Code -->
   <script>
   !function(f,b,e,v,n,t,s)
@@ -22,30 +22,54 @@
   src="https://www.facebook.com/tr?id=3660402574116403&ev=PageView&noscript=1"
   /></noscript>
   <!-- End Meta Pixel Code -->
-  
+
   <script>
-    // GitHub Pages SPA routing solution
-    // This file handles client-side routing for language-specific URLs
-    (function() {
+    /*
+      GitHub Pages 404 handler.
+      Pages are real root-level .html files (index.html, consulting.html,
+      foundation.html, startup.html, training.html, business-tech-bridge.html,
+      academia-career.html, cultural-tourism.html).
+
+      This handler ONLY runs when a non-existent URL is requested — typically a
+      legacy clean URL like /fr/foundation or /fr/. We map it DIRECTLY to the
+      corresponding root .html file with ?lang=, so we never bounce to another
+      non-existent path (which previously caused an infinite redirect loop).
+    */
+    (function () {
+      var VALID = { 'index': 1, 'consulting': 1, 'foundation': 1, 'startup': 1,
+                    'training': 1, 'business-tech-bridge': 1, 'academia-career': 1,
+                    'cultural-tourism': 1, 'bridge-it-form-v2': 1, 'letterhead': 1 };
+
       var path = window.location.pathname;
       var hash = window.location.hash;
-      
-      // Extract language from path
-      var langMatch = path.match(/^\/(en|fr|ja)(\/.*)?$/);
-      
-      if (langMatch) {
-        // Valid language path, redirect to index.html with the full path preserved
-        var newUrl = window.location.origin + '/?p=' + encodeURIComponent(path) + hash;
-        window.location.replace(newUrl);
-      } else {
-        // No valid language, redirect to French (default)
-        var cleanPath = path === '/' ? '' : path;
-        window.location.replace(window.location.origin + '/fr' + cleanPath + hash);
+
+      // Detect language from a /{lang}/ prefix or ?lang= query (default fr)
+      var lang = 'fr';
+      var langMatch = path.match(/^\/(en|fr|ja)(\/|$)/);
+      if (langMatch) { lang = langMatch[1]; }
+      var qp = new URLSearchParams(window.location.search).get('lang');
+      if (qp && /^(en|fr|ja)$/.test(qp)) { lang = qp; }
+
+      // Strip the language prefix, then take the last path segment as the page
+      var rest = path.replace(/^\/(en|fr|ja)/, '');
+      var seg = rest.replace(/\/+$/, '').split('/').pop() || '';
+      seg = seg.replace(/\.html$/i, '');
+
+      // Decide the destination page (fallback to the hub)
+      var page = (seg && VALID[seg]) ? seg : 'index';
+
+      var dest = window.location.origin + '/' + page + '.html?lang=' + lang + hash;
+
+      // Guard: if we're somehow already at the destination, do nothing
+      // (prevents any possibility of a loop).
+      var here = window.location.pathname.replace(/\.html$/i, '').replace(/^\//, '') || 'index';
+      if (here !== page) {
+        window.location.replace(dest);
       }
     })();
   </script>
 </head>
 <body>
-  <p>Redirecting...</p>
+  <p>Redirecting…</p>
 </body>
 </html>

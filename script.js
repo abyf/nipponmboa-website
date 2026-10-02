@@ -525,39 +525,14 @@ function applyLang(lang) {
 
 // Initialize language from URL on page load
 function initLanguage() {
-  // Check if we're coming from 404.html redirect (GitHub Pages SPA routing)
-  const urlParams = new URLSearchParams(window.location.search);
-  const redirectPath = urlParams.get('p');
-
-  if (redirectPath) {
-    // A legacy /{lang}/page redirect arrived. Extract the language and the
-    // target page, then normalize to a root-served .html with ?lang=.
-    const decoded = decodeURIComponent(redirectPath);
-    const langMatch = decoded.match(/^\/(en|fr|ja)(\/|$)/);
-    const lang = (langMatch && i18n[langMatch[1]]) ? langMatch[1] : 'fr';
-    const stripped = decoded.replace(/^\/(en|fr|ja)/, '');
-    const fileMatch = stripped.match(/\/([a-z0-9-]+)(?:\.html)?\/?$/i);
-    const file = fileMatch ? fileMatch[1] : '';
-    const currentFile = window.location.pathname.split('/').pop().replace('.html', '');
-    const targetFile = (file && file !== 'index') ? file : (currentFile || 'index');
-    const currentNorm = currentFile || 'index';
-    if (targetFile !== currentNorm) {
-      const dest = (targetFile === 'index') ? 'index.html' : `${targetFile}.html`;
-      window.location.replace(`/${dest}?lang=${lang}${window.location.hash}`);
-      return;
-    }
+  // No redirects here — 404.html handles any one-time redirect to the correct
+  // root .html file. We just apply the language and normalize a stray ?p=.
+  const params = new URLSearchParams(window.location.search);
+  const lang = getLangFromURL() || 'fr';
+  if (params.get('p')) {
     window.history.replaceState(null, '', `${window.location.pathname}?lang=${lang}${window.location.hash}`);
   }
-
-  const urlLang = getLangFromURL();
-
-  if (urlLang && i18n[urlLang]) {
-    applyLang(urlLang);
-  } else {
-    // No language indicated: default to French in place (no path redirect,
-    // which would 404 on GitHub Pages for root-served .html files).
-    applyLang('fr');
-  }
+  applyLang(i18n[lang] ? lang : 'fr');
 }
 
 // Update language buttons to navigate instead of just applying language

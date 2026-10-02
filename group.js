@@ -584,29 +584,15 @@ function groupApplyLang(lang) {
 }
 
 function groupInitLanguage() {
-  // Handle 404.html SPA redirect (?p=...): restore the intended path if it
-  // points to a real root-level page; otherwise just clean the URL.
+  // No redirects here. 404.html performs any one-time redirect to the correct
+  // root .html file. On a normally-served page we simply apply the language
+  // from ?lang= / path prefix / ?p= (whichever is present), defaulting to FR.
+  // Normalize a stray ?p= (legacy) into a clean ?lang= URL without reloading.
   const params = new URLSearchParams(window.location.search);
-  const redirectPath = params.get('p');
-  if (redirectPath) {
-    const decoded = decodeURIComponent(redirectPath);
-    // strip any /{lang} prefix to find the target file
-    const stripped = decoded.replace(/^\/(en|fr|ja)/, '');
-    const lang = groupGetLangFromURL() || 'fr';
-    // If the redirect targeted a specific page, send to its root .html
-    const fileMatch = stripped.match(/\/([a-z0-9-]+)(?:\.html)?\/?$/i);
-    const file = fileMatch ? fileMatch[1] : '';
-    const current = window.location.pathname.split('/').pop().replace('.html', '');
-    const target = (file && file !== 'index') ? file : '';
-    const currentNorm = (current === '' || current === 'index') ? '' : current;
-    if (target !== currentNorm) {
-      window.location.replace(`/${target ? target + '.html' : ''}?lang=${lang}${window.location.hash}`);
-      return;
-    }
-    // same page: just clean the URL to ?lang=
+  const lang = groupGetLangFromURL() || 'fr';
+  if (params.get('p')) {
     window.history.replaceState(null, '', `${window.location.pathname}?lang=${lang}${window.location.hash}`);
   }
-  const lang = groupGetLangFromURL() || 'fr';
   groupApplyLang(lang);
 }
 
