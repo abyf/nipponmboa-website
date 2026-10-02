@@ -618,6 +618,16 @@ body { font-family: var(--font); background: var(--bg-deep); color: var(--text);
 .contact-tile a { color: var(--blue); text-decoration: none; }
 .contact-tile a:hover { color: var(--gold); }
 
+/* Blog placeholder (foundation) */
+.blog-placeholder {
+  max-width: 680px; margin: 40px auto 0; text-align: center;
+  background: var(--bg-card); border: 2px dashed var(--border);
+  border-radius: var(--radius); padding: 48px 32px; box-shadow: var(--shadow);
+}
+.blog-placeholder h3 { font-size: 1.25rem; font-weight: 800; color: #0d2137; margin-bottom: 14px; }
+.blog-placeholder h3::before { content: ""; display: block; width: 44px; height: 3px; border-radius: 2px; background: #0097a7; margin: 0 auto 16px; }
+.blog-placeholder p { color: var(--text); font-size: 0.95rem; line-height: 1.7; margin-bottom: 24px; }
+
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
   .nav-links { display: none; }
