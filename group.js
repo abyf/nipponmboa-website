@@ -93,6 +93,10 @@ const groupI18n = {
     f_role_vp: "Vice-Président",
     f_role_sg: "Secrétaire Général",
     f_role_treasurer: "Trésorier",
+    f_name_president: "Omoko Brigitte",
+    f_name_vp: "ABEME Freddy",
+    f_name_sg: "Bikolene Wilfried",
+    f_name_treasurer: "Mengue Cédric",
 
     f_blog_title: "Blog",
     f_blog_subtitle: "Nos activités à venir et déjà réalisées",
@@ -253,6 +257,10 @@ const groupI18n = {
     f_role_vp: "Vice-President",
     f_role_sg: "General Secretary",
     f_role_treasurer: "Treasurer",
+    f_name_president: "Omoko Brigitte",
+    f_name_vp: "ABEME Freddy",
+    f_name_sg: "Bikolene Wilfried",
+    f_name_treasurer: "Mengue Cédric",
 
     f_blog_title: "Blog",
     f_blog_subtitle: "Our upcoming and completed activities",
@@ -411,6 +419,10 @@ const groupI18n = {
     f_role_vp: "副会長",
     f_role_sg: "事務局長",
     f_role_treasurer: "会計",
+    f_name_president: "オモコ ブリジット",
+    f_name_vp: "アブゥム フレデイ",
+    f_name_sg: "ビコレーネ ウィルフリード",
+    f_name_treasurer: "メンゲ シドリック",
 
     f_blog_title: "ブログ",
     f_blog_subtitle: "これからの活動と、これまでの活動",
