@@ -649,6 +649,8 @@ body { font-family: var(--font); background: var(--bg-deep); color: var(--text);
 }
 .board-name { font-size: 1rem; font-weight: 700; color: #0d2137; margin-bottom: 4px; }
 .board-role { font-size: 0.85rem; color: #0097a7; font-weight: 600; }
+/* Focus the circular crop near the top for tall/full-body portraits */
+.board-photo-top { object-position: center 18%; }
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
