@@ -651,6 +651,8 @@ body { font-family: var(--font); background: var(--bg-deep); color: var(--text);
 .board-role { font-size: 0.85rem; color: #0097a7; font-weight: 600; }
 /* Focus the circular crop near the top for tall/full-body portraits */
 .board-photo-top { object-position: center 18%; }
+/* Slightly lower focus for close-up head-and-shoulders portraits */
+.board-photo-face { object-position: center 30%; }
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
