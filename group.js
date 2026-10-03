@@ -40,6 +40,51 @@ const groupI18n = {
     hub_hero_cta1: "Découvrir le groupe",
     hub_hero_cta2: "Nous contacter",
 
+    /* News & Events */
+    news_title: "Actualités & Événements",
+    news_subtitle: "Restez informés de nos dernières nouvelles et événements à venir",
+    news_1_title: "Nouveau Partenariat Stratégique",
+    news_1_desc: "NipponMboa Consulting a signé des partenariats avec des structures japonaises afin de faciliter les échanges commerciaux et technologiques, et de promouvoir l'entrepreneuriat, la carrière et la formation des ingénieurs entre le Cameroun et le Japon.",
+    news_1_date: "Mars 2025",
+    news_2_title: "Formation Japonais en Ligne — Premier Batch Décembre 2026",
+    news_2_desc: `<p>Formation disponible en ligne, avec accès gratuit à notre Académie de langues pour l'auto-apprentissage.</p>
+    <ul class="slide-bullet-list">
+      <li>Cours en ligne en direct avec un professeur professionnel : 3x/semaine, 52 semaines, 210 heures.</li>
+      <li>Système d'auto-apprentissage guidé quotidien : 30 min/jour, 52 semaines, 190 heures.</li>
+      <li>Total : 400 heures/an d'immersion structurée en japonais.</li>
+    </ul>
+    <p>Parcours réels pour étudier et travailler au Japon. Tout depuis votre écran. À votre rythme.</p>
+    <p>Inscriptions en continu — premier batch en décembre 2026.<br>BATCH DÉCEMBRE 2026 — SEULEMENT 6 PLACES RESTANTES.</p>
+    <p><strong>C'est pour VOUS si :</strong></p>
+    <ul class="slide-bullet-list">
+      <li>Vous avez zéro japonais — et c'est parfaitement bien</li>
+      <li>Vous avez accès à Internet et un PC</li>
+      <li>Vous avez la motivation d'investir en vous-même</li>
+    </ul>`,
+    news_2_date: "Décembre 2026",
+    news_3_title: "SÉMINAIRE EN LIGNE : Transfert Technologique & Matchmaking Business Japon-Cameroun",
+    news_3_desc: `<p><strong>Samedi 19 septembre 2026</strong><br>10h00 – 11h00<br>En direct sur Zoom - Gratuit</p>
+    <p>NipponMboa Business Services vise à connecter le Japon et le Cameroun pour le transfert technologique et la collaboration commerciale.</p>
+    <p><strong>Opportunités présentées :</strong></p>
+    <ul class="slide-bullet-list">
+      <li>Partenariats Véhicules d'Occasion</li>
+      <li>Co-Création B2B</li>
+      <li>Matchmaking Subventions & Financement</li>
+      <li>Matchmaking Pitch & Partenariat</li>
+    </ul>
+    <p><strong>Ce séminaire s'adresse aux :</strong></p>
+    <ul class="slide-bullet-list">
+      <li>Entreprises</li>
+      <li>Startups</li>
+      <li>PME</li>
+      <li>ONG & Associations</li>
+      <li>Innovateurs</li>
+    </ul>`,
+    news_3_date: "19 Septembre 2026",
+    news_4_title: "Académie de Langues NipponMboa",
+    news_4_desc: "NipponMboa a lancé son Académie de langues (https://languageacademy.nipponmboa.com), proposant des cours en autonomie en japonais, français et anglais aux apprenants intéressés à travers le monde. L'académie est gratuite et constitue une ressource complémentaire pour les apprenants inscrits à des programmes de longue durée, en présentiel ou en ligne.",
+    news_4_date: "Janvier 2027",
+
     hub_story_title: "Qui est NipponMboa ?",
     hub_story_subtitle: "Une famille d'entités au service d'un même pont",
     hub_story_p1: "« Nipponmboa » unit deux mondes : « Nippon » (le Japon) et « Mboa » (le pays, le « chez-nous » camerounais). Plus qu'un nom, c'est une promesse : être un pont vivant entre les deux nations, et plus largement entre l'expertise disponible partout dans le monde et les besoins concrets des communautés locales.",
@@ -82,7 +127,7 @@ const groupI18n = {
 
     f_mission_title: "Notre mission",
     f_mission_subtitle: "Partager le savoir, transformer des vies",
-    f_mission_intro: "La Fondation NipponMboa existe pour partager et transférer compétences et technologies vers les populations et les régions du Cameroun qui en ont le plus besoin — avec une attention particulière aux communautés défavorisées. Nous puisons l'expertise à toutes ses sources : les pays développés, au premier rang desquels le Japon par affinité culturelle, mais aussi les talents locaux déjà avancés présents au Cameroun. Cette expertise est ensuite redirigée — chaque source comptant à poids égal — vers un impact durable et ancré localement : renforcer des capacités réelles, relier le savoir au besoin, et aider les communautés à grandir par elles-mêmes.",
+    f_mission_intro: "À la Fondation NipponMboa, nous croyons que le savoir ne devrait connaître aucune frontière. Nous partageons et transférons les compétences, les technologies et les connaissances qui transforment des vies — des langues à la culture, jusqu'aux outils du progrès — en les portant vers les populations et les régions du Cameroun qui en ont le plus besoin. Nous unissons l'expertise du monde entier, avec le Japon au premier plan, et les talents remarquables qui émergent au sein même du Cameroun.",
 
     f_gov_title: "Gouvernance",
     f_gov_subtitle: "Une association transparente et structurée",
@@ -205,6 +250,51 @@ const groupI18n = {
     hub_hero_cta1: "Explore the group",
     hub_hero_cta2: "Contact us",
 
+    /* News & Events */
+    news_title: "News & Events",
+    news_subtitle: "Stay informed about our latest news and upcoming events",
+    news_1_title: "New Strategic Partnership",
+    news_1_desc: "NipponMboa Consulting has signed partnerships with Japanese organizations to facilitate trade and technological exchanges, and to promote entrepreneurship, careers and engineer training between Cameroon and Japan.",
+    news_1_date: "March 2025",
+    news_2_title: "Online Japanese Training — First Batch December 2026",
+    news_2_desc: `<p>Online training available with free access to our Language Academy for self-learning.</p>
+    <ul class="slide-bullet-list">
+      <li>Live online classes with a professional teacher: 3x/week, 52 weeks, 210 hours.</li>
+      <li>Guided daily self-learning system: 30 min/day, 52 weeks, 190 hours.</li>
+      <li>Total: 400 hours/year of structured Japanese immersion.</li>
+    </ul>
+    <p>Real pathways to study and work in Japan. All from your screen. At your own pace.</p>
+    <p>Continuous enrollment — first batch in December 2026.<br>DECEMBER 2026 BATCH — ONLY 6 SEATS LEFT.</p>
+    <p><strong>This is for YOU if:</strong></p>
+    <ul class="slide-bullet-list">
+      <li>You have zero Japanese — and that's perfectly fine</li>
+      <li>You have access to the internet and a PC</li>
+      <li>You have the motivation to invest in yourself</li>
+    </ul>`,
+    news_2_date: "December 2026",
+    news_3_title: "ONLINE SEMINAR: Japan-Cameroon Technology Transfer & Business Matchmaking",
+    news_3_desc: `<p><strong>Saturday, September 19th, 2026</strong><br>10:00 AM – 11:00 AM<br>Live on Zoom - Free</p>
+    <p>NipponMboa Business Services aims to bridge Japan and Cameroon for technology transfer and business collaboration.</p>
+    <p><strong>Opportunities Presented:</strong></p>
+    <ul class="slide-bullet-list">
+      <li>Used Vehicle Partnerships</li>
+      <li>B2B Co-Creation</li>
+      <li>Grant & Funding Matchmaking</li>
+      <li>Pitch & Partnership Matchmaking</li>
+    </ul>
+    <p><strong>This seminar is for:</strong></p>
+    <ul class="slide-bullet-list">
+      <li>Corporations</li>
+      <li>Startups</li>
+      <li>SMEs</li>
+      <li>NGOs & Associations</li>
+      <li>Innovators & Idea Holders</li>
+    </ul>`,
+    news_3_date: "September 19, 2026",
+    news_4_title: "NipponMboa Language Academy",
+    news_4_desc: "NipponMboa has launched its Language Academy (https://languageacademy.nipponmboa.com), offering self-paced courses in Japanese, French, and English to interested learners worldwide. The academy is free and serves as a complementary resource for learners enrolled in long-term programs, whether in-person or online.",
+    news_4_date: "January 2027",
+
     hub_story_title: "Who is NipponMboa?",
     hub_story_subtitle: "A family of entities serving one bridge",
     hub_story_p1: "“Nipponmboa” unites two worlds: “Nippon” (Japan) and “Mboa,” which in Cameroon means “home,” “our place.” More than a name, it is a promise: to be a living bridge between the two nations, and more broadly between expertise available anywhere in the world and the concrete needs of local communities.",
@@ -246,7 +336,7 @@ const groupI18n = {
 
     f_mission_title: "Our mission",
     f_mission_subtitle: "Sharing knowledge, changing lives",
-    f_mission_intro: "The NipponMboa Foundation exists to share and transfer skills and technologies to the people and regions of Cameroon that need them most — with a special focus on disadvantaged communities. We draw expertise from every source: developed nations, with Japan foremost by cultural affinity, as well as the advanced local talent already present in Cameroon. That expertise is then redirected — with equal weight given to every source — toward lasting, locally rooted impact: building real capacity, bridging knowledge and need, and helping communities grow stronger on their own terms.",
+    f_mission_intro: "At the NipponMboa Foundation, we believe knowledge should know no borders. We share and transfer the skills, technologies, and understanding that transform lives—from languages to culture to the tools of progress—carrying them to the people and regions of Cameroon who need them most. We unite the world's expertise, with Japan at the forefront, and the brilliant talent rising within Cameroon itself.",
 
     f_gov_title: "Governance",
     f_gov_subtitle: "A transparent, structured association",
@@ -367,6 +457,51 @@ const groupI18n = {
     hub_hero_cta1: "グループを見る",
     hub_hero_cta2: "お問い合わせ",
 
+    /* News & Events */
+    news_title: "ニュース＆イベント",
+    news_subtitle: "最新ニュースと今後のイベント情報をお届けします",
+    news_1_title: "新戦略的パートナーシップ",
+    news_1_desc: "NipponMboaコンサルティングは、カメルーンと日本間の貿易・技術交流を促進し、起業家精神、キャリア、エンジニア育成を推進するため、日本の組織とのパートナーシップを締結しました。",
+    news_1_date: "2025年3月",
+    news_2_title: "オンライン日本語研修 — 第1期 2026年12月",
+    news_2_desc: `<p>自習用言語アカデミーへの無料アクセス付きオンライン研修。</p>
+    <ul class="slide-bullet-list">
+      <li>プロの教師によるライブオンライン授業：週3回、52週間、210時間。</li>
+      <li>毎日のガイド付き自習システム：30分/日、52週間、190時間。</li>
+      <li>合計：年間400時間の構造化された日本語イマージョン。</li>
+    </ul>
+    <p>日本での留学・就職への実際の道筋。すべて画面から。自分のペースで。</p>
+    <p>随時受付中 — 第1期は2026年12月開始。<br>2026年12月バッチ — 残り6席のみ。</p>
+    <p><strong>こんな方におすすめ：</strong></p>
+    <ul class="slide-bullet-list">
+      <li>日本語ゼロ — それで全く問題ありません</li>
+      <li>インターネットとPCをお持ちの方</li>
+      <li>自己投資する意欲のある方</li>
+    </ul>`,
+    news_2_date: "2026年12月",
+    news_3_title: "オンラインセミナー：日本・カメルーン技術移転＆ビジネスマッチメイキング",
+    news_3_desc: `<p><strong>2026年9月19日（土）</strong><br>10:00 – 11:00<br>Zoomライブ配信 - 無料</p>
+    <p>NipponMboa Business Servicesは、技術移転とビジネス協力のために日本とカメルーンを結びます。</p>
+    <p><strong>提供する機会：</strong></p>
+    <ul class="slide-bullet-list">
+      <li>中古車両パートナーシップ</li>
+      <li>B2B共創</li>
+      <li>助成金・資金調達マッチング</li>
+      <li>ピッチ＆パートナーシップマッチング</li>
+    </ul>
+    <p><strong>対象：</strong></p>
+    <ul class="slide-bullet-list">
+      <li>企業</li>
+      <li>スタートアップ</li>
+      <li>中小企業</li>
+      <li>NGO・協会</li>
+      <li>イノベーター・アイデア保有者</li>
+    </ul>`,
+    news_3_date: "2026年9月19日",
+    news_4_title: "NipponMboa言語アカデミー",
+    news_4_desc: "NipponMboaは言語アカデミー（https://languageacademy.nipponmboa.com）を開設し、世界中の学習者に日本語、フランス語、英語の自習コースを提供しています。アカデミーは無料で、対面またはオンラインの長期プログラムに登録している学習者のための補完的なリソースとして機能します。",
+    news_4_date: "2027年1月",
+
     hub_story_title: "NipponMboa とは？",
     hub_story_subtitle: "一つの架け橋のために集う事業体の家族",
     hub_story_p1: "「Nipponmboa」は二つの世界を結びます。「Nippon」（日本）と「Mboa」（カメルーンで「故郷」「私たちの場所」を意味する言葉）。それは名前以上に、二国間の、そして世界中の専門知識と地域の具体的なニーズとをつなぐ、生きた架け橋であるという約束です。",
@@ -408,7 +543,7 @@ const groupI18n = {
 
     f_mission_title: "私たちの使命",
     f_mission_subtitle: "知識を分かち合い、人生を変える",
-    f_mission_intro: "NipponMboa 財団は、技能と技術を、カメルーンで最も必要とする人々と地域へ――とりわけ恵まれない地域に重きを置いて――共有し移転するために存在します。私たちは専門知識をあらゆる源から得ます。文化的親和性からまず日本を筆頭とする先進国、そしてカメルーンにすでに存在する進んだ地域の人材です。その専門知識を、どの源も等しい重みで、持続的で地域に根ざした成果へと振り向けます――本物の能力を築き、知識と必要をつなぎ、地域が自らの力で成長できるよう支えます。",
+    f_mission_intro: "NipponMboa 財団は、知識に国境はないと信じています。私たちは、人生を変える技能・技術・理解を――言語から文化、そして進歩のための手段に至るまで――共有し移転し、それらをカメルーンで最も必要とする人々と地域へ届けます。私たちは、日本を筆頭とする世界中の専門知識と、カメルーン自身の内側から育ちつつある優れた人材とを結びつけます。",
 
     f_gov_title: "ガバナンス",
     f_gov_subtitle: "透明で体系的な団体",
@@ -594,3 +729,80 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 groupInitLanguage();
+
+/* ===== NEWS & EVENTS CAROUSEL ===== */
+let currentSlide = 1;
+let autoSlideInterval;
+
+function showSlide(slideNumber) {
+  const slides = document.querySelectorAll('.carousel-slide');
+  const dots = document.querySelectorAll('.dot');
+  if (!slides.length) return;
+
+  // Wrap around if needed
+  if (slideNumber > slides.length) {
+    currentSlide = 1;
+  } else if (slideNumber < 1) {
+    currentSlide = slides.length;
+  } else {
+    currentSlide = slideNumber;
+  }
+
+  slides.forEach(slide => slide.classList.remove('active'));
+  dots.forEach(dot => dot.classList.remove('active'));
+
+  slides[currentSlide - 1].classList.add('active');
+  if (dots[currentSlide - 1]) dots[currentSlide - 1].classList.add('active');
+}
+
+function nextSlide() {
+  showSlide(currentSlide + 1);
+}
+
+function prevSlide() {
+  showSlide(currentSlide - 1);
+}
+
+function startAutoSlide() {
+  autoSlideInterval = setInterval(nextSlide, 15000);
+}
+
+function stopAutoSlide() {
+  clearInterval(autoSlideInterval);
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  const carouselContainer = document.querySelector('.carousel-container');
+  if (!carouselContainer) return; // page has no carousel
+
+  const prevBtn = document.querySelector('.prev-btn');
+  const nextBtn = document.querySelector('.next-btn');
+
+  if (prevBtn && nextBtn) {
+    prevBtn.addEventListener('click', () => {
+      prevSlide();
+      stopAutoSlide();
+      startAutoSlide();
+    });
+
+    nextBtn.addEventListener('click', () => {
+      nextSlide();
+      stopAutoSlide();
+      startAutoSlide();
+    });
+  }
+
+  const dots = document.querySelectorAll('.dot');
+  dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => {
+      showSlide(index + 1);
+      stopAutoSlide();
+      startAutoSlide();
+    });
+  });
+
+  startAutoSlide();
+
+  carouselContainer.addEventListener('mouseenter', stopAutoSlide);
+  carouselContainer.addEventListener('mouseleave', startAutoSlide);
+});
